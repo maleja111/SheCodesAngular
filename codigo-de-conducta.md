@@ -63,8 +63,8 @@ A nivel general en **She Codes Angular:**
 1.  Personas de contacto o Organizadores de Evento:
 
 * Alejandra Giraldo
-* Juan Herrera
 * Vanessa Aristizabal
+* Carlos Angulo
 
      2. Salidas de Emergencia: Serán notificadas durante el evento.
 
