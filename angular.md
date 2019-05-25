@@ -43,7 +43,25 @@ Te invitamos a leer este articulo si quieres saber más sobre TS 👉 [`Qué Es 
 * Facil de usar
 * Tiene una gran comunidad 
 
+## Estructura de Angular
+
+La estructura de una aplicación en Angular esta compuesta por componentes.
+
+{% hint style="info" %}
+**¿Qué es un componente?**
+
+Un componente es un elemento que hace parte una composición o de un todo, en nuestro caso de una página Web. Una lista de items, un botón, un encabezado de una página, el pie de página, podrían ser un componente.
+{% endhint %}
+
+![Una aplicaci&#xF3;n esta compuesta por componentes](.gitbook/assets/aplicaicon.png)
+
+Un componente tiene principalmente un archivo de Typescript \(donde pondremos la lógica\), uno de CSS \(donde pondremos los estilos para hacerlo bonito\) y otro de HTML \(que es lo que queremos mostrar en el navegador\). Puede tener más archivos.
+
+![Estructura de un componente](.gitbook/assets/componente.png)
+
 ## ¿Confundida?
+
+![@vanessamarely copyright](.gitbook/assets/chibi-confundido.png)
 
 Hasta este punto te hemos mencionado conceptos que tal vez conocías y tal vez no, pero no te preocupes a medida que avances en el taller puedes ir preguntándonos sobre ellos, a los organizadores y a nuestros increíbles mentores 😀
 
