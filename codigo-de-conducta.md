@@ -5,7 +5,7 @@ description: >-
   sea empoderada en Angular.
 ---
 
-# Código de Conducta
+# 🛑 Código de Conducta 🛑
 
 **She Codes Angular**, está edificada con las bases del Respeto, el Compromiso y Aprendizaje. 
 
@@ -60,11 +60,11 @@ A nivel general en **She Codes Angular:**
 
 ### RECURSOS DE APOYO
 
-1.  Personas de contacto o Organizadores de Evento:
+1.  Personas de contacto y organizadores del Evento:
 
-* Alejandra Giraldo
-* Vanessa Aristizabal
-* Carlos Angulo
+* [Alejandra Giraldo](https://twitter.com/maleja111)
+* [Vanessa Aristizabal](https://twitter.com/vanessamarely)
+* [Carlos Angulo](https://twitter.com/Carlos_ACNS)
 
      2. Salidas de Emergencia: Serán notificadas durante el evento.
 

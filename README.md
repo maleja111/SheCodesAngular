@@ -19,6 +19,6 @@ Actualmente el equipo organizador esta conformado por [Alejandra Giraldo](https:
 Esperamos en nuestros eventos brindarte la mejor experiencia posible, que aprendas, te diviertas mucho y sobretodo  que nos puedas acompañar en las futuras versiones de nuestros eventos. 👍
 
 {% hint style="success" %}
-Queremos que tengas un pequeño contexto de las herramientas usadas en nuestro taller, por ello te invitamos a conocer Stackblitz a continuación **👇**
+Queremos que tengas un pequeño contexto que es **Angular**, por ello te invitamos a conocerlo a continuación **👇**
 {% endhint %}
 
