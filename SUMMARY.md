@@ -1,13 +1,13 @@
 # Table of contents
 
-* [💃 Bienvenidas a She Codes Angular 💃](README.md)
+* [💃 Bienvenid@s a She Codes Angular 💃](README.md)
 * [🅰️ ¿Qué es Angular? 🅰️](angular.md)
 * [⚡ ¡Utiliza Stackblitz! ⚡](1.-utiliza-stackblitz.md)
 * [🛑 Código de Conducta 🛑](codigo-de-conducta.md)
 
 ## Workshop v.2
 
-* [💃 Bienvenidas 💃](workshop-v.2/untitled.md)
+* [💃 Bienvenid@s 💃](workshop-v.2/untitled.md)
 * [Básico 1: Interpolation](workshop-v.2/basico-1.md)
 * [Básico 2: Directives \|\| pipes](workshop-v.2/basico-2.md)
 * [Básico 3: Data binding](workshop-v.2/basico-3.md)

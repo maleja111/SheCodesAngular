@@ -1,4 +1,8 @@
-# 💃 Bienvenidas 💃
+---
+description: "Esperamos disfruten nuestra segunda versión de \"She Codes Angular\"\uD83D\uDC4D"
+---
+
+# 💃 Bienvenid@s 💃
 
 ## 1. Introducción 💪
 

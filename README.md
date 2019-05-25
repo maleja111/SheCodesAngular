@@ -1,4 +1,4 @@
-# 💃 Bienvenidas a She Codes Angular 💃
+# 💃 Bienvenid@s a She Codes Angular 💃
 
 ## 1. Introducción 💪
 
