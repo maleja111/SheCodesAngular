@@ -1,8 +1,16 @@
+---
+description: >-
+  En este reto aprendamos sobre directivas. Una directiva se representa como un
+  atributo en una etiqueta HTML; *ngIf, *ngFor, *ngSwitch son algunas y le
+  adiciona un comportamiento definido.
+---
+
 # Básico 2: Directives \|\| pipes
 
 ## 💡 Introducción 💡
 
-Ya hemos utilizado funciones muy divertidas de Angular, ahora vamos a utilizar un formulario para crear una pequeña lista de notas [**¡Aquí puedes encontrar el demo!**](https://stackblitz.com/edit/angular-toma-lista)\*\*\*\*
+¡Que divertido fue aprender a usar imagenes de gatos!  
+ahora vayamos por... [**¡Aquí puedes encontrar el demo!**](https://stackblitz.com/edit/angular-toma-lista)\*\*\*\*
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
