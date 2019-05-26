@@ -42,6 +42,56 @@ Deberías ver algo así: 👇
 
 ![](../.gitbook/assets/ejer1.gif)
 
+## Paso 3: Hora de poner el formulario **📋**
+
+Vamos a utilizar un formulario con un campo de texto y 2 botones: un botón adicionará el contenido del campo de texto a la lista y el otro botón limpiara la lista para que no contenga nada.
+
+Adiciona este código en la linea 8 de tu archivo **app.component.html**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<div>
+  <form (ngSubmit)="save()">
+    <div class="form-group">
+      <input class="form-group"
+        id="textId"
+        type="text"
+        placeholder="Adiciona a la lista..."
+        required
+        minlength="3"
+        [(ngModel)]="model.text"
+        name="text" />
+    </div>
+    <button type='submit'>Adiciona a la lista</button>
+    <button (click)='clearComplete()' type='button'>Elimina toda la lista</button>
+  </form>
+  <label class="label">Form Model: {{this.model | json}}</label><br />
+  <label class="label">List: {{this.items | json}}</label><br />
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/2.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** La etiqueta **form** \(linea 2\) es una etiqueta de HTML que representa un formulario. En este formulario contiene los diferentes campos y botones que necesitemos.  
+  
+**2.** La etiqueta **label**  es usada para contener texto.  
+  
+**3.** El elemento **{{}}**  es una forma de comunicar nuestro [componente](https://platzi.com/tutoriales/1153-angular/1619-que-son-los-componentes-en-angular/).   
+De esta manera el **app.component.ts**, se comunica con **app.component.html,** y ****el **\|\|** dentro ****del ****elemento es una condición "o" que nos va a mostrar el número cero mientras no exista datos en las variables.  
+  
+**4.** El elemento [**class**](https://css-tricks.com/almanac/selectors/c/class/)**=""** nos va a ayudar a definir los estilos de nuestra aplicación \(no solo tiene esa utilidad, pero la usaremos para eso en el ejercicio de hoy\).  
+  
+ **5.** El elemento **\***[**ngIf**](https://angular.io/api/common/NgIf)**=** nos va a ayudar a ocultar o mostrar elementos, depende de la variable que tengamos asignada dentro del **\*ngIf=**, en este caso tenemos la variable **showBtnStart** donde la asignaremos en el **app.component.ts** más adelante. 
+{% endhint %}
+
 {% hint style="info" %}
 \*\*\*\*
 {% endhint %}
