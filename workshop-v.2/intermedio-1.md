@@ -133,8 +133,8 @@ Ahora vamos a modificar el archivo **app.component.ts**, ****en ****este vamos a
 En este archivo vamos a reemplazar su contenido, vamos a reemplazar el actual código por este:
 
 {% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
-```markup
+{% code-tabs-item title="app.component.ts" %}
+```typescript
 import { Component } from '@angular/core';
 
 
@@ -170,5 +170,53 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ![](../.gitbook/assets/3.gif)
 
-\*\*\*\*
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** La etiqueta **form** es una etiqueta de HTML que representa un formulario. En este formulario contiene los diferentes campos y botones que lleguemos a necesitar.  
+  
+**2.** La etiqueta **\(ngSubmit\)="save\(\)"**: **ngSubmit** es usada para manejar el envío de la información del formulario. **save\(\):** es usado para indicar al archivo **app.component.ts** cual es la función a la que se va a hacer referencia cuando se envíe información del formulario.
+
+**3.** La etiqueta **input**:   
+**class:** Es usada para manejar estilos.   
+**id:** Referencia al elemento.   
+**type:** El tipo de dato, en este caso texto.   
+**placeholder:** Muestra en el campo de texto un mensaje, antes de que el usuario ingrese un valor.   
+**required y minlength:** Se utiliza para realizar validaciones.  
+**ngModel:** Creas una instancia a [`FormControl`](https://angular.io/api/forms/FormControl) donde se domina el modelo y binds hacia el elemento.  
+**name:** Nombre del input.
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<input class="form-group"
+        id="textId"
+        type="text"
+        placeholder="Adiciona a la lista..."
+        required
+        minlength="3"
+        [(ngModel)]="model.text"
+        name="text" />
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+  
+**4.** El elemento **button** es un botón, el primero envía información del formulario.  
+Segundo, elimina la lista.  
+El primer label nos va a permitir ver el modelo de nuestra aplicación.  
+El segundo label nos va a permitir ver como la lista se elimina.
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<button type='submit'>Adiciona a la lista</button>
+<button (click)='clearComplete()' type='button'>Elimina toda la lista</button>
+//////
+<label class="label">Form Model: {{this.model | json}}</label><br />
+<label class="label">List: {{this.items | json}}</label><br />
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+{% endhint %}
 
