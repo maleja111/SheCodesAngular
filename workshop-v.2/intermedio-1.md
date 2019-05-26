@@ -46,7 +46,7 @@ Deberías ver algo así: 👇
 
 Vamos a utilizar un formulario con un campo de texto y 2 botones: un botón adicionará el contenido del campo de texto a la lista y el otro botón limpiara la lista para que no contenga nada.
 
-Adiciona este código en la linea 8 de tu archivo **app.component.html**
+Adiciona este código en la línea 8 de tu archivo **app.component.html**
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -173,10 +173,19 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 {% hint style="info" %}
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
 
-**1.** La etiqueta **form** es una etiqueta de HTML que representa un formulario. En este formulario contiene los diferentes campos y botones que lleguemos a necesitar.  
+**1.** En la línea 10 y 11, se declaran las variables: **model** y **items**.  
   
-**2.** La etiqueta **\(ngSubmit\)="save\(\)"**: **ngSubmit** es usada para manejar el envío de la información del formulario. **save\(\):** es usado para indicar al archivo **app.component.ts** cual es la función a la que se va a hacer referencia cuando se envíe información del formulario.
+**2.** La función **save\(\)**, línea 17, es la encargada de enviar los datos del formulario a lista.  
+  
+**3. Dentro de la función save\(\):** Línea 18 valida que el input tenga texto.  
+La línea 19 me adiciona un elemento a una lista.  
+La línea 20 me limpia el input.
 
+  
+La etiqueta **\(ngSubmit\)="save\(\)"**: **ngSubmit** es usada para manejar el envío de la información del formulario. **save\(\):** es usado para indicar al archivo **app.component.ts** cual es la función a la que se va a hacer referencia cuando se envíe información del formulario.
+{% endhint %}
+
+{% hint style="info" %}
 **3.** La etiqueta **input**:   
 **class:** Es usada para manejar estilos.   
 **id:** Referencia al elemento.   
