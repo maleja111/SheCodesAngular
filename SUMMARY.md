@@ -8,7 +8,7 @@
 ## Workshop v.2
 
 * [💃 Bienvenid@s 💃](workshop-v.2/untitled.md)
-* [Básico 1: Interpolation](workshop-v.2/basico-1.md)
+* [Desafio \#1: CatClock😺](workshop-v.2/basico-1.md)
 * [Básico 2: Directives \|\| pipes](workshop-v.2/basico-2.md)
 * [Básico 3: Data binding](workshop-v.2/basico-3.md)
 * [Intermedio 1: Forms](workshop-v.2/intermedio-1.md)
