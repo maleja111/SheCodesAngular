@@ -80,11 +80,11 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 {% hint style="info" %}
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
 
-**1.** La etiqueta **form** \(linea 2\) es una etiqueta de HTML que representa un formulario. En este formulario contiene los diferentes campos y botones que necesitemos.  
+**1.** La etiqueta **form** \(linea 2\) es una etiqueta de HTML que representa un formulario. En este formulario contiene los diferentes campos y botones que lleguemos a necesitar.  
   
-**2.** La etiqueta **label**  es usada para contener texto.  
+**2.** La etiqueta **\(ngSubmit\)="save\(\)"** : **ngSubmit** es usada para manejar el envío de la información del formulario. **save\(\):** es usado para indicar al archivo **app.component.ts** cual es la función a la que se va a hacer referencia cuando se envíe información del formulario.  
   
-**3.** El elemento **{{}}**  es una forma de comunicar nuestro [componente](https://platzi.com/tutoriales/1153-angular/1619-que-son-los-componentes-en-angular/).   
+**3.** El elemento **{{}}**  es una forma de comunicar nuestro[componente](https://platzi.com/tutoriales/1153-angular/1619-que-son-los-componentes-en-angular/).   
 De esta manera el **app.component.ts**, se comunica con **app.component.html,** y ****el **\|\|** dentro ****del ****elemento es una condición "o" que nos va a mostrar el número cero mientras no exista datos en las variables.  
   
 **4.** El elemento [**class**](https://css-tricks.com/almanac/selectors/c/class/)**=""** nos va a ayudar a definir los estilos de nuestra aplicación \(no solo tiene esa utilidad, pero la usaremos para eso en el ejercicio de hoy\).  
@@ -92,7 +92,5 @@ De esta manera el **app.component.ts**, se comunica con **app.component.html,** 
  **5.** El elemento **\***[**ngIf**](https://angular.io/api/common/NgIf)**=** nos va a ayudar a ocultar o mostrar elementos, depende de la variable que tengamos asignada dentro del **\*ngIf=**, en este caso tenemos la variable **showBtnStart** donde la asignaremos en el **app.component.ts** más adelante. 
 {% endhint %}
 
-{% hint style="info" %}
 \*\*\*\*
-{% endhint %}
 
