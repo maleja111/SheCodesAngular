@@ -127,7 +127,48 @@ El segundo label nos va a permitir ver como la lista se elimina.
 {% endcode-tabs %}
 {% endhint %}
 
+## Paso 4: Adicionemos lógica para el formulario 🧪 **📋**
 
+Ahora vamos a modificar el archivo **app.component.ts**, ****en ****este vamos a adicionar la declaración de variables que vimos en el archivo **app.component.html** y además vamos a agregar unas funciones.  
+En este archivo vamos a reemplazar su contenido, vamos a reemplazar el actual código por este:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+import { Component } from '@angular/core';
+
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  model = {};
+  items = [];
+
+
+  ngOnInit() {
+  }
+
+  save() {
+    if (this.model.text !== '') {
+      this.items.unshift({ 'text': this.model['text'], 'complete': false });
+      this.model['text'] = '';
+    }
+  }
+
+  clearComplete() {
+    this.items = [];
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/3.gif)
 
 \*\*\*\*
 
