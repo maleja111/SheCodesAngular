@@ -184,7 +184,7 @@ La línea 20 me limpia el input.
 **4.** La función **clearComplete\(\)**, línea 24, es la encargada de eliminar los datos de la lista, es por eso que se limpia la variable.
 {% endhint %}
 
-## Paso 4: Vamos a ver la lista del formulario **📝👀**
+## Paso 5: Creemos un espacio para ver las listas **📝👀**
 
 Ahora vamos a modificar el archivo **app.component.html**, ****en ****este vamos a adicionar el código para ver nuestra lista.  
 Adiciona este código en la línea 26 de tu archivo **app.component.html**
