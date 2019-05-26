@@ -213,17 +213,13 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 ![](../.gitbook/assets/4.gif)
 
 {% hint style="info" %}
-**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
-
-**1.** En la línea 10 y 11, se declaran las variables: **model** y **items**.  
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
   
-**2.** La función **save\(\)**, línea 17, es la encargada de enviar los datos del formulario a lista.  
+1**. El elemento _**\***_**ngIf=** __nos va a ayudar a ocultar o mostrar elementos, depende de la variable que tengamos asignada dentro del **ngIf=**, en este caso tenemos la siguiente lógica, si la variable **items.length** \(el número de elementos de la lista\) es mayor a 0 entonces muestre la lista.  
   
-**3. Dentro de la función save\(\):** Línea 18 valida que el input tenga texto.  
-La línea 19 me adiciona un elemento a una lista.  
-La línea 20 me limpia el input.  
+**2.** **\*ngFor** es una directiva en Angular, nos permite presentar una lista de elementos en pantalla de una forma sencilla. Su sintaxis consiste en inicializar una variable que la podemos llamar **item**, que será el elemento que nos irá mostrando de la lista  items.  
   
-**4.** La función **clearComplete\(\)**, línea 24, es la encargada de eliminar los datos de la lista, es por eso que se limpia la variable.
+3.**{{item.text \|\| 'Add some thing'}}** Aquí indico si deseo que muestre el mensaje o un mensaje por defecto si text no llega a tener texto.
 {% endhint %}
 
 
