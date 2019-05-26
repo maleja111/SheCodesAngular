@@ -82,7 +82,32 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 **1.** La etiqueta **form** \(linea 2\) es una etiqueta de HTML que representa un formulario. En este formulario contiene los diferentes campos y botones que lleguemos a necesitar.  
   
-**2.** La etiqueta **\(ngSubmit\)="save\(\)"** : **ngSubmit** es usada para manejar el envío de la información del formulario. **save\(\):** es usado para indicar al archivo **app.component.ts** cual es la función a la que se va a hacer referencia cuando se envíe información del formulario.  
+**2.** La etiqueta **\(ngSubmit\)="save\(\)"** \(Linea 2\): **ngSubmit** es usada para manejar el envío de la información del formulario. **save\(\):** es usado para indicar al archivo **app.component.ts** cual es la función a la que se va a hacer referencia cuando se envíe información del formulario.
+
+**3.** La etiqueta **input** \(Linea 4\):   
+**class:** Es usada para manejar estilos.   
+**id:** Referencia al elemento.   
+**type:** El tipo de dato, en este caso texto.   
+**placeholder:** Muestra en el campo de texto un mensaje, antes de que el usuario ingrese un valor.   
+**required y minlength:** Se utiliza para realizar validaciones.  
+**ngModel:** Creas una instancia a [`FormControl`](https://angular.io/api/forms/FormControl) donde se domina el modelo y binds hacia el elemento.  
+**name:** Nombre del input.
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<input class="form-group"
+        id="textId"
+        type="text"
+        placeholder="Adiciona a la lista..."
+        required
+        minlength="3"
+        [(ngModel)]="model.text"
+        name="text" />
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
   
 **3.** El elemento **{{}}**  es una forma de comunicar nuestro[componente](https://platzi.com/tutoriales/1153-angular/1619-que-son-los-componentes-en-angular/).   
 De esta manera el **app.component.ts**, se comunica con **app.component.html,** y ****el **\|\|** dentro ****del ****elemento es una condición "o" que nos va a mostrar el número cero mientras no exista datos en las variables.  
