@@ -222,5 +222,124 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 3.**{{item.text \|\| 'Add some thing'}}** Aquí indico si deseo que muestre el mensaje o un mensaje por defecto si text no llega a tener texto.
 {% endhint %}
 
+## Paso Final: Personaliza tu aplicación 👩🏻‍🎨
 
+¡Vamos a hacer que nuestra lista tenga color agregando CSS!   
+¿recuerdas las clases que usamos en nuestro **app.component.html**? ¡llego el tiempo de usarlas!   
+Reemplaza el contenido de **app.component.css** con éste:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.css" %}
+```css
+* {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+/* Title */
+h1 {
+  color: #a4499a;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* Title Number */
+h1 span.highlight {
+  color: #4220da;
+}
+form {
+  width: 300px;
+  white-space: nowrap;
+  display: grid;
+}
+#textId {
+  width: 98%;
+}
+.label {
+  color: #7f6859;
+  font-weight: bold;
+  background-color: #e8e8e8;
+  width: 300px;
+  font-size: 15px;
+  font-family: Arial,Helvetica,sans-serif;
+}
+input {
+  border-radius: 15px;
+}
+button{
+  padding: 2px 0px;
+  background: #d075c1;
+  border-radius: 15px;
+  border: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 3px 0px;
+}
+.list-items {
+  background-color: #789872;
+  border-bottom: 3px solid #88b1a77a;
+}
+.items {
+  color: #fff;
+  font-size: 18px;
+  display: inline-flex;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/5.gif)
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```typescript
+// adicionamos en la línea 2
+// Servicio
+import { CatsService } from './services/cats.service';
+
+// adicionamos en la línea 21
+catURL = '';
+constructor(private catsService: CatsService) { }
+
+// adicionamos en la línea 77
+this.getCatImage();
+
+// adicionamos en la línea 80
+getCatImage(): void {
+  this.catsService
+    .getImage()
+    .subscribe(
+   resultQuestion => this.catURL = resultQuestion[0].url,
+    error => (console.log('Ups! we have an error: ', error))
+    )
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+## 😎 Tu Misión 😎
+
+Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder eliminar un elemento de la lista cuando este terminada
+
+⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,**  llamado de funciones y evento clic en botones para lograr este objetivo.
+
+**💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**
+
+## 🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas en casa y necesitas ayuda con este ejercicio puedes contactar a:
+
+Alejandra Giraldo  
+Twitter: @maleja111  
+Correo: magiraldodevelop@gmail.com
+{% endhint %}
 
