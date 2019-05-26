@@ -1,16 +1,16 @@
 ---
 description: >-
   Es la hora de la acción ⏰. Crearemos una  alarma gatuna para despertar a
-  nuestro gatico y este listo para la acción.
+  nuestro gatito y este listo para la acción.
 ---
 
-# Desafio \#1: CatClock😺
+# Desafio \#1: CatParty😺
 
 ## 💡 Introducción 💡
 
 En este desafío haremos algo divertido aplicando conceptos básicos de Angular, los cuales  iremos describiendo a medida que realicemos cada uno de los pasos descritos abajo.  
 
-[**¡Aquí puedes encontrar el demo!**](https://greater-than.stackblitz.io)\*\*\*\*
+\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-catparty.stackblitz.io/)\*\*\*\*
 
 ¿Estás lista?
 
@@ -155,7 +155,7 @@ Quedaría algo así: 👇
 
 ## Paso 6: **Remplacemos nuestra imágen con algo de lógica**
 
-Ahora lo que haremos es que cuando reemplacemos el texto de nuestra imágen en el código se cambiará nuestra imágen.
+Ahora lo que haremos es que cuando reemplacemos el texto de nuestra imágen en el código, se cambiará nuestra imágen.
 
 Para ellos usaremos algo de lógica, colocaremos un **if** \(nos sirve para preguntar\) en nuestro archivo **app.component.ts**, donde preguntaremos si el texto de la variable **party** es igual a 'Party' se muestre una nueva imágen. 
 
@@ -182,5 +182,35 @@ export class AppComponent  {
 
 Si reemplazas el texto del party, podrás ver la imagen inicial y con 'Party' los gatos saltando.
 
+¡Felicitaciones hemos terminado el primer desafío!
 
+🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-catparty) puedes encontrar el ejercicio resuelto.
+{% endhint %}
+
+## 😎 Tu Misión 😎
+
+Parece que nuestra aplicación está lista pero debemos editar el texto desde la lógica 😵. 
+
+⭐️ Se podría poner un botón que al darle click nos cambie el texto, pero esto te lo dejamos de tarea ****⭐️
+
+A medida que vas desarrollando los demás desafíos aprenderás como añadir un botón que al presionarlo pueda realizar este cambio, o puedes poner un campo de texto o idearte tu propia solución.
+
+Esta adición es para retar tu curiosidad, podrías proponer la solución que tu quieras, puedes en cualquier momento del taller mostrarme \(Vanessa\) tu propuesta y recibirás un regalito. 
+
+{% hint style="success" %}
+Has completado el **desafío \#2**, ahora vamos a el **desafío \#3 👇**
+{% endhint %}
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas mentoría con este ejercicio puedes contactar a los mentores o a:
+
+Vanessa M. Aristizabal  
+Twitter: @vanessamarely  
+Correo: vanessamarely@gmail.com
+{% endhint %}
 
