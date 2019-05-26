@@ -184,5 +184,47 @@ La línea 20 me limpia el input.
 **4.** La función **clearComplete\(\)**, línea 24, es la encargada de eliminar los datos de la lista, es por eso que se limpia la variable.
 {% endhint %}
 
+## Paso 4: Vamos a ver la lista del formulario **📝👀**
+
+Ahora vamos a modificar el archivo **app.component.html**, ****en ****este vamos a adicionar el código para ver nuestra lista.  
+Adiciona este código en la línea 26 de tu archivo **app.component.html**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<div *ngIf="items.length > 0" class="mt-20">
+  <div *ngFor="let item of items" class="individual">
+    <div class="list-items">
+      <div class="items">
+        <input type="checkbox" id="check1"/>
+        <label for="check1">
+        <div><i class="fa fa-check"></i></div> {{item.text || 'Add some thing'}}
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/4.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** En la línea 10 y 11, se declaran las variables: **model** y **items**.  
+  
+**2.** La función **save\(\)**, línea 17, es la encargada de enviar los datos del formulario a lista.  
+  
+**3. Dentro de la función save\(\):** Línea 18 valida que el input tenga texto.  
+La línea 19 me adiciona un elemento a una lista.  
+La línea 20 me limpia el input.  
+  
+**4.** La función **clearComplete\(\)**, línea 24, es la encargada de eliminar los datos de la lista, es por eso que se limpia la variable.
+{% endhint %}
+
 
 
