@@ -201,7 +201,7 @@ A medida que vas desarrollando los demás desafíos aprenderás como añadir un 
 Esta adición es para retar tu curiosidad, podrías proponer la solución que tu quieras, puedes en cualquier momento del taller mostrarme \(Vanessa\) tu propuesta y recibirás un regalito. 
 
 {% hint style="success" %}
-Has completado el **desafío \#2**, ahora vamos a el **desafío \#3 👇**
+Has completado el **desafío \#1**, ahora vamos a el **desafío \#2 👇**
 {% endhint %}
 
 {% hint style="info" %}
