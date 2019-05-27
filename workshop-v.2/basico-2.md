@@ -47,5 +47,42 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ![](../.gitbook/assets/6.gif)
 
-## 
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** La etiqueta **\*ngIf** es una directiva que incluye una condición basada en el valor de una variable que la contiene. Cuando la expresión se evalúa como verdadera, Angular realiza la visualización de la porción de código, y cuando es falsa o nula, Angular realiza la **NO** visualización de la porción de código.
+{% endhint %}
+
+## Paso 3: Reforcemos el concepto de \*ngIf 🤓 <a id="paso-2-vamos-a-armar-el-esqueleto"></a>
+
+‌Vamos a suponer que deseamos filtrar la información que vamos a mostrar en nuestro perfil. ¿Cómo podremos lograr eso?
+
+Adiciona este código en la línea 9 de tu archivo **app.component.html**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<div class="">
+  <p class="align-left" *ngIf="following > 100">Following:</p><p class="align-right">{{following}}</p>  
+</div>
+
+<div class="clear-float" *ngIf="following > 700">
+  <p class="align-left">Followers:</p><p class="align-right">{{followers}}</p>  
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇​
+
+![](../.gitbook/assets/7.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** La etiqueta **\*ngIf** también nos permite realizar operaciones lógicas, tanto así, que podemos hacer que una condición haga que se visualice o no los datos.   
+  
+Si el número de following es mayor a 100 podré ver esta información, de lo contrario se ocultarán.   
+Si el número de followers es mayor a 700 podré ver esta información, de lo contrario se ocultarán.
+{% endhint %}
 
