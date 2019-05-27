@@ -207,3 +207,160 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 **people:** línea 15 donde le asignamos un valor tipo objeto, donde almacenamos la lista de mejores amigos de tu perfil.
 {% endhint %}
 
+## Paso Final: Personaliza tu perfil 🎨 <a id="paso-final-personaliza-tu-aplicacion"></a>
+
+¡Vamos a hacer que nuestro perfil tenga color agregando CSS!   
+¿recuerdas las clases que usamos en nuestro **app.component.html**?   
+¡llego el tiempo de usarlas!   
+Reemplaza el contenido de **app.component.css** con éste:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.css" %}
+```css
+body {
+  background: #ededed; 
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  user-select: none;
+}
+
+.card {
+  width: 300px;
+  height: 550px;
+  margin: 0 auto;
+  background: #22313F;
+  border-radius: 4px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.profile-cover-container {
+  background-size: cover;
+  width: 100%;
+  height: 175x;
+  overflow: hidden;
+  float: left;
+}
+.profile-cover-container img {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  z-index: 0;
+}
+
+.cover-overlay {
+  z-index: 1;
+  border-top-right-radius: 35%;
+  border-top-left-radius: 35%;
+  margin-top: -50px;
+  width: 100%;
+  height: 60px;
+  background: #22313F;
+  position: relative;
+}
+
+.profile-picture {
+  background-image: url("https://pbs.twimg.com/profile_images/1057449615841214466/KXT83JRQ_400x400.jpg");
+  background-size: cover;
+  top: 65px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  z-index: 1;
+  border: 1px solid #949599;
+  position: relative;
+}
+
+.profile-picture-outer-radius {
+  width: 158px;
+  height: 157px;
+  top: -5px;
+  left: -5px;
+  border-radius: 50%;
+  border: 1px solid #949599;
+  position: absolute;
+}
+
+.infobox {
+  margin: 80px 25px;
+  color: #949599;;
+}
+.infobox p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.infobox-username {
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+}
+
+.align-left {
+  float: left;
+  text-align: left;
+}
+
+.align-right {
+  float: right;
+  text-align: right;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.floating-action-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #35B4E1;
+  background: -webkit-radial-gradient(#35B4E1, #18B984); 
+  background: -o-radial-gradient(#35B4E1, #18B984);
+  background: -moz-radial-gradient(#35B4E1, #18B984);
+  background: radial-gradient(#35B4E1, #18B984);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+  position: relative;
+  float: right;
+  right: 27px;
+}
+.floating-action-button:hover {
+  background: #18b984;
+  background: -webkit-linear-gradient(#18B984, #35B4E1); 
+  background: -o-linear-gradient(#18B984, #35B4E1);
+  background: -moz-linear-gradient(#18B984, #35B4E1);
+  background: linear-gradient(#18B984, #35B4E1);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/12.gif)
+
+## 😎 Tu Misión 😎 <a id="tu-mision"></a>
+
+Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder agregar elementos ocultos un elemento de la lista cuando este terminada‌
+
+⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,** llamado de funciones y evento clic en botones para lograr este objetivo.‌
+
+**💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**‌
+
+## 🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas en casa y necesitas ayuda con este ejercicio puedes contactar a:
+
+Alejandra Giraldo  
+Twitter: @maleja111  
+Correo: magiraldodevelop@gmail.com
+{% endhint %}
+
