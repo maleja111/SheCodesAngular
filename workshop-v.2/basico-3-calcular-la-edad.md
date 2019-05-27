@@ -6,9 +6,9 @@ description: "En este desafío vamos a crear una mini calculadora de edad. Pract
 
 ## 💡 Introducción 💡
 
-En este desafío haremos algo divertido aplicando los conceptos aprendidos de Angular.  
+En este desafío haremos algo divertido aplicando los conceptos aprendidos de Angular, para realizar una App que nos permita calcular la edad.  
 
-\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-cyqw12.stackblitz.io)\*\*\*\*
+\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-agecalculator.stackblitz.io)\*\*\*\*
 
 ¿Estás list@?
 
@@ -52,7 +52,7 @@ Deberías ver algo así: 👇
 **Una Etiqueta** o tag es una forma de escribir código HTML, es la semántica del HTML. Son fragmentos de texto rodeados por corchetes angulares `< >,` que tienen funciones y usos específicos, existen muchas etiquetas como **&lt;div&gt;&lt;/div&gt;**, **&lt;p&gt;&lt;/p&gt;**, **&lt;h1&gt;&lt;/h1&gt;**, **&lt;img /&gt;**, entre otras
 {% endhint %}
 
-## Paso 3: Añadamos más etiquetas
+## Paso 3: Añadamos más etiquetas 🏷️
 
 Debajo de nuestro titulo en el archivo **app.component.html**, ****vamos a añadir un campo de texto, existen muchos tipos de campo de texto, el que vamos a incluir va a ser de tipo fecha.
 
@@ -81,7 +81,7 @@ Incluyamos un botón debajo de nuestro campo de texto.
 
 ![A&#xF1;adamos el bot&#xF3;n para calcular](../.gitbook/assets/screen-shot-2019-05-26-at-5.43.44-pm.png)
 
-## Paso 4: Creemos la funcionalidad de Calcular
+## Paso 4: Creemos la funcionalidad de Calcular 🧠
 
 Ahora a nuestro campo de texto vamos a usar un concepto llamado **two-way-binding**, para esto vamos añadirle algo llamado **banana box \[\(\)\]** y dentro pondremos la palabra **ngModel** y lo haremos igual a una variable llamada **age.** Lo que haremos es que todo lo que escriba en el campo de texto será almacenado en **age**. Todo esto lo vamos a añadirle en nuestro archivo **app.component.html**
 
@@ -164,7 +164,7 @@ Teníamos una variable llamada **showAge** a la cual le asignaremos la función 
 
 ![Funci&#xF3;n de calcular edad](../.gitbook/assets/screen-shot-2019-05-26-at-7.16.41-pm.png)
 
-## Paso 5: Mostrar la Edad
+## Paso 5: Mostrar la Edad 🤠
 
 Ya tenemos el calculo de la fecha ingresada, ahora vamos a mostrarlo, usemos la interpolación que hemos aplicado anteriormente. 
 
@@ -246,7 +246,7 @@ p {
 🎉 ¡**LO LOGRASTE!** 🎉
 
 {% hint style="info" %}
-\*\*\*\*[**Aquí** ](https://stackblitz.com/edit/angular-cyqw12)puedes encontrar el ejercicio resuelto.
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-agecalculator) puedes encontrar el ejercicio resuelto.
 {% endhint %}
 
 {% hint style="info" %}
