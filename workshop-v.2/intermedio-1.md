@@ -4,7 +4,7 @@ description: >-
   formularios!
 ---
 
-# Intermedio 1: Toma nota 📝
+# Intermedio \#1: Toma nota 📝
 
 ## 💡 Introducción 💡
 
