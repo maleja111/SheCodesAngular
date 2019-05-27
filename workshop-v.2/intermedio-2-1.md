@@ -47,11 +47,9 @@ Puedes añadir el siguiente código en **app.component.html**
 
 ![](../.gitbook/assets/screen-shot-2019-05-26-at-9.57.47-pm.png)
 
-## Paso 2: Adicionemos la lógica de nuestro formulario
+## Paso 2: Creemos la función que se encargará de traducir
 
 En el archivo **app.component.ts** vamos a crear el objeto model, que nos mostrara el modelo de nuestro formulario y crearemos una función translate que se encargara de la lógica de nuestra App.
-
-
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
@@ -79,6 +77,86 @@ export class AppComponent {
 {% endcode-tabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/screen-shot-2019-05-26-at-10.03.46-pm.png)
+
+## Paso 3: Crearemos un servicio
+
+Crearemos un 'servicio' dando clic sobre la carpeta 'app', seleccionamos 'service', nombramos el servicio como: '**translate**', el nos creara un archivo llamado: 'translate.service.ts
+
+![Creamos nuestro servicio](../.gitbook/assets/webp.net-gifmaker-8.gif)
+
+Importamos unas dependencias en nuestro nuevo archivo creado **translate.service.ts**,  y añadimos en el constructor: **http: HttpClient** 
+
+{% code-tabs %}
+{% code-tabs-item title="translate.service.ts" %}
+```text
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError as observableThrowError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+
+@Injectable()
+export class TranslateService {
+
+  constructor(private http: HttpClient) { }
+
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Incluimos el 'HttpClientModule' en el archivo **app.module.ts**
+
+{% code-tabs %}
+{% code-tabs-item title="add.module.ts" %}
+```text
+import { HttpClientModule } from '@angular/common/http';
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+y también en los imports incluimos el **HttpClientModule** en el 'app.module.ts'
+
+{% code-tabs %}
+{% code-tabs-item title="app.module.ts" %}
+```text
+@NgModule({
+  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
+  declarations: [ AppComponent, HelloComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [TranslateService]
+})
+export class AppModule { }
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+En nuestro archivo **translate.service.ts** crearemos dos funciones, una para manejar los errores: **handleError** y otra que nos obtendrá la data del Api **get**:
+
+{% code-tabs %}
+{% code-tabs-item title="translate.service.ts" %}
+```text
+get(APIRoot) {
+  return this.http
+    .get<Array<{}>>(APIRoot)
+    .pipe(map(data => data), catchError(this.handleError));
+}
+
+private handleError(res: HttpErrorResponse | any) {
+  console.error(res.error || res.body.error);
+  return observableThrowError(res.error || 'Server error');
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
+
+
+
+
 
 ¡Felicitaciones hemos terminado nuestro desafío!
 
