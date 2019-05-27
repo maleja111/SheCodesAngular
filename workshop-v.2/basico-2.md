@@ -86,3 +86,31 @@ Si el número de following es mayor a 100 podré ver esta información, de lo co
 Si el número de followers es mayor a 700 podré ver esta información, de lo contrario se ocultarán.
 {% endhint %}
 
+## Paso 4: Datos y más datos sin codificar tanto 🧙🏻‍♀️ <a id="paso-2-vamos-a-armar-el-esqueleto"></a>
+
+‌Vamos a suponer que deseamos filtrar la información que vamos a mostrar en nuestro perfil. ¿Cómo podremos lograr eso?
+
+Adiciona este código en la línea 16 de tu archivo **app.component.html**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<div class="clear-float" *ngFor="let strength of strengths">
+    <p class="align-left">{{strength.text}}</p><p class="align-right">{{strength.level}}</p>  
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇​
+
+![](../.gitbook/assets/8.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** La etiqueta **\*ngFor** es una directiva principal, nos permite crear listas de datos en nuestro HTML sin adicionar más lineas de código. todo se genera dinámicamente según el tamaño de la lista de elementos a mostrar.
+
+2. Veremos como se visualizara en pantalla el contenido de **strengths** sin necesidad de escribir una por una en el archivo **app.component.html.**
+{% endhint %}
+
