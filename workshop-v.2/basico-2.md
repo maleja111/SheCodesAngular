@@ -352,8 +352,6 @@ Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵.
 
 **💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**‌
 
-## 🎉 ¡**LO LOGRASTE!** 🎉
-
 {% hint style="info" %}
 **Nota:**
 
