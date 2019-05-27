@@ -348,7 +348,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder agregar elementos con información como correo electrónico y profesión.
 
-⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,** las diferentes directivas y variables para adicionar mas campos en nuestra tarjeta.‌
+⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,** las diferentes directivas y variables para adicionar mas campos en nuestra tarjeta.‌ y ¡personaliza con tu foto, datos y colores favoritos!
 
 **💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**‌
 
