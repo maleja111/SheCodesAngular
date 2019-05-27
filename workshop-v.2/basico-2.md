@@ -57,7 +57,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ‌Vamos a suponer que deseamos filtrar la información que vamos a mostrar en nuestro perfil. ¿Cómo podremos lograr eso?
 
-Adiciona este código en la línea 9 de tu archivo **app.component.html**
+Adiciona este código en la línea 8 de tu archivo **app.component.html**
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -75,7 +75,7 @@ Adiciona este código en la línea 9 de tu archivo **app.component.html**
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
-![](../.gitbook/assets/7.gif)
+![](../.gitbook/assets/13.gif)
 
 {% hint style="info" %}
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
@@ -104,7 +104,7 @@ Adiciona este código en la línea 16 de tu archivo **app.component.html**
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
-![](../.gitbook/assets/8.gif)
+![](../.gitbook/assets/14.gif)
 
 {% hint style="info" %}
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
@@ -120,7 +120,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
 para esto vamos a usar la directiva NgSwitch.
 
-Adiciona este código en la línea 25 de tu archivo **app.component.html**
+Adiciona este código en la línea 20 de tu archivo **app.component.html**
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -136,7 +136,7 @@ Adiciona este código en la línea 25 de tu archivo **app.component.html**
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
-![](../.gitbook/assets/10.gif)
+![](../.gitbook/assets/15.gif)
 
 {% hint style="info" %}
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
@@ -346,9 +346,9 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ## 😎 Tu Misión 😎 <a id="tu-mision"></a>
 
-Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder agregar elementos ocultos un elemento de la lista cuando este terminada‌
+Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder agregar elementos con información como correo electrónico y profesión.
 
-⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,** llamado de funciones y evento clic en botones para lograr este objetivo.‌
+⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,** las diferentes directivas y variables para adicionar mas campos en nuestra tarjeta.‌
 
 **💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**‌
 
