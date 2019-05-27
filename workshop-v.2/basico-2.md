@@ -197,30 +197,13 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 ![](../.gitbook/assets/11.gif)
 
 {% hint style="info" %}
-\*\*\*\*
-{% endhint %}
-
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
-```markup
-<div class="clear-float" *ngFor="let person of people" [ngSwitch]="person.color">
-  <div *ngSwitchCase="'pink'" [style.color]="person.color">
-    <p class="align-left">{{person.name}}</p><p class="align-right">{{person.color}}</p>
-  </div>
-</div>
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-Deberías hacer algo así, y tu resultado se deberá ver así:👇​
-
-![](../.gitbook/assets/10.gif)
-
-{% hint style="info" %}
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
 
-**1.** La etiqueta **\[ngSwitch\]** es una directiva estructural que agrega o no código \(mostrar u ocultar vistas\) cuando la condición coincide con la expresión de cambio.
-
-**2.** Veremos como se visualizara en pantalla el elemento siempre y cuando exista un valor pink expresado en el siguiente código **\*ngSwitchCase="'pink'"**.
+**1.** Realizamos la declaración de variables para:  
+**name:** línea 9 donde le asignamos un valor tipo string.  
+**following:** línea 10 donde le asignamos un valor tipo entero.  
+**followers:** línea 11 donde le asignamos un valor tipo entero.  
+**strengths**: línea 13 donde le asignamos un valor tipo objeto, donde almacenamos la lista de fortalezas a visualizar en el perfil.  
+**people:** línea 15 donde le asignamos un valor tipo objeto, donde almacenamos la lista de mejores amigos de tu perfil.
 {% endhint %}
 
