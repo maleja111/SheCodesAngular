@@ -1,7 +1,7 @@
 ---
 description: >-
   En este reto aprendamos sobre directivas. Una directiva se representa como un
-  atributo en una etiqueta HTML; *ngIf, *ngFor, *ngSwitch son algunas y le
+  atributo en una etiqueta HTML; *ngIf, *ngFor o *ngSwitch son algunas y le
   adiciona un comportamiento definido.
 ---
 
@@ -111,6 +111,38 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
 **1.** La etiqueta **\*ngFor** es una directiva principal, nos permite crear listas de datos en nuestro HTML sin adicionar más lineas de código. todo se genera dinámicamente según el tamaño de la lista de elementos a mostrar.
 
-2. Veremos como se visualizara en pantalla el contenido de **strengths** sin necesidad de escribir una por una en el archivo **app.component.html.**
+**2.** Veremos como se visualizara en pantalla el contenido de **strengths** sin necesidad de escribir una por una en el archivo **app.component.html.**
+{% endhint %}
+
+## Paso 5: Personalizo mi tarjeta sin esfuerzo 💅🏼  <a id="paso-2-vamos-a-armar-el-esqueleto"></a>
+
+‌Vamos a hacer que de una lista de opciones solo se nos muestre una.
+
+para esto vamos a usar la directiva NgSwitch.
+
+Adiciona este código en la línea 25 de tu archivo **app.component.html**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<div class="clear-float" *ngFor="let person of people" [ngSwitch]="person.color">
+  <div *ngSwitchCase="'pink'" [style.color]="person.color">
+    <p class="align-left">{{person.name}}</p><p class="align-right">{{person.color}}</p>
+  </div>
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇​
+
+![](../.gitbook/assets/10.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** La etiqueta **\[ngSwitch\]** es una directiva estructural que agrega o no código \(mostrar u ocultar vistas\) cuando la condición coincide con la expresión de cambio.
+
+**2.** Veremos como se visualizara en pantalla el elemento siempre y cuando exista un valor pink expresado en el siguiente código **\*ngSwitchCase="'pink'"**.
 {% endhint %}
 
