@@ -146,3 +146,81 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 **2.** Veremos como se visualizara en pantalla el elemento siempre y cuando exista un valor pink expresado en el siguiente código **\*ngSwitchCase="'pink'"**.
 {% endhint %}
 
+## Paso 6: Vamos a adicionar la lógica 🧠  <a id="paso-2-vamos-a-armar-el-esqueleto"></a>
+
+Ahora vamos a modificar el archivo **app.component.ts**, ****en ****este vamos a adicionar la declaración de variables que vimos en el archivo **app.component.html**.  
+En este archivo vamos a reemplazar su contenido, vamos a reemplazar el actual código por este:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  name = 'Alejandra Giraldo';
+  following = 5001;
+  followers = 10002;
+
+  strengths = [{ text: 'English', level: 'Basic' }, { text: 'HTML', level: 'High' }, { text: 'Testing', level: 'Low' }];
+
+  people = [
+    {
+      "name": "Vanessa M.",
+      "age": 16,
+      "color": 'red'
+    },
+    {
+      "name": "Carlos Angulo",
+      "age": 25,
+      "color": 'green'
+    },
+    {
+      "name": "Maleja",
+      "age": 21,
+      "color": 'pink'
+    }
+  ];
+
+}
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/11.gif)
+
+{% hint style="info" %}
+\*\*\*\*
+{% endhint %}
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<div class="clear-float" *ngFor="let person of people" [ngSwitch]="person.color">
+  <div *ngSwitchCase="'pink'" [style.color]="person.color">
+    <p class="align-left">{{person.name}}</p><p class="align-right">{{person.color}}</p>
+  </div>
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇​
+
+![](../.gitbook/assets/10.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
+
+**1.** La etiqueta **\[ngSwitch\]** es una directiva estructural que agrega o no código \(mostrar u ocultar vistas\) cuando la condición coincide con la expresión de cambio.
+
+**2.** Veremos como se visualizara en pantalla el elemento siempre y cuando exista un valor pink expresado en el siguiente código **\*ngSwitchCase="'pink'"**.
+{% endhint %}
+
