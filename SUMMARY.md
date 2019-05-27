@@ -8,8 +8,9 @@
 ## Workshop v.2
 
 * [💃 Bienvenid@s 💃](workshop-v.2/untitled.md)
-* [Desafio \#1: CatParty😺](workshop-v.2/desafio-1-catclock.md)
+* [Básico \#1: CatParty😺](workshop-v.2/basico-1-catclock.md)
 * [Básico 2: Directives \|\| pipes](workshop-v.2/basico-2.md)
+* [Básico \#3: Calcular la Edad 🧮](workshop-v.2/basico-3-calcular-la-edad.md)
 * [Básico 3: Data binding](workshop-v.2/basico-3.md)
 * [Intermedio 1: Toma nota 📝](workshop-v.2/intermedio-1.md)
 * [Intermedio 2: Services](workshop-v.2/intermedio-2.md)

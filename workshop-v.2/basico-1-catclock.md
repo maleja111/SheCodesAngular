@@ -4,7 +4,7 @@ description: >-
   nuestro gatito y este listo para la acción.
 ---
 
-# Desafio \#1: CatParty😺
+# Básico \#1: CatParty😺
 
 ## 💡 Introducción 💡
 
@@ -12,7 +12,7 @@ En este desafío haremos algo divertido aplicando conceptos básicos de Angular,
 
 \*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-catparty.stackblitz.io/)\*\*\*\*
 
-¿Estás lista?
+¿Estás list@?
 
 **Es hora de la Acción!!! 😝**
 
