@@ -36,5 +36,23 @@ Deberías ver algo así: 👇
 
 ![](../.gitbook/assets/ejer1.gif)
 
-## 
+## 😎 Tu Misión 😎
+
+Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder eliminar un elemento de la lista cuando este terminada
+
+⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,**  llamado de funciones y evento clic en botones para lograr este objetivo.
+
+**💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**
+
+## 🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas en casa y necesitas ayuda con este ejercicio puedes contactar a:
+
+Alejandra Giraldo  
+Twitter: @maleja111  
+Correo: magiraldodevelop@gmail.com
+{% endhint %}
 
