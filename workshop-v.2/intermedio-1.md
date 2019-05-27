@@ -296,33 +296,6 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ![](../.gitbook/assets/5.gif)
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.ts" %}
-```typescript
-// adicionamos en la línea 2
-// Servicio
-import { CatsService } from './services/cats.service';
-
-// adicionamos en la línea 21
-catURL = '';
-constructor(private catsService: CatsService) { }
-
-// adicionamos en la línea 77
-this.getCatImage();
-
-// adicionamos en la línea 80
-getCatImage(): void {
-  this.catsService
-    .getImage()
-    .subscribe(
-   resultQuestion => this.catURL = resultQuestion[0].url,
-    error => (console.log('Ups! we have an error: ', error))
-    )
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
 ## 😎 Tu Misión 😎
 
 Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder eliminar un elemento de la lista cuando este terminada
