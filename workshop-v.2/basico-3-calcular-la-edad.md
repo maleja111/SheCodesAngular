@@ -8,7 +8,7 @@ description: "En este desafío vamos a crear una mini calculadora de edad. Pract
 
 En este desafío haremos algo divertido aplicando los conceptos aprendidos de Angular.  
 
-\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-catparty.stackblitz.io/)\*\*\*\*
+\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-cyqw12.stackblitz.io)\*\*\*\*
 
 ¿Estás list@?
 
@@ -166,5 +166,104 @@ Teníamos una variable llamada **showAge** a la cual le asignaremos la función 
 
 ## Paso 5: Mostrar la Edad
 
-Ya tenemos el calculo de la fecha ingresada, ahora vamos a mostrarlo
+Ya tenemos el calculo de la fecha ingresada, ahora vamos a mostrarlo, usemos la interpolación que hemos aplicado anteriormente. 
+
+En el archivo **app.component.html** vamos incluir un texto e incluiremos nuestra variable **showAge**, para mostrar los años de la persona. Debajo de nuestro botón pondremos la siguiente linea: 
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<p>Tu edad es {{ showAge }}</p>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Te va a quedar todo parecido a lo siguiente: 👇
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<h1>Calcular la Edad ⏳</h1>
+<input type="date" [(ngModel)]="age" />
+<button type="button"> Calcular </button>
+<p>Tu edad es {{ showAge }}</p>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Además vamos a añadir otra directiva **\*ngIf,** para mostrar el texto solo si se ha ingresado algún valor. Añada en la etiqueta **&lt;p&gt;** el atributo **\*ngIf**.
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<p *ngIf="age">Tu edad es {{ showAge }}</p>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![Mostraremos la edad usando la interpolaci&#xF3;n](../.gitbook/assets/webp.net-gifmaker-7.gif)
+
+Podemos hacer más bonita nuestra vista añadiendo en el CSS el siguiente código en el archivo **app.component.css**, para que nuestra App luzca así:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.css" %}
+```css
+button {
+  cursor: pointer;
+  background: #f45c41;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  min-width: 120px;
+}
+
+input {
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px #cbcdd3;
+  color: #333;
+  font-size: 16px;
+  height: 40px;
+  text-align: center;
+}
+
+p {
+  color: #333;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![Hemos terminado nuestra App &#x1F44D;](../.gitbook/assets/screen-shot-2019-05-26-at-7.39.43-pm.png)
+
+¡Felicitaciones hemos terminado nuestro desafío!
+
+🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+\*\*\*\*[**Aquí** ](https://stackblitz.com/edit/angular-cyqw12)puedes encontrar el ejercicio resuelto.
+{% endhint %}
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas mentoría con este ejercicio puedes contactar a:
+
+Vanessa M. Aristizabal  
+Twitter: @vanessamarely  
+Correo: vanessamarely@gmail.com
+{% endhint %}
+
+{% hint style="success" %}
+Has completado los desafíos básicos, ahora vamos a continuar con los **intermedios 👇**
+{% endhint %}
+
+
+
+ 
 

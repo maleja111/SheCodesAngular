@@ -207,7 +207,7 @@ Has completado el **desafío \#1**, ahora vamos a el **desafío \#2 👇**
 {% hint style="info" %}
 **Nota:**
 
-Si necesitas mentoría con este ejercicio puedes contactar a los mentores o a:
+Si necesitas mentoría con este ejercicio puedes contactar a:
 
 Vanessa M. Aristizabal  
 Twitter: @vanessamarely  
