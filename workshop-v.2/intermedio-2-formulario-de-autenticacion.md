@@ -10,7 +10,7 @@ Como ya sabes inicializar una App de **Angular** en **Stackblitz**, omitiremos e
 
  En este desafío nos divertiremos creando una App, donde haremos un formulario de autenticación.
 
-\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-catparty.stackblitz.io/)\*\*\*\*
+\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-logingithub.stackblitz.io)\*\*\*\*
 
 ¿Estás list@?
 
@@ -49,7 +49,7 @@ Puedes añadir el siguiente código en **app.component.html**
 
 ## Paso 2: Creemos la función que se encargará de la autenticación
 
-En el archivo **app.component.ts** vamos a crear el objeto model, que nos mostrara el modelo de nuestro formulario y crearemos una función login que se encargara de la lógica de nuestra App.
+En el archivo **app.component.ts** vamos a crear el objeto model, que nos mostrará el modelo de nuestro formulario y crearemos una función login que se encargará de la lógica de nuestra App.
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
@@ -91,7 +91,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ## Paso 3: Crearemos un servicio
 
-Crearemos un 'servicio' dando clic sobre la carpeta 'app', seleccionamos 'service', nombramos el servicio como: '**login**', damos enter y se nos creará un archivo llamado: 'login.service.ts
+Crearemos un 'servicio' dando clic sobre la carpeta 'app', seleccionamos 'service', nombramos el servicio como: '**login**', damos enter y se nos creará un archivo llamado: **login.service.ts**
 
 ![](../.gitbook/assets/webp.net-gifmaker-9.gif)
 
@@ -115,7 +115,7 @@ export class LoginService {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Incluimos el 'HttpClientModule' en el archivo **app.module.ts**
+Incluimos el '**HttpClientModule**' en el archivo **app.module.ts**
 
 {% code-tabs %}
 {% code-tabs-item title="add.module.ts" %}
@@ -125,7 +125,7 @@ import { HttpClientModule } from '@angular/common/http';
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-y también en los imports incluimos el **HttpClientModule** en el 'app.module.ts'
+En los imports incluimos el **HttpClientModule** en el '**app.module.ts'**
 
 {% code-tabs %}
 {% code-tabs-item title="app.module.ts" %}
@@ -142,15 +142,15 @@ export class AppModule { }
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-En nuestro archivo **login.service.ts** crearemos dos funciones, una para manejar los errores: **handleError** y otra que nos obtendrá la data del Api **get**:
+En nuestro archivo **login.service.ts** crearemos dos funciones, una para manejar los errores: **handleError** y otra que nos obtendrá la data del Api **getResponse**:
 
 {% code-tabs %}
 {% code-tabs-item title="login.service.ts" %}
 ```text
-get(APIRoot) {
+getResponse(APIRoot: any) {
   return this.http
     .get<Array<{}>>(APIRoot)
-    .pipe(map(data => data), catchError(this.handleError));
+    .pipe(map(data => data), catchError(this.handleError)); 
 }
 
 private handleError(res: HttpErrorResponse | any) {
@@ -161,7 +161,7 @@ private handleError(res: HttpErrorResponse | any) {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![](../.gitbook/assets/webp.net-gifmaker-10.gif)
+![](../.gitbook/assets/webp.net-gifmaker-11.gif)
 
 ## Paso 4: Hagamos la lógica que llama a nuestro servicio
 
@@ -173,7 +173,7 @@ También importaremos en nuestro **app.component.ts** el servicio que creamos **
 {% code-tabs-item title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
-import { LoginService } from './gender.service';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'my-app',
@@ -186,25 +186,179 @@ export class AppComponent {
   
   constructor(private loginService: LoginService){}
   
-  login() {
+  login(form: any) {
+    this.model = form;
+    console.log(this.model);
     this.loginService
-      .get(`this.apiRoot${this.model['username]}/repos`)
+      .getResponse(`${this.apiRoot}${this.model['username']}/repos`)
       .subscribe(
       response => (console.log(response)),
       error => (console.log('Ups! we have an error: ', error))
       )
   }
+} 
 
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+Ahora podemos probar el llamado de nuestra Api colocando en el campo de texto el nombre de un usuario de **Github**. Si abres la consola de **Stackblitz** podrás ver el resultado de nuestro **console.log\(response\)**.
+
+![](../.gitbook/assets/webp.net-gifmaker-12.gif)
+
+## Paso 5: Mostremos el resultado del Api
+
+Crearemos una variable llamada **reposList**, donde almacenaremos el resultado del llamado de nuestra Api. Si observas la url de nuestra Api, al final tiene '/**respos**', con esta palabra traeremos la lista de todos los repositorios del usuario que estamos consultando, puedes probar quitándole esta palabra y observarás que traerás la información de usuario \(la imagen de perfil, su id en Github, entre otros datos\) .
+
+![](../.gitbook/assets/screen-shot-2019-05-27-at-10.14.01-pm.png)
+
+Debajo de nuestra variable apiRoot, crearemos la variable **reposList** y en donde teníamos nuestro **console.log\(response\)**, lo reemplazaremos por: **this.reposList = response**
+
+![](../.gitbook/assets/screen-shot-2019-05-27-at-10.19.58-pm.png)
+
+Si quisiéramos mostrar el resultado en nuestra vista, en el html al final podr**í**amos usar una interpolación de nuestra variable **reposList** añadiéndole a la interpolación un pipe **json**, veríamos algo como esto:
+
+![](../.gitbook/assets/screen-shot-2019-05-27-at-10.24.14-pm.png)
+
+Pero el resultado se mostraría muy desordenado y difícil de leer, así que haremos algo más para mostrarlo mas bonito.
+
+## Paso 6: Tabla para mostrar los resultados
+
+Creáremos una tabla para mostrar  nuestro resultado y para ello vamos a crear un componente llamado tabla.
+
+![](../.gitbook/assets/webp.net-gifmaker-13.gif)
+
+Iremos al archivo **table.component.html** y vamos a crear las etiquetas de tabla \(**&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;**\)
+
+En nuestra tabla crearemos una fila para los encabezados dónde vamos a mostrar un nombre, la descripción, el lenguaje del repo, la rama por defecto y la url.
+
+{% code-tabs %}
+{% code-tabs-item title="table.component.html" %}
+```markup
+<table class="table" id="reposTable">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Language</th>
+      <th>Default Branch</th>
+      <th>Git Url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Ahora vamos a añadir nuestro  componente tabla \(**&lt;app-table&gt;&lt;/app-table&gt;**\) en nuestro componente App, en el archivo **app.component.html** 
+
+![A&#xF1;adimos nuestro componente tabla \(&amp;lt;app-table&amp;gt;\)](../.gitbook/assets/screen-shot-2019-05-27-at-11.00.20-pm.png)
+
+Añadimos nuestro componente tabla \(**TableComponent**\) en la vista del componente App.
+
+En el **app.component.ts** vamos a importar nuestro componente tabla.
+
+![Importamos TableComponent](../.gitbook/assets/screen-shot-2019-05-27-at-11.01.54-pm.png)
+
+Ahora vamos a pasar la data de un componente a otro. Nuestro App component es el que tendrá toda la lógica de nuestra App, en Angular a estos componentes los llamamos **Smart Components** y a los componentes que no tienen una lógica como la de App y son mas sencillos \(como para mostrar solo data\) los llamamos **Dumb Component**
+
+En el **app.component.html** en el componente tabla, en el **app-table** vamos a ****hacer **binding** \(pasaremos la data de un lugar a otro\), crearemos un atributo **\[repos\]** y le asignaremos nuestra variable **reposList**
+
+![](../.gitbook/assets/screen-shot-2019-05-27-at-11.11.14-pm.png)
+
+En el **table.component.ts** vamos a usar el decorador **@Input\(\)**, para recibir la data del componente padre, del App.
+
+{% hint style="info" %}
+Un **decorador**, extiende una función mediante otra función, pero sin tocar aquella original, que se está extendiendo. El decorador recibe una función como argumento \(aquella que se quiere decorar\) y devuelve esa función con alguna funcionalidad adicional.
+{% endhint %}
+
+En el archivo **table.component.ts** vamos a importar el Input y recibimos la nueva data.
+
+En la linea donde importamos el **Component**, vamos a añadirle el **Input**, nuestra línea quedaría así: 
+
+{% code-tabs %}
+{% code-tabs-item title="table.component.ts" %}
+```text
+
+import { Component, Input, OnInit } from '@angular/core';
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+En la case **TableComponent** añadimos nuestro decorador **Input** con nuestro **repos** de tipo **array**.
+
+{% code-tabs %}
+{% code-tabs-item title="table.component.ts" %}
+```text
+export class TableComponent implements OnInit {
+
+  @Input() repos: [];
+
+  constructor() { }
+}
+
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![](../.gitbook/assets/screen-shot-2019-05-27-at-11.25.37-pm.png)
+
+Como podemos en la respuesta recibir mas de un elemento en nuestro array, en nuestro HTML \(**table.component.html**\) usaremos la directiva **\*ngFor**, para recorrer todos los valores del array y usaremos la interpolación para colocar los valores que corresponde a cada columna.
+
+{% code-tabs %}
+{% code-tabs-item title="table.component.html" %}
+```text
+
+<tbody>
+    <tr *ngFor="let repo of repos; let i = index">
+      <td>{{ i }}</td>
+      <td>{{ repo['name'] }}</td>
+      <td>{{ repo['description'] }}</td>
+      <td>{{ repo['language'] }}</td>
+      <td>{{ repo['default_branch'] }}</td>
+      <td>{{ repo['git_url'] }}</td>
+    </tr>
+  </tbody>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![Agregamos un \*ngForm para recorrer el array que obtuvimos como respuesta del Api](../.gitbook/assets/screen-shot-2019-05-27-at-11.42.37-pm.png)
+
+Para ocultar los encabezados podríamos añadirle la directiva **\*ngIf** en nuestro componente de tabla, para que solo muestre la tabla cuando tenga algún resultado, nos quedaría algo como esto:👇
+
+![A&#xF1;adimos el \*ngIf](../.gitbook/assets/screen-shot-2019-05-27-at-11.48.24-pm.png)
+
+## 🤓¡Tu Misión!🤓
+
+Tenemos una misión para ti y es que pongas bonita la App, en ejercicios pasados hemos añadido CSS para poner los campos de texto y los botones más bonitos, incluso ya sabes poner imágenes.
+
+La idea es que le pongas algo de CSS al mini formulario y a la tabla.
+
+Para la tabla te daremos un poco de ayuda con una página que te permite generar estilos para las tablas:
+
+{% embed url="https://divtable.com/table-styler/" %}
+
+Solo necesitas copiar los estilos en el archivo **table.component.css** y añadir las clases respectivas en el html **table.component.html**
 
 ¡Felicitaciones hemos terminado nuestro desafío!
 
 🎉 ¡**LO LOGRASTE!** 🎉
 
 {% hint style="info" %}
-\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-agecalculator) puedes encontrar el ejercicio resuelto.
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-logingithub) puedes encontrar el ejercicio resuelto.
 {% endhint %}
 
 {% hint style="info" %}
@@ -218,7 +372,7 @@ Correo: vanessamarely@gmail.com
 {% endhint %}
 
 {% hint style="success" %}
-Has completado este desafío 🎉🎉🎉
+Has completado este desafío y finalizado con todos los desafíos del taller **Felicitaciones**!! 🎉🎉🎉
 {% endhint %}
 
 
