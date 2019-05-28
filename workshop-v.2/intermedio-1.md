@@ -4,7 +4,7 @@ description: >-
   formularios!
 ---
 
-# Intermedio \#1: Toma nota 📝
+# Intermedio \#1: Lista de Tareas 📝
 
 ## 💡 Introducción 💡
 
@@ -307,7 +307,7 @@ Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵.
 {% hint style="info" %}
 **Nota:**
 
-Si necesitas en casa y necesitas ayuda con este ejercicio puedes contactar a:
+Si necesitas ayuda con este ejercicio puedes contactar a:
 
 Alejandra Giraldo  
 Twitter: @maleja111  
