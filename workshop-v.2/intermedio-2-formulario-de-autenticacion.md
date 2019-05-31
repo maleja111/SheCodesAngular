@@ -18,7 +18,7 @@ Como ya sabes inicializar una App de **Angular** en **Stackblitz**, omitiremos e
 
 ## Paso 1: Crearemos un formulario ✍️
 
-Vamos a crear un formulario con un campo de texto, donde pondremos el nombre de usuario con el que nos vamos a autenticar en nuestra App. Nuestro formulario tendrá un botón para enviar el texto que ingresaremos en el formulario.
+Vamos a crear un formulario con un campo de texto, donde pondremos el nombre de usuario con el que nos vamos a autenticar en nuestra App. Adicionalmente tendrá un botón para enviar el texto que ingresaremos en el formulario.
 
 Puedes añadir el siguiente código en **app.component.html**
 
@@ -142,7 +142,7 @@ export class AppModule { }
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-En nuestro archivo **login.service.ts** crearemos dos funciones, una para manejar los errores: **handleError** y otra que nos obtendrá la data del Api **getResponse**:
+En nuestro archivo **login.service.ts** crearemos dos funciones, una para manejar los errores: **handleError** y otra que nos obtendrá la data del API **getResponse**:
 
 {% code-tabs %}
 {% code-tabs-item title="login.service.ts" %}
@@ -165,9 +165,9 @@ private handleError(res: HttpErrorResponse | any) {
 
 ## Paso 4: Hagamos la lógica que llama a nuestro servicio
 
-En nuestro archivo **app.component.ts**, crearemos una variable, de tipo **string,** donde le asignaremos la url del API.   En nuestra función **login**, crearemos un 'Observable' que nos permitirá subscribirnos, a la petición que hacemos de los datos, usando la variable que definimos con la ruta del API de **Github**.
+En nuestro archivo **app.component.ts**, crearemos una variable, de tipo **string,** donde le asignaremos la url del API.   En nuestra función **login**, crearemos un 'Observable' que nos permitirá subscribirnos a la petición que hacemos de los datos, usando la variable que definimos con la ruta del API de **Github**.
 
-También importaremos en nuestro **app.component.ts** el servicio que creamos **LoginService** y crearemos una función **constructor** donde declararemos una función privada del servicio. ****
+También importaremos en nuestro **app.component.ts** el servicio que creamos, **LoginService,** y crearemos una función **constructor** donde declararemos una función privada del servicio. ****
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
@@ -202,13 +202,13 @@ export class AppComponent {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Ahora podemos probar el llamado de nuestra Api colocando en el campo de texto el nombre de un usuario de **Github**. Si abres la consola de **Stackblitz** podrás ver el resultado de nuestro **console.log\(response\)**.
+Ahora podemos probar el llamado de nuestra API colocando en el campo de texto el nombre de un usuario de **Github**. Si abres la consola de **Stackblitz** podrás ver el resultado de nuestro **console.log\(response\)**.
 
 ![](../.gitbook/assets/webp.net-gifmaker-12.gif)
 
-## Paso 5: Mostremos el resultado del Api
+## Paso 5: Mostremos el resultado del API
 
-Crearemos una variable llamada **reposList**, donde almacenaremos el resultado del llamado de nuestra Api. Si observas la url de nuestra Api, al final tiene '/**respos**', con esta palabra traeremos la lista de todos los repositorios del usuario que estamos consultando, puedes probar quitándole esta palabra y observarás que traerás la información de usuario \(la imagen de perfil, su id en Github, entre otros datos\) .
+Crearemos una variable llamada **reposList**, donde almacenaremos el resultado del llamado de nuestra API. Si observas la url de nuestra API, al final tiene '/**repos**', con esta palabra traeremos la lista de todos los repositorios del usuario que estamos consultando, puedes probar quitándole esta palabra y observarás que traerás la información de usuario \(la imagen de perfil, su id en Github, entre otros datos\) .
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-10.14.01-pm.png)
 
@@ -216,15 +216,15 @@ Debajo de nuestra variable apiRoot, crearemos la variable **reposList** y en don
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-10.19.58-pm.png)
 
-Si quisiéramos mostrar el resultado en nuestra vista, en el html al final podr**í**amos usar una interpolación de nuestra variable **reposList** añadiéndole a la interpolación un pipe **json**, veríamos algo como esto:
+Si quisiéramos mostrar el resultado en nuestra vista, en el html al final podríamos usar una interpolación de nuestra variable **reposList** añadiéndole a la interpolación un pipe **json**, veríamos algo como esto:
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-10.24.14-pm.png)
 
-Pero el resultado se mostraría muy desordenado y difícil de leer, así que haremos algo más para mostrarlo mas bonito.
+Pero el resultado se mostraría muy desordenado y difícil de leer, así que haremos algo para mostrarlo más bonito.
 
 ## Paso 6: Tabla para mostrar los resultados
 
-Creáremos una tabla para mostrar  nuestro resultado y para ello vamos a crear un componente llamado tabla.
+Crearemos una tabla para mostrar  nuestro resultado y para ello vamos a crear un componente llamado tabla.
 
 ![](../.gitbook/assets/webp.net-gifmaker-13.gif)
 
@@ -271,9 +271,9 @@ En el **app.component.ts** vamos a importar nuestro componente tabla.
 
 ![Importamos TableComponent](../.gitbook/assets/screen-shot-2019-05-27-at-11.01.54-pm.png)
 
-Ahora vamos a pasar la data de un componente a otro. Nuestro App component es el que tendrá toda la lógica de nuestra App, en Angular a estos componentes los llamamos **Smart Components** y a los componentes que no tienen una lógica como la de App y son mas sencillos \(como para mostrar solo data\) los llamamos **Dumb Component**
+Ahora vamos a pasar la data de un componente a otro. Nuestro App component es el que tendrá toda la lógica de nuestra App, en Angular a estos componentes los llamamos **Smart Components** y a los componentes que no tienen una lógica como la de App y son mas sencillos \(como para mostrar sólo data\) los llamamos **Dumb Component.**
 
-En el **app.component.html** en el componente tabla, en el **app-table** vamos a ****hacer **binding** \(pasaremos la data de un lugar a otro\), crearemos un atributo **\[repos\]** y le asignaremos nuestra variable **reposList**
+Dentro de **app.component.html** en el componente tabla, encontraremos el **app-table** donde vamos a ****hacer **binding** \(pasaremos la data de un lugar a otro\), crearemos un atributo **\[repos\]** y le asignaremos nuestra variable **reposList.**
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-11.11.14-pm.png)
 
@@ -285,7 +285,7 @@ Un **decorador**, extiende una función mediante otra función, pero sin tocar a
 
 En el archivo **table.component.ts** vamos a importar el Input y recibimos la nueva data.
 
-En la linea donde importamos el **Component**, vamos a añadirle el **Input**, nuestra línea quedaría así: 
+En la línea donde importamos el **Component**, vamos a añadirle el **Input**, nuestra línea quedaría así: 
 
 {% code-tabs %}
 {% code-tabs-item title="table.component.ts" %}
@@ -315,7 +315,7 @@ export class TableComponent implements OnInit {
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-11.25.37-pm.png)
 
-Como podemos en la respuesta recibir mas de un elemento en nuestro array, en nuestro HTML \(**table.component.html**\) usaremos la directiva **\*ngFor**, para recorrer todos los valores del array y usaremos la interpolación para colocar los valores que corresponde a cada columna.
+Como en la respuesta podemos recibir más de un elemento en nuestro array, en nuestro HTML \(**table.component.html**\) usaremos la directiva **\*ngFor**, para recorrer todos los valores del array y usaremos la interpolación para colocar los valores que corresponde a cada columna.
 
 {% code-tabs %}
 {% code-tabs-item title="table.component.html" %}
@@ -335,7 +335,7 @@ Como podemos en la respuesta recibir mas de un elemento en nuestro array, en nue
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Agregamos un \*ngForm para recorrer el array que obtuvimos como respuesta del Api](../.gitbook/assets/screen-shot-2019-05-27-at-11.42.37-pm.png)
+![Agregamos un \*ngForm para recorrer el array que obtuvimos como respuesta del API](../.gitbook/assets/screen-shot-2019-05-27-at-11.42.37-pm.png)
 
 Para ocultar los encabezados podríamos añadirle la directiva **\*ngIf** en nuestro componente de tabla, para que solo muestre la tabla cuando tenga algún resultado, nos quedaría algo como esto:👇
 
