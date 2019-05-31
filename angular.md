@@ -65,9 +65,9 @@ Un componente tiene principalmente un archivo de Typescript \(donde pondremos la
 
 Hasta este punto te hemos mencionado conceptos que tal vez conocías y tal vez no, pero no te preocupes a medida que avances en el taller puedes ir preguntándonos sobre ellos, a los organizadores y a nuestros increíbles mentores 😀
 
-¿Porque no resolvemos ahora esas dudas? porque todos van a tener dudas particulares y diferentes así que no te preocupes, las resolveremos todas!!, estamos ansiosos de que nos preguntes, así que te invitamos a preguntarnos👍👍.
+¿Por qué no resolvemos ahora esas dudas? porque todos van a tener dudas particulares y diferentes así que no te preocupes, ¡¡las resolveremos todas!! Estamos ansiosos de que nos preguntes, así que te invitamos a preguntarnos👍👍.
 
-Tal vez tengas otra duda más y es si necesitas saber programación para este taller o lógica?, pero de pronto no te has dado cuenta que toda tu vida has usado la lógica que se requiere en este taller, desde el hecho que tengas que decidir que ropa usar cada mañana, si deseas café o té, este tipo de interrogantes mentales o verbales es la lógica que se usa en este taller, solo aplicada a un ejercicio en particular y transformada a código. 💪
+Tal vez tengas otra duda más, ¿necesitas saber programación para este taller o lógica?, pero de pronto no te has dado cuenta que toda tu vida has usado la lógica que se requiere en este taller, desde el hecho que tengas que decidir que ropa usar cada mañana, si deseas café o té, este tipo de interrogantes mentales o verbales es la lógica que se usa en este taller, solo aplicada a un ejercicio en particular y transformada a código. 💪
 
 Así que la respuesta es no necesitas saber nada previo 👍
 
