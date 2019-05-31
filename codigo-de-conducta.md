@@ -64,7 +64,6 @@ A nivel general en **She Codes Angular:**
 
 * [Alejandra Giraldo](https://twitter.com/maleja111)
 * [Vanessa Aristizabal](https://twitter.com/vanessamarely)
-* [Carlos Angulo](https://twitter.com/Carlos_ACNS)
 
      2. Salidas de Emergencia: Serán notificadas durante el evento.
 
