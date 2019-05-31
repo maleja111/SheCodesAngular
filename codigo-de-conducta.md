@@ -13,7 +13,7 @@ Queremos brindarte un espacio de aprendizaje seguro y confiable donde todos  coo
 
 Se espera que los asistentes, voluntarios y organizadores que participan en nuestros eventos cumplan lo siguiente:
 
-* Compromiso:
+* **Compromiso**:
 
 1. Cumplir activamente con las tareas propuestas.
 2. Tener una buena actitud en el evento.
@@ -21,14 +21,14 @@ Se espera que los asistentes, voluntarios y organizadores que participan en nues
 4. Proactividad
 5. Haz siempre lo máximo que puedas
 
-* Aprendizaje
+* **Aprendizaje**
 
 1. Profundizar en lo aprendido
 2. Entender la metodología del taller
 3. Buscar siempre el mejor mecanismo para enseñar a otros
 4. Nunca asumir un conocimiento previo como adquirido
 
-* Respeto
+* **Respeto**
 
 1.  Utilizar un lenguaje incluyente
 2. Respetar las ideas y pensamientos del otros
