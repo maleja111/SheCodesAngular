@@ -9,10 +9,10 @@ description: >-
 
 ## 💡 Introducción 💡
 
-¡Que divertido fue aprender a usar imagenes de gatos!  
-¡ahora vayamos por la creación de nuestro propio perfil!  
+¡Qué divertido fue aprender a usar imágenes de gatos!  
+¡Ahora vayamos por la creación de nuestro propio perfil!  
 
-¿Te gustaría crear la base de lo que podría ser tu propio perfil en tu aplicación web? Vamos a crear un perfil, que muestre u oculte información según nuestros propios datos, así podremos personalizarlo ¡como más nos guste! [**¡Aquí puedes encontrar el demo!**](https://stackblitz.com/edit/angular-mi-perfil)\*\*\*\*
+¿Te gustaría crear la base de lo que podría ser tu propio perfil en tu aplicación web? Vamos a crear un perfil, que muestre u oculte información según nuestros propios datos, así podremos personalizarlo ¡Cómo más nos guste! [**¡Aquí puedes encontrar el demo!**](https://stackblitz.com/edit/angular-mi-perfil)\*\*\*\*
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
@@ -109,16 +109,16 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 {% hint style="info" %}
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️**
 
-**1.** La etiqueta **\*ngFor** es una directiva principal, nos permite crear listas de datos en nuestro HTML sin adicionar más lineas de código. todo se genera dinámicamente según el tamaño de la lista de elementos a mostrar.
+**1.** La etiqueta **\*ngFor** es una directiva principal, nos permite crear listas de datos en nuestro HTML sin adicionar más lineas de código. Todo se genera dinámicamente según el tamaño de la lista de elementos a mostrar.
 
-**2.** Veremos como se visualizara en pantalla el contenido de **strengths** sin necesidad de escribir una por una en el archivo **app.component.html.**
+**2.** Veremos como se visualizará en pantalla el contenido de **strengths** sin necesidad de escribir una por una en el archivo **app.component.html.**
 {% endhint %}
 
 ## Paso 5: Personalizo mi tarjeta sin esfuerzo 💅🏼  <a id="paso-2-vamos-a-armar-el-esqueleto"></a>
 
 ‌Vamos a hacer que de una lista de opciones solo se nos muestre una.
 
-para esto vamos a usar la directiva NgSwitch.
+Para esto vamos a usar la directiva NgSwitch.
 
 Adiciona este código en la línea 20 de tu archivo **app.component.html**
 
@@ -143,13 +143,13 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
 **1.** La etiqueta **\[ngSwitch\]** es una directiva estructural que agrega o no código \(mostrar u ocultar vistas\) cuando la condición coincide con la expresión de cambio.
 
-**2.** Veremos como se visualizara en pantalla el elemento siempre y cuando exista un valor pink expresado en el siguiente código **\*ngSwitchCase="'pink'"**.
+**2.** Veremos como se visualizará en pantalla el elemento siempre y cuando exista un valor pink expresado en el siguiente código **\*ngSwitchCase="'pink'"**.
 {% endhint %}
 
 ## Paso 6: Vamos a adicionar la lógica 🧠  <a id="paso-2-vamos-a-armar-el-esqueleto"></a>
 
 Ahora vamos a modificar el archivo **app.component.ts**, ****en ****este vamos a adicionar la declaración de variables que vimos en el archivo **app.component.html**.  
-En este archivo vamos a reemplazar su contenido, vamos a reemplazar el actual código por este:
+En este archivo vamos a reemplazar su contenido, por el siguiente código por este:
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
@@ -210,8 +210,8 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 ## Paso Final: Personaliza tu perfil 🎨 <a id="paso-final-personaliza-tu-aplicacion"></a>
 
 ¡Vamos a hacer que nuestro perfil tenga color agregando CSS!   
-¿recuerdas las clases que usamos en nuestro **app.component.html**?   
-¡llego el tiempo de usarlas!   
+¿Recuerdas las clases que usamos en nuestro **app.component.html**?   
+¡Llegó el tiempo de usarlas!   
 Reemplaza el contenido de **app.component.css** con éste:
 
 {% code-tabs %}
@@ -348,7 +348,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder agregar elementos con información como correo electrónico y profesión.
 
-⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,** las diferentes directivas y variables para adicionar mas campos en nuestra tarjeta.‌ y ¡personaliza con tu foto, datos y colores favoritos!
+⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,** las diferentes directivas y variables para adicionar más campos en nuestra tarjeta y ¡Personaliza con tu foto, datos y colores favoritos!
 
 **💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**‌
 

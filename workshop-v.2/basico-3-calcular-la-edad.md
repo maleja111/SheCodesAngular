@@ -54,7 +54,7 @@ Deberías ver algo así: 👇
 
 ## Paso 3: Añadamos más etiquetas 🏷️
 
-Debajo de nuestro titulo en el archivo **app.component.html**, ****vamos a añadir un campo de texto, existen muchos tipos de campo de texto, el que vamos a incluir va a ser de tipo fecha.
+Debajo de nuestro titulo en el archivo **app.component.html**, ****vamos a añadir un campo de texto. Existen muchos tipos de campo de texto, el que vamos a incluir va a ser de tipo fecha.
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -116,7 +116,7 @@ Conceptos vistos hasta ahora: 👇
 
 **Banana box \[\(\)\]**, 🍌 lo llaman así porque si usas tu imaginación parece una banana en una caja.
 
-**Directiva**, se representa como un atributo en una etiqueta HTML, este atributo está dotando al elemento del DOM que la contiene de un comportamiento, ése comportamiento lo definimos nosotros y se puede utilizar en todos los elementos que queramos.
+**Directiva**, se representa como un atributo en una etiqueta HTML, este atributo está dotando al elemento del DOM que la contiene de un comportamiento, ese comportamiento lo definimos nosotros y se puede utilizar en todos los elementos que queramos.
 
 **ngModel** es una directiva que nos permite tener un enlace entre el componente de TS y un elemento en el HTML. Existen varios tipos de directivas.
 
@@ -166,9 +166,9 @@ Teníamos una variable llamada **showAge** a la cual le asignaremos la función 
 
 ## Paso 5: Mostrar la Edad 🤠
 
-Ya tenemos el calculo de la fecha ingresada, ahora vamos a mostrarlo, usemos la interpolación que hemos aplicado anteriormente. 
+Ya tenemos el cálculo de la fecha ingresada, ahora vamos a mostrarlo, usemos la interpolación que hemos aplicado anteriormente. 
 
-En el archivo **app.component.html** vamos incluir un texto e incluiremos nuestra variable **showAge**, para mostrar los años de la persona. Debajo de nuestro botón pondremos la siguiente linea: 
+En el archivo **app.component.html** vamos incluir un texto y nuestra variable **showAge**, para mostrar los años de la persona. Debajo de nuestro botón pondremos la siguiente línea: 
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -191,7 +191,7 @@ Te va a quedar todo parecido a lo siguiente: 👇
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Además vamos a añadir otra directiva **\*ngIf,** para mostrar el texto solo si se ha ingresado algún valor. Añada en la etiqueta **&lt;p&gt;** el atributo **\*ngIf**.
+Además vamos a añadir otra directiva **\*ngIf,** para mostrar el texto sólo si se ha ingresado algún valor. Añade en la etiqueta **&lt;p&gt;** el atributo **\*ngIf**.
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}

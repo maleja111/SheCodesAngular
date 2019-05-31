@@ -1,6 +1,6 @@
 ---
 description: >-
-  Además de utilizar conocimiento de ejercicios pasados ¡vamos a usar
+  Además de utilizar conocimiento de ejercicios pasados ¡Vamos a usar
   formularios!
 ---
 
@@ -44,7 +44,7 @@ Deberías ver algo así: 👇
 
 ## Paso 3: Hora de poner el formulario **📋**
 
-Vamos a utilizar un formulario con un campo de texto y 2 botones: un botón adicionará el contenido del campo de texto a la lista y el otro botón limpiara la lista para que no contenga nada.
+Vamos a utilizar un formulario con un campo de texto y 2 botones: un botón adicionará el contenido del campo de texto a la lista y el otro botón limpiará la lista para que no contenga nada.
 
 Adiciona este código en la línea 8 de tu archivo **app.component.html**
 
@@ -130,7 +130,7 @@ El segundo label nos va a permitir ver como la lista se elimina.
 ## Paso 4: Adicionemos lógica para el formulario 🧪 **📋**
 
 Ahora vamos a modificar el archivo **app.component.ts**, ****en ****este vamos a adicionar la declaración de variables que vimos en el archivo **app.component.html** y además vamos a agregar unas funciones.  
-En este archivo vamos a reemplazar su contenido, vamos a reemplazar el actual código por este:
+En este archivo vamos a reemplazar su contenido, por el siguiente código:
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
@@ -219,13 +219,13 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
   
 **2.** **\*ngFor** es una directiva en Angular, nos permite presentar una lista de elementos en pantalla de una forma sencilla. Su sintaxis consiste en inicializar una variable que la podemos llamar **item**, que será el elemento que nos irá mostrando de la lista  items.  
   
-3.**{{item.text \|\| 'Add some thing'}}** Aquí indico si deseo que muestre el mensaje o un mensaje por defecto si text no llega a tener texto.
+3.**{{item.text \|\| 'Add some thing'}}** Aquí indico si deseo que muestre el mensaje o un mensaje por defecto, si text no llega a tener texto.
 {% endhint %}
 
 ## Paso Final: Personaliza tu aplicación 👩🏻‍🎨
 
 ¡Vamos a hacer que nuestra lista tenga color agregando CSS!   
-¿recuerdas las clases que usamos en nuestro **app.component.html**? ¡llego el tiempo de usarlas!   
+¿Recuerdas las clases que usamos en nuestro **app.component.html**? ¡Llegó el tiempo de usarlas!   
 Reemplaza el contenido de **app.component.css** con éste:
 
 {% code-tabs %}
@@ -298,7 +298,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ## 😎 Tu Misión 😎
 
-Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder eliminar un elemento de la lista cuando este terminada
+Parece que nuestra aplicación está lista excepto por un pequeño detalle 😵. Debería de poder eliminar un elemento de la lista cuando esta esté terminada.
 
 ⭐️ Utiliza lo que ya conoces como: **data** [**binding**](https://alligator.io/angular/data-binding-angular/)**,**  llamado de funciones y evento clic en botones para lograr este objetivo.
 
