@@ -26,26 +26,26 @@ Es un lenguaje de programación que nos permite darle vida, dinamismo, interacti
 
 ![HTML + CSS + JS ](.gitbook/assets/cake_js_spanish.png)
 
-**Angular2**, implemento Typescript o TS como lenguaje de programación. Se quito del nombre la palabra JS a solo Angular. Cada 6 meses se lanza una nueva versión. Actualmente fue lanzada la versión 8.
+**Angular2**, implementó Typescript o TS como lenguaje de programación. Se quitó del nombre la palabra JS a solo Angular. Cada 6 meses se lanza una nueva versión. Actualmente fue lanzada la versión 8.
 
 {% hint style="info" %}
 **¿Qué es TS o Typescript?**
 
 Es un superset de JS \(quiere decir que es un lenguaje creado sobre otro lenguaje\), creado por Microsoft. Este lenguaje potencia las características de JS. 💪
 
-Te invitamos a leer este articulo si quieres saber más sobre TS 👉 [`Qué Es TypeScript`](https://codigofacilito.com/articulos/typescript)
+Te invitamos a leer este artéculo si quieres saber más sobre TS 👉 [`Qué Es TypeScript`](https://codigofacilito.com/articulos/typescript)
 {% endhint %}
 
 ## Características 🏷️
 
 * Tiene una gran documentación
 * Es un Framework rápido
-* Facil de usar
+* Fácil de usar
 * Tiene una gran comunidad 
 
 ## Estructura de Angular
 
-La estructura de una aplicación en Angular esta compuesta por componentes.
+La estructura de una aplicación en Angular está conformada por componentes.
 
 {% hint style="info" %}
 **¿Qué es un componente?**
