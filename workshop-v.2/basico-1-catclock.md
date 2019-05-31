@@ -1,7 +1,7 @@
 ---
 description: >-
   Es la hora de la acción ⏰. Crearemos una  alarma gatuna para despertar a
-  nuestro gatito y este listo para la acción.
+  nuestro gatito y que esté listo para la acción.
 ---
 
 # Básico \#1: CatParty😺
@@ -58,7 +58,7 @@ Las etiquetas o tags son la forma de escribir código HTML, es la semántica del
 **&lt;img&gt;**: Es una etiqueta para imágenes
 {% endhint %}
 
-## Paso 3: **Añadamos una imágen de un gatito** 🖼️
+## Paso 3: **Añadamos una imagen de un gatito** 🖼️
 
 Debajo de nuestro titulo en el archivo **app.component.html**, ****vamos a añadir la etiqueta para las imágenes, con una imagen de un gatito.
 
@@ -103,7 +103,7 @@ Verás algo así: 👇
 Ahora añadamos nuestra variable a nuestro título en el archivo **app.component.html**.
 
 {% hint style="info" %}
-**¿qué es una variable?** es como un caja, donde puedes poner cosas 🎁\). Ésta almacenará lo que nosotros queramos, textos, números, etc **👍**
+**¿Qué es una variable?** es como un caja, \(donde puedes poner cosas 🎁\). Ésta almacenará lo que nosotros queramos, textos, números, etc **👍**
 {% endhint %}
 
 Para usar la interpolación se usan dos llaves **{{ }}** dobles.
@@ -118,11 +118,11 @@ Para usar la interpolación se usan dos llaves **{{ }}** dobles.
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-## Paso 5: **Crearemos una imágen dinámica**
+## Paso 5: **Crearemos una imagen dinámica**
 
-Sabemos como crear texto dinámico, ahora vamos a crear una imágen dinámica.
+Sabemos cómo crear texto dinámico, ahora vamos a crear una imagen dinámica.
 
-Para ello copiaremos la url de la imágen que esta en el 'src' y la pondremos en una nueva variable.
+Para ello copiaremos la url de la imagen que esta en el 'src' y la pondremos en una nueva variable.
 
 Crearemos una variable llamada **urlImage** y pondremos la url copiada allí.
 
@@ -151,13 +151,13 @@ Quedaría algo así: 👇
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Creamos nuestra im&#xE1;gen din&#xE1;mica](../.gitbook/assets/webp.net-gifmaker-4.gif)
+![Creamos nuestra imagen din&#xE1;mica](../.gitbook/assets/webp.net-gifmaker-4.gif)
 
-## Paso 6: **Remplacemos nuestra imágen con algo de lógica**
+## Paso 6: **Remplacemos nuestra imagen con algo de lógica**
 
-Ahora lo que haremos es que cuando reemplacemos el texto de nuestra imágen en el código, se cambiará nuestra imágen.
+Ahora lo que haremos es que cuando reemplacemos el texto de nuestra imagen en el código, esta cambiara.
 
-Para ellos usaremos algo de lógica, colocaremos un **if** \(nos sirve para preguntar\) en nuestro archivo **app.component.ts**, donde preguntaremos si el texto de la variable **party** es igual a 'Party' se muestre una nueva imágen. 
+Para ellos usaremos algo de lógica, colocaremos un **if** \(nos sirve para preguntar\) en nuestro archivo **app.component.ts**, donde preguntaremos si el texto de la variable **party** es igual a 'Party' si esto se cumple se mostrará una nueva imagen. 
 
 Copia debajo la variable **urlImage** el siguiente código:
 
@@ -180,7 +180,7 @@ export class AppComponent  {
 
 ![](../.gitbook/assets/webp.net-gifmaker-5.gif)
 
-Si reemplazas el texto del party, podrás ver la imagen inicial y con 'Party' los gatos saltando.
+Si reemplazas el texto la variable **party**, podrás ver la imagen inicial. Con el valor 'Party' veras los gatos saltando.
 
 ¡Felicitaciones hemos terminado el primer desafío!
 
