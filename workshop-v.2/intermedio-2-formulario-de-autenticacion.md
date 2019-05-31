@@ -68,7 +68,7 @@ export class AppComponent {
   login() {
   
   }
-
+}
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
