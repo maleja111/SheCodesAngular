@@ -265,12 +265,6 @@ Ahora vamos a añadir nuestro  componente tabla \(**&lt;app-table&gt;&lt;/app-ta
 
 ![A&#xF1;adimos nuestro componente tabla \(&amp;lt;app-table&amp;gt;\)](../.gitbook/assets/screen-shot-2019-05-27-at-11.00.20-pm.png)
 
-Añadimos nuestro componente tabla \(**TableComponent**\) en la vista del componente App.
-
-En el **app.component.ts** vamos a importar nuestro componente tabla.
-
-![Importamos TableComponent](../.gitbook/assets/screen-shot-2019-05-27-at-11.01.54-pm.png)
-
 Ahora vamos a pasar la data de un componente a otro. Nuestro App component es el que tendrá toda la lógica de nuestra App, en Angular a estos componentes los llamamos **Smart Components** y a los componentes que no tienen una lógica como la de App y son mas sencillos \(como para mostrar sólo data\) los llamamos **Dumb Component.**
 
 Dentro de **app.component.html** en el componente tabla, encontraremos el **app-table** donde vamos a ****hacer **binding** \(pasaremos la data de un lugar a otro\), crearemos un atributo **\[repos\]** y le asignaremos nuestra variable **reposList.**
