@@ -6,7 +6,7 @@ description: "Antes de dar inicio a nuestro gran Workshop en Angular \uD83D\uDE0
 
 Angular, es un **Framework** que nos permite crear páginas **Web**. 👍
 
-[Video de Stephen Fluin ](https://youtu.be/Q0VPt2kF-Z0)📹📹📹
+[Video de Stephen Fluin ](https://www.youtube.com/watch?v=EJ1j0Vcg-Xg)📹📹📹
 
 {% hint style="info" %}
 **¿Qué es un Framework?** 
