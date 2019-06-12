@@ -10,13 +10,13 @@ En el Workshop se abordan diferentes temas de Angular, orientado a ser realizado
 
 En el 2018 se realizó NgGirls en la linda ciudad de Medellín. Para este evento 3 de los organizadores de este evento,  decidieron unirse para crear una nueva comunidad de Angular enfocada principalmente al público femenino. 
 
-Del amor por Angular,  pasión por ayudar a la comunidad y compartir el conocimiento, surgió She Codes Angular, comunidad creada por [Alejandra Giraldo](https://twitter.com/maleja111), [Juan Herrera](https://twitter.com/jdjuan) y [Vanessa Aristizabal.](https://twitter.com/vanessamarely)
+Del amor por Angular,  pasión por ayudar a la comunidad y compartir el conocimiento, surgió She Codes Angular, comunidad creada por [Alejandra Giraldo](https://twitter.com/maleja111), [Juan Herrera](https://twitter.com/jdjuan) y [Vanessa Aristizabal](https://twitter.com/vanessamarely).
 
 Nuestra primera versión de She codes Angular, se realizó en [Enero](https://www.meetup.com/She-Codes-Angular/events/257810892/) del 2019, esta versión fue organizada por los creadores de la comunidad.
 
 She Codes Angular participó en el IWD- International Women's Day 2019 en marzo, en conjunto con otras comunidades aliadas. 
 
-Por motivos personales [Juan Herrera](https://twitter.com/jdjuan), emprendió nuevos rumbos 🛫🛫 y del equipo original de organizadores quedan: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal. ](https://twitter.com/vanessamarely)
+Por motivos personales [Juan Herrera](https://twitter.com/jdjuan), emprendió nuevos rumbos 🛫🛫y ya no hace parte del equipo y el equipo actual solo esta conformado por: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal. ](https://twitter.com/vanessamarely)
 
 Esperamos en nuestros eventos brindarte la mejor experiencia posible, que aprendas, te diviertas mucho y sobretodo  que nos puedas acompañar en las futuras versiones de nuestros eventos. 👍
 
