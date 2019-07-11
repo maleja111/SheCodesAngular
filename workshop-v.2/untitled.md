@@ -1,5 +1,5 @@
 ---
-description: "Esperamos disfruten nuestra segunda versión de \"She Codes Angular\"\uD83D\uDC4D"
+description: "Esperamos disfruten nuestra segunda versión de \"She Codes Angular\"\U0001F44D"
 ---
 
 # 💃 Bienvenid@s 💃

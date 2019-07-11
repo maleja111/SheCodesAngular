@@ -1,5 +1,5 @@
 ---
-description: "En este desafío vamos a crear una mini calculadora de edad. Practicaremos todo lo aprendido hasta ahora. \uD83D\uDC4D"
+description: "En este desafío vamos a crear una mini calculadora de edad. Practicaremos todo lo aprendido hasta ahora. \U0001F44D"
 ---
 
 # Básico \#3: Calcular la Edad 🧮

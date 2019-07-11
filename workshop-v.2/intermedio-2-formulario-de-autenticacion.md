@@ -1,5 +1,5 @@
 ---
-description: "En este desafío vamos a divertirnos  creando un formulario de autenticación \uD83C\uDFAF"
+description: "En este desafío vamos a divertirnos  creando un formulario de autenticación \U0001F3AF"
 ---
 
 # Intermedio \#2: Formulario de Autenticación 🥳

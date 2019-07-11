@@ -1,5 +1,5 @@
 ---
-description: "Antes de dar inicio a nuestro gran Workshop en Angular \uD83D\uDE04, queremos que conozcas qué es esta herramienta \uD83E\uDDF0, algo de historia \uD83D\uDD70️ y algunas características \uD83D\uDC69‍\uD83C\uDFEB."
+description: "Antes de dar inicio a nuestro gran Workshop en Angular \U0001F604, queremos que conozcas qué es esta herramienta \U0001F9F0, algo de historia \U0001F570️ y algunas características \U0001F469‍\U0001F3EB."
 ---
 
 # 🅰️ ¿Qué es Angular? 🅰️
