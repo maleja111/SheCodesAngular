@@ -123,7 +123,7 @@ Conceptos vistos hasta ahora: 👇
 **\(click\)** es una directiva de evento, con ella podemos controlar la ación del click, en nuestro caso el click del botón.
 {% endhint %}
 
-En nuestro **app.component.ts** vamos a crear una función, llamada **ageCalculator\(\)**, esta función será la que realizará el calculo de la fecha ingresada. Reemplazaremos la variable llamada **name='Angular'** y pondremos la función que esta a continuación:
+En nuestro **app.component.ts** vamos a crear una función, llamada **ageCalculator\(\)**, esta función será la que realizará el calculo de la fecha ingresada. Vamos a añadir la función dentro del **export class AppComponent** y ademas reemplazaremos la variable llamada **name='Angular'** y pondremos la función que esta a continuación:
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}

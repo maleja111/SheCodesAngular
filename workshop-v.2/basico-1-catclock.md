@@ -78,11 +78,11 @@ Verás algo así: 👇
 
 ![As&#xED; puedes cualquier imagen en tu html](../.gitbook/assets/screen-shot-2019-05-25-at-11.17.29-pm.png)
 
-## Paso 4: **Añadamos un texto dinámico** 
+## Paso 4: **Añadamos un texto dinámico** 📝
 
 Vamos a usar un término en Angular llamado **Interpolación** \(conocida en inglés como "string interpolation"\),  nos permite desplegar algo declarado en código en nuestra vista o HTML. Crearemos una variable llamada "**party**" en el archivo **app.component.ts**.
 
-Podemos reemplazar la variable que estaba creada llamada **name** y la renombramos a **party** en el archivo **app.component.ts**.
+Podemos reemplazar la variable que estaba creada llamada **name** y la renombramos a **party** en el archivo **app.component.ts** dentro del **export class AppComponent** y lo demas no lo borramos.
 
 Le quitamos el valor de **'Angular'** y le pondremos **'Party'**
 
@@ -118,7 +118,7 @@ Para usar la interpolación se usan dos llaves **{{ }}** dobles.
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-## Paso 5: **Crearemos una imagen dinámica**
+## Paso 5: **Crearemos una imagen dinámica**  🖌️
 
 Sabemos cómo crear texto dinámico, ahora vamos a crear una imagen dinámica.
 
@@ -126,7 +126,7 @@ Para ello copiaremos la url de la imagen que esta en el 'src' y la pondremos en 
 
 Crearemos una variable llamada **urlImage** y pondremos la url copiada allí.
 
-En el archivo **app.component.ts** ve hasta la línea 8, donde encontraras el **export class AppComponent** y añade dentro de el la variable party con el valor asignado y la variable de urlImage, no borres lo demás, te debe quedar algo así en el **export class AppComponent**: ****👇
+En el archivo **app.component.ts** ve hasta la línea 8, donde encontraras el **export class AppComponent** y añade dentro de el, debajo de la variable **party**, ****la variable de urlImage, no borres lo demás, te debe quedar algo así en el **export class AppComponent**: ****👇
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
@@ -155,7 +155,7 @@ Quedaría algo así: 👇
 
 ![Creamos nuestra imagen din&#xE1;mica](../.gitbook/assets/webp.net-gifmaker-4.gif)
 
-## Paso 6: **Remplacemos nuestra imagen con algo de lógica**
+## Paso 6: **Remplacemos nuestra imagen con algo de lógica** 🧠
 
 Ahora lo que haremos es que cuando reemplacemos el texto de nuestra imagen en el código, esta cambiará.
 
