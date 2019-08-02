@@ -241,7 +241,13 @@ p {
 
 ![Hemos terminado nuestra App &#x1F44D;](../.gitbook/assets/screen-shot-2019-05-26-at-7.39.43-pm.png)
 
-¡Felicitaciones hemos terminado nuestro desafío!
+## 😎 Tu Misión 😎 <a id="tu-mision"></a>
+
+Nuestra aplicación se ve lista, podrías si aceptas la misión ponerle algo de estilos para que se vea más bonita **💪**. Sino sabes como hacerlo puedes preguntarle a los mentores como puedes cambiar los estilos de los textos o del botón. 👍
+
+⭐️ Puedes utilizar estilos que has usado en desafíos anteriores
+
+**💪💪**¡¡Felicitaciones!! ¡Llegaste muy lejos! **💪💪**‌
 
 🎉 ¡**LO LOGRASTE!** 🎉
 

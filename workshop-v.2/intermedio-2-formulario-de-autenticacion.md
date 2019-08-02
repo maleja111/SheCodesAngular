@@ -47,7 +47,7 @@ Puedes añadir el siguiente código en **app.component.html**
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-9.25.58-pm.png)
 
-## Paso 2: Creemos la función que se encargará de la autenticación
+## Paso 2: Creemos la función que se encargará de la autenticación 🏭
 
 En el archivo **app.component.ts** vamos a crear el objeto model, que nos mostrará el modelo de nuestro formulario y crearemos una función login que se encargará de la lógica de nuestra App.
 
@@ -89,7 +89,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-9.10.57-pm.png)
 
-## Paso 3: Crearemos un servicio
+## Paso 3: Crearemos un servicio 💆
 
 Crearemos un 'servicio' dando clic sobre la carpeta 'app', seleccionamos 'service', nombramos el servicio como: '**login**', damos enter y se nos creará un archivo llamado: **login.service.ts**
 
@@ -163,7 +163,7 @@ private handleError(res: HttpErrorResponse | any) {
 
 ![](../.gitbook/assets/webp.net-gifmaker-11.gif)
 
-## Paso 4: Hagamos la lógica que llama a nuestro servicio
+## Paso 4: Hagamos la lógica que llama a nuestro servicio  🍭
 
 En nuestro archivo **app.component.ts**, crearemos una variable, de tipo **string,** donde le asignaremos la url del API.   En nuestra función **login**, crearemos un 'Observable' que nos permitirá subscribirnos a la petición que hacemos de los datos, usando la variable que definimos con la ruta del API de **Github**.
 
@@ -206,7 +206,7 @@ Ahora podemos probar el llamado de nuestra API colocando en el campo de texto el
 
 ![](../.gitbook/assets/webp.net-gifmaker-12.gif)
 
-## Paso 5: Mostremos el resultado del API
+## Paso 5: Mostremos el resultado del API 📰
 
 Crearemos una variable llamada **reposList**, donde almacenaremos el resultado del llamado de nuestra API. Si observas la url de nuestra API, al final tiene '/**repos**', con esta palabra traeremos la lista de todos los repositorios del usuario que estamos consultando, puedes probar quitándole esta palabra y observarás que traerás la información de usuario \(la imagen de perfil, su id en Github, entre otros datos\) .
 
@@ -222,7 +222,7 @@ Si quisiéramos mostrar el resultado en nuestra vista, en el html al final podr�
 
 Pero el resultado se mostraría muy desordenado y difícil de leer, así que haremos algo para mostrarlo más bonito.
 
-## Paso 6: Tabla para mostrar los resultados
+## Paso 6: Tabla para mostrar los resultados 📋
 
 Crearemos una tabla para mostrar  nuestro resultado y para ello vamos a crear un componente llamado tabla.
 
