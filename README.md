@@ -14,11 +14,13 @@ Del amor por Angular,  pasión por ayudar a la comunidad y compartir el conocimi
 
 Por motivos personales [Juan Herrera](https://twitter.com/jdjuan), emprendió nuevos rumbos 🛫🛫y ya no hace parte del equipo, el equipo actual  esta conformado por: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal. ](https://twitter.com/vanessamarely)
 
+![](.gitbook/assets/screen-shot-2019-08-02-at-5.41.24-pm.png)
+
 Nuestra primera versión de She codes Angular, se realizó en [Enero](https://www.meetup.com/She-Codes-Angular/events/257810892/) del 2019, esta versión fue organizada por los creadores de la comunidad.
 
 She Codes Angular participó en el IWD- International Women's Day 2019 en marzo, en conjunto con otras comunidades aliadas. 
 
-En Agosto 3 del 2019, una versión de She Codes Angular fue iniciada en Bogotá, siendo organizada por [Mayra Rodriguez](https://twitter.com/TheNativeGeekG).
+En Agosto 3 del 2019, una versión de She Codes Angular fue iniciada en Bogotá, liderada por [Mayra Rodriguez](https://twitter.com/TheNativeGeekG).
 
 Esperamos en nuestros eventos brindarte la mejor experiencia posible, que aprendas, te diviertas mucho y sobretodo  que nos puedas acompañar en las futuras versiones de nuestros eventos. 👍
 
