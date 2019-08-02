@@ -22,6 +22,8 @@ She Codes Angular participó en el IWD- International Women's Day 2019 en marzo,
 
 En Agosto 3 del 2019, una versión de She Codes Angular fue iniciada en Bogotá, liderada por [Mayra Rodriguez](https://twitter.com/TheNativeGeekG).
 
+![](.gitbook/assets/screen-shot-2019-08-02-at-6.31.17-pm.png)
+
 Esperamos en nuestros eventos brindarte la mejor experiencia posible, que aprendas, te diviertas mucho y sobretodo  que nos puedas acompañar en las futuras versiones de nuestros eventos. 👍
 
 {% hint style="success" %}
