@@ -61,7 +61,7 @@ Un componente tiene principalmente un archivo de Typescript \(donde pondremos la
 
 ![Estructura de un componente](.gitbook/assets/componente.png)
 
-## ¿Confundida?
+## ¿Confundid@?
 
 ![@vanessamarely copyright](.gitbook/assets/chibi-confundido.png)
 

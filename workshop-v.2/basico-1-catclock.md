@@ -18,7 +18,7 @@ En este desafío haremos algo divertido aplicando conceptos básicos de Angular,
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
-Primero iremos a el inicio de Stackbliz y crearemos una App de Angular.
+Primero iremos a el inicio de **Stackbliz** y crearemos una App de Angular.
 
 ![Vamos al inicio de Stackblitz y damos click en el bot&#xF3;n.](../.gitbook/assets/screen-shot-2019-05-25-at-10.41.44-pm.png)
 
@@ -126,6 +126,8 @@ Para ello copiaremos la url de la imagen que esta en el 'src' y la pondremos en 
 
 Crearemos una variable llamada **urlImage** y pondremos la url copiada allí.
 
+En el archivo **app.component.ts** ve hasta la línea 8, donde encontraras el **export class AppComponent** y añade dentro de el la variable party con el valor asignado y la variable de urlImage, no borres lo demás, te debe quedar algo así en el **export class AppComponent**: ****👇
+
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
 ```typescript
@@ -137,7 +139,7 @@ export class AppComponent  {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Luego borraremos del src la url de la imagen y pondremos en su lugar el nombre de la nueva variable entre llaves dobles. 
+Luego en el archivo  **app.component.html** borraremos del src la url de la imagen y pondremos en su lugar el nombre de la nueva variable entre llaves dobles. 
 
 Quedaría algo así: 👇
 
@@ -155,7 +157,7 @@ Quedaría algo así: 👇
 
 ## Paso 6: **Remplacemos nuestra imagen con algo de lógica**
 
-Ahora lo que haremos es que cuando reemplacemos el texto de nuestra imagen en el código, esta cambiara.
+Ahora lo que haremos es que cuando reemplacemos el texto de nuestra imagen en el código, esta cambiará.
 
 Para ellos usaremos algo de lógica, colocaremos un **if** \(nos sirve para preguntar\) en nuestro archivo **app.component.ts**, donde preguntaremos si el texto de la variable **party** es igual a 'Party' si esto se cumple se mostrará una nueva imagen. 
 
@@ -190,7 +192,7 @@ Si reemplazas el texto la variable **party**, podrás ver la imagen inicial. Con
 \*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-catparty) puedes encontrar el ejercicio resuelto.
 {% endhint %}
 
-## 😎 Tu Misión 😎
+## 😎 Tu Misión Especial 😎
 
 Parece que nuestra aplicación está lista pero debemos editar el texto desde la lógica 😵. 
 
