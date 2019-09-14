@@ -200,7 +200,7 @@ Parece que nuestra aplicación está lista pero debemos editar el texto desde la
 
 A medida que vas desarrollando los demás desafíos aprenderás como añadir un botón que al presionarlo pueda realizar este cambio, o puedes poner un campo de texto o idearte tu propia solución.
 
-Esta adición es para retar tu curiosidad, podrías proponer la solución que tu quieras, puedes en cualquier momento del taller mostrarme \(Vanessa\) tu propuesta y recibirás un regalito. 
+Esta adición es para retar tu curiosidad, podrías proponer la solución que tu quieras. 
 
 {% hint style="success" %}
 Has completado el **desafío \#1**, ahora vamos a el **desafío \#2 👇**
