@@ -22,7 +22,7 @@ She Codes Angular participó en el [IWD - International Women's Day 2019 en marz
 
 Una segunda versión se realizó de la comunidad el [1 de junio del 2019](https://www.meetup.com/She-Codes-Angular/events/260742676/), organizado por las actuales organizadoras: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal.](https://twitter.com/vanessamarely) 
 
-En agosto 3 del 2019, se presento nuevamente el taller V2 de Medellín en Bogotá,  liderado por [Mayra Rodriguez](https://twitter.com/TheNativeGeekG).  
+En agosto 3 del 2019, se presento nuevamente el taller V2 de Medellín en Bogotá,  liderado por [Mayra Rodriguez](https://twitter.com/TheNativeGeekG) y asistió [Vanessa Aristizabal](https://twitter.com/vanessamarely) co-organizadora como mentora.   
   
 La 3ra versión se realizó el [9 de noviembre del 2019](https://www.meetup.com/She-Codes-Angular/events/264380822/), organizado por las actuales organizadoras: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal.](https://twitter.com/vanessamarely) 
 
