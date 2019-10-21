@@ -12,7 +12,7 @@ En el 2018 se realizó NgGirls en la linda ciudad de Medellín. Para este evento
 
 Del amor por Angular,  pasión por ayudar a la comunidad y compartir el conocimiento, surgió She Codes Angular, comunidad  de Medellín, creada por [Alejandra Giraldo](https://twitter.com/maleja111), [Juan Herrera](https://twitter.com/jdjuan) y [Vanessa Aristizabal](https://twitter.com/vanessamarely). 
 
-Por motivos personales [Juan Herrera](https://twitter.com/jdjuan), emprendió nuevos rumbos 🛫🛫y ya no hace parte del equipo, el equipo actual  esta conformado por: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal. ](https://twitter.com/vanessamarely)
+Por motivos personales [Juan Herrera](https://twitter.com/jdjuan), emprendió nuevos rumbos 🛫🛫y ya no hace parte del equipo actual que esta conformado por: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal. ](https://twitter.com/vanessamarely)
 
 ![](.gitbook/assets/screen-shot-2019-08-02-at-5.41.24-pm.png)
 
