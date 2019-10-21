@@ -5,6 +5,10 @@
 * [⚡ ¡Utiliza Stackblitz! ⚡](1.-utiliza-stackblitz.md)
 * [🛑 Código de Conducta 🛑](codigo-de-conducta.md)
 
+## WORKSHOP V.3
+
+* [💃 Bienvenid@s 💃](workshop-v.3/bienvenid-s.md)
+
 ## Workshop v.2
 
 * [💃 Bienvenid@s 💃](workshop-v.2/untitled.md)
