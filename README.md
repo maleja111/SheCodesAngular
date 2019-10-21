@@ -26,7 +26,7 @@ En agosto 3 del 2019, se presento nuevamente el taller V2 de Medellín en Bogot�
   
 La 3ra versión se realizó el [9 de noviembre del 2019](https://www.meetup.com/She-Codes-Angular/events/264380822/), organizado por las actuales organizadoras: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal.](https://twitter.com/vanessamarely) 
 
-Esperamos en nuestros eventos brindarte la mejor experiencia posible, que aprendas, te diviertas mucho y sobretodo  que nos puedas acompañar en las futuras versiones de nuestros eventos. 👍
+Esperamos en nuestros eventos brindarte la mejor experiencia posible, que aprendas, te diviertas mucho y sobretodo  que nos puedas acompañar en las futuras versiones de nuestros eventos ya que nos esforzamos por siempre traer ejercicios nuevos. 👍
 
 {% hint style="success" %}
 Queremos que tengas un pequeño contexto que es **Angular**, por ello te invitamos a conocerlo a continuación **👇**
