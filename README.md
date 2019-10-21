@@ -16,13 +16,15 @@ Por motivos personales [Juan Herrera](https://twitter.com/jdjuan), emprendió nu
 
 ![](.gitbook/assets/screen-shot-2019-08-02-at-5.41.24-pm.png)
 
-Nuestra primera versión de She codes Angular, se realizó el [19 de Enero del 2019](https://www.meetup.com/She-Codes-Angular/events/257810892/), esta versión fue organizada por: [Alejandra Giraldo](https://twitter.com/maleja111), [Juan Herrera](https://twitter.com/jdjuan) y [Vanessa Aristizabal](https://twitter.com/vanessamarely).
+Nuestra primera versión de She codes Angular, se realizó el [19 de enero del 2019](https://www.meetup.com/She-Codes-Angular/events/257810892/), esta versión fue organizada por: [Alejandra Giraldo](https://twitter.com/maleja111), [Juan Herrera](https://twitter.com/jdjuan) y [Vanessa Aristizabal](https://twitter.com/vanessamarely).
 
 She Codes Angular participó en el [IWD - International Women's Day 2019 en marzo](https://www.meetup.com/She-Codes-Angular/events/259451451/), en conjunto con otras comunidades aliadas.
 
-Una segunda versión se realizó de la comunidad el [1 de Junio del 2019](https://www.meetup.com/She-Codes-Angular/events/260742676/), organizado por las actuales organizadoras: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal.](https://twitter.com/vanessamarely) 
+Una segunda versión se realizó de la comunidad el [1 de junio del 2019](https://www.meetup.com/She-Codes-Angular/events/260742676/), organizado por las actuales organizadoras: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal.](https://twitter.com/vanessamarely) 
 
-En Agosto 3 del 2019, se presento nuevamente el taller V2 de Medellín en Bogotá,  liderado por [Mayra Rodriguez](https://twitter.com/TheNativeGeekG).
+En agosto 3 del 2019, se presento nuevamente el taller V2 de Medellín en Bogotá,  liderado por [Mayra Rodriguez](https://twitter.com/TheNativeGeekG).  
+  
+La 3ra versión se realizó el [9 de noviembre del 2019](https://www.meetup.com/She-Codes-Angular/events/260742676/), organizado por las actuales organizadoras: [Alejandra Giraldo](https://twitter.com/maleja111) y [Vanessa Aristizabal.](https://twitter.com/vanessamarely) 
 
 Esperamos en nuestros eventos brindarte la mejor experiencia posible, que aprendas, te diviertas mucho y sobretodo  que nos puedas acompañar en las futuras versiones de nuestros eventos. 👍
 
