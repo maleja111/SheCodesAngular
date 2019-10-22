@@ -110,5 +110,93 @@ Puedes incluirle más texto si lo deseas. Incluirle más párrafos \(&lt;p&gt;&l
 
 ## 🎨Introducción al CSS🎨
 
+Las siglas de CSS significan “Cascade Style Sheet” o "Hoja de estilo en cascada". 
+
+Son un conjunto de instrucciones que nos permiten definir la apariencia de los diferentes elementos o etiquetas del HTML.
+
+Hay diferentes formas de aplicar el CSS, podemos colocarlo en cada etiqueta o podemos hacerlo haciendo uso de un archivo adicional.
+
+Si queremos aplicar por ejemplo un color a un párrafo, dentro de la etiqueta &lt;p&gt;&lt;/p&gt;, se haría algo así: 
+
+```markup
+<p style="color:red">Text</p>
+```
+
+![As&#xED; lucir&#xED;a el texto](../.gitbook/assets/screen-shot-2019-10-21-at-11.33.29-pm.png)
+
+Ahora usaremos nuestra card para colocarle algo de estilos.
+
+¿Estás list@?
+
+## Paso 1: Incluiremos selectores a nuestra Card
+
+En el CSS existe algo llamado selectores, que nos permiten definir sobre que tipo de elemento vamos a aplicar un conjunto de reglas o propiedades para cambiar la apariencia de los elementos HTML.
+
+Existen selectores de tipo, de clase, Id, universales y de atributo.
+
+{% hint style="info" %}
+**Selectores de tipo**: Aplica los estilos al elemento que coincide con su nombre. Por ejemplo: h1 { color: red}
+
+**Selectores de Clase**:  Aplica los estilos al elemento que tiene el atributo class. Por ejemplo: &lt;p class="text"&gt;&lt;/p&gt;
+
+**Selectores de Id**: Aplica los estilos al elemento que tiene el atributo Id especificado. Por ejemplo: &lt;p id="text"&gt;&lt;/p&gt;
+
+**Selectores universales**: Selecciona todos los elementos. Por ejemplo: \* {}
+
+**Selectores de atributo**: Aplica los estilos al elemento basándose en el valor de un determinado atributo. Por ejemplo: 
+
+```css
+a[title] {
+  color: purple;
+}
+```
+{% endhint %}
+
+Incluiremos selectores tipo clase en nuestra Card en el app.component.html. Nuestro código quedaría así:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<section class="card">
+    <h1 class="title">Mr Cat</h1>
+    <img class="card-image" src="https://www.incimages.com/uploaded_files/image/970x450/getty_513189787_110007.jpg" alt="Mr Cat" />
+    <h3 class="description-title">Description</h3>
+    <p class="description">He is a funny cat!!!</p>
+</section>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![A&#xF1;adimos las clases](../.gitbook/assets/screen-shot-2019-10-21-at-11.47.00-pm.png)
+
+Añadimos las clases en nuestro CSS, para esto en e app.component.css, vamos a colocar cada una de las clases que creamos en el HTML.
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.css" %}
+```css
+.card {
+}
+.title {
+}
+.card-image {
+}
+.description-title {
+}
+.description {
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Nuestro **Stackblitz** se vería así:
+
+![Incluimos nuestras clases](../.gitbook/assets/screen-shot-2019-10-21-at-11.51.15-pm.png)
+
+## Paso 2: Daremos estilo a nuestra Card
+
+Hasta ahora hemos añadido los selectores de clase. Lo que vamos a añadirle son algunas propiedades para que nuestra card se vea más bonita.
+
+En el archivo **app.component.css**, incluiremos lo siguiente:
+
 
 
