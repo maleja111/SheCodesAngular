@@ -262,3 +262,15 @@ Puedes añadirle más cosas adicionales si lo deseas, como más imágenes, emoji
 Has completado el **desafío \#0 de HTL & CSS**, ahora vamos a el **desafío \#0 de JavaScript 👇**
 {% endhint %}
 
+
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas mentoría adicional con este ejercicio puedes contactar a:
+
+Vanessa M. Aristizabal  
+Twitter: @vanessamarely  
+Correo: vanessamarely@gmail.com
+{% endhint %}
+
