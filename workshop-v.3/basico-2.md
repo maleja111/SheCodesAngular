@@ -1,2 +1,2 @@
-# Básico \#2
+# Básico \#2 - Interpolación y pipelines
 
