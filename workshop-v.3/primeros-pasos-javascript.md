@@ -219,10 +219,13 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
  Acabaste de ver que en el archivo con extensión **.html** tiene algo nuevo, tiene un par de llaves dobles **{{ }}**, el uso de estas llaves se le llama interpolación, su nombre en inglés es "interpolation", es un mecanismo de Angular para ver en una **template** \(nuestro archivo app.component.html\) una variable.
 {% endhint %}
 
-## Paso 6: Aprendamos que es If y que es else ✅ <a id="paso-2-que-es-una-variable"></a>
+## Paso 6: Aprendamos que es for 🧮 <a id="paso-2-que-es-una-variable"></a>
 
-Esta es la estructura más utilizada en JavaScript y en la mayoría de lenguajes de programación. La usamos para tomar decisiones, vamos a ver un ejemplo de su escritura y su uso.  
-Adiciona este código en tu archivo **app.component.ts**
+La estructura `for` nos permite hacer repeticiones de código \(también llamados bucles\) de una forma muy sencilla. Nos permite ejecutar una serie de ciclos _"mientras la condición indicada se siga cumpliendo, se va a repetir la ejecución de las instrucciones definidas dentro del for. Además, después de cada repetición, actualiza el valor de las variables que se utilizan en la condición"_.
+
+* La "inicialización" es la zona en la que se establece los valores iniciales de las variables que controlan la repetición.
+* La "condición" es el único elemento que decide si continua o se detiene la repetición.
+* La "actualización" es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
