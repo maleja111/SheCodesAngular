@@ -62,12 +62,12 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 **1.** Nos podemos dar cuenta que cuando abrimos el archivo **app.component.ts** que ya existe una variable name, y es de tipo string.  
   
-**2.** Vemos una palabra nueva llamada **this**, ¿Qué es **this**?`this`es una palabra reservada de JavaScript \(palabra reservada significa que no puedes crear una variable que este escrita exactamente igual\), se hace referencia al objeto, que contiene el método donde se invoca.  
-En este caso`this.dias`hace referencia a la variable `dias` que  acabamos de crear y \[0\] hace referencia a la posición del array que queremos seleccionar, la primero seria el 0 con lunes, 1 con martes, 2 con miércoles y así sucesivamente.  
+**2.** Vemos una palabra nueva llamada **this**, ¿Qué es **this**?`this`es una palabra reservada de JavaScript \(palabra reservada significa que no puedes crear una variable que este escrita exactamente igual a "**this**"\), se hace referencia al elemento que contiene el método donde se invoca.  
+En este caso`this.dias`hace referencia a la variable `dias` que  acabamos de crear y \[0\] hace referencia a la posición del array que queremos seleccionar, el primer elemento del array seria el 0 con el texto _lunes_, el segundo seria 1 con el texto _martes_, el tercero seria 2 con el texto _miércoles_ y así sucesivamente.  
   
-**3.** La misma referencia de`this` se hace en la variable `personalInfo` aquí, los objetos están conformados por una estructura`{llave: valor},` donde llave será la referencia para acceder al contenido, es por eso que cuando escribimos `this.personalInfo.apellido`, el resultado es `"Giraldo"`, porque estamos accediendo a la llave`apellido`de nuestra variable`personalInfo.`
-
-**4.** También te abras podido dar cuenta, que en un archivo con extensión **.TS** puedes hacer comentarios dentro de tu código, usando **`//`** o **/**_**\*  texto \***_**/** si quieres utilizar más de una línea comentada, por ejemplo:
+**3.** También usamos la referencia de`this`en la variable `personalInfo` aquí, los objetos están conformados por una estructura`{llave: valor},` donde llave será la referencia para acceder al contenido, es por eso que cuando escribimos `this.personalInfo.apellido`, el resultado es `"Giraldo"`, porque estamos accediendo a la llave`apellido`de nuestra variable`personalInfo.` Ensaya usando `this.personalInfo.cedula` ¡ y descubre que pasa!  
+  
+**4.** También te abras podido dar cuenta, que en un archivo con extensión **.TS** puedes hacer comentarios dentro de tu código, usando **`//`** o **/**_**\*  texto \***_**/** si quieres utilizar más de una línea comentada, por ejemplo
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.ts" %}
@@ -81,6 +81,8 @@ líneas comentadas */
 
 Esto es muy útil cuando trabajas en equipos y deseas dejar una nota, o simplemente porque deseas recordar que es lo que hace tu código.
 {% endhint %}
+
+
 
 ## Paso 3: ¿**Cómo podemos ver el contenido de una variable? 👀**
 
