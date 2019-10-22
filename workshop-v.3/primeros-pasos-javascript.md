@@ -2,7 +2,7 @@
 description: "En este nivel, vamos a aprender ¿Qué es JavaScript \U0001F913?, ¿Para que sirve? y ¿Cómo podemos sacarle el mejor provecho a este lenguaje?."
 ---
 
-# Primeros pasos: JavaScript
+# Primeros pasos: JavaScript 💻
 
 ## 💡 Introducción 💡
 
