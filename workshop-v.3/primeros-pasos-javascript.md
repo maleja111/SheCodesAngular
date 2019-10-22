@@ -15,7 +15,7 @@ Hoy vamos a conocer aspectos generales pero muy útiles de forma dinámica. 🎮
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
-Entra a [**www.stackblitz.com**](www.stackblitz.com), y verás algo como esto:
+Entra a [**www.stackblitz.com**](https://stackblitz.com/), y verás algo como esto:
 
 ![](../.gitbook/assets/1.png)
 
