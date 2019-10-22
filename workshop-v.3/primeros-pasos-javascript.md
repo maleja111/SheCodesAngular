@@ -64,7 +64,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 **2.** Vemos una palabra nueva llamada **this**, ¿Qué es **this**?`this`es una palabra reservada de JavaScript \(palabra reservada significa que no puedes crear una variable que este escrita exactamente igual\), se hace referencia al objeto, que contiene el método donde se invoca.  
 En este caso`this.dias`hace referencia a la variable `dias` que  acabamos de crear y \[0\] hace referencia a la posición del array que queremos seleccionar, la primero seria el 0 con lunes, 1 con martes, 2 con miércoles y así sucesivamente.
 
-**3.** La misma referencia de`this` se hace en la variable `personalInfo` aquí, los objetos están conformados por una estructura`{llave: valor},` donde llave será la referencia para acceder al contenido, es por eso que cuando escribimos `this.personalInfo.apellido`, el resultado es `"Giraldo"`, porque estamos accediendo a la llave`apellido de nuestra variable personalInfo.`
+**3.** La misma referencia de`this` se hace en la variable `personalInfo` aquí, los objetos están conformados por una estructura`{llave: valor},` donde llave será la referencia para acceder al contenido, es por eso que cuando escribimos `this.personalInfo.apellido`, el resultado es `"Giraldo"`, porque estamos accediendo a la llave`apellido`de nuestra variable`personalInfo.`
 {% endhint %}
 
 ## Paso 2: ¿Qué es una variable? **🗄** <a id="paso-2-que-es-una-variable"></a>
