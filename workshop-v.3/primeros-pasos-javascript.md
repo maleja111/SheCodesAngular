@@ -215,7 +215,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 1.** Este es un conocimiento de Angular 🅰️💖:  
 Acabaste de ver la función `ngOnInit(),`esta es propia de Angular y tiene la particularidad de ser la primer función en ejecutarse cuando cargamos nuestro componente; **ngOnInit\(\)** es la primer función que será llamada y dentro de ella encontramos el llamado a la función `queMensajeMostrar()`, haciendo esto, podremos garantizar que se ejecute apenas inicie nuestra aplicación.
 
-**2.** **if** `this.mostrarMensajeEnVariable == true`, entonces nos mostrara un mensaje especifico, si no, **else**, tendremos un mensaje diferente.
+**2.** **if** `this.mostrarMensajeEnVariable == true`, entonces nos mostrará un mensaje especifico, si no, **else**, tendremos un mensaje diferente.
 {% endhint %}
 
 🎉 ¡**LO LOGRASTE!** 🎉
