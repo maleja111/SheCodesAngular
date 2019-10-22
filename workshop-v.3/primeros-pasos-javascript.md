@@ -11,7 +11,7 @@ Hoy vamos a conocer aspectos generales pero muy útiles de forma dinámica. 🎮
 
 ![JavaScript Logo](../.gitbook/assets/image%20%281%29.png)
 
-\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-catparty.stackblitz.io/)\*\*\*\*
+\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-conoce-javascript.stackblitz.io)\*\*\*\*
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
@@ -213,43 +213,24 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 **Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
   
 1.** Este es un conocimiento de Angular 🅰️💖:  
- Acabaste de ver que en el archivo con extensión **.html** tiene algo nuevo, tiene un par de llaves dobles **{{ }}**, el uso de estas llaves se le llama interpolación, su nombre en inglés es "interpolation", es un mecanismo de Angular para ver en una **template** \(nuestro archivo app.component.html\) una variable.
+Acabaste de ver la función `ngOnInit(),`esta es propia de Angular y tiene la particularidad de ser la primer función en ejecutarse cuando cargamos nuestro componente; **ngOnInit\(\)** es la primer función que será llamada y dentro de ella encontramos el llamado a la función `queMensajeMostrar()`, haciendo esto, podremos garantizar que se ejecute apenas inicie nuestra aplicación.
 
-**1.** Este es un conocimiento de Angular 🅰️💖:  
- Acabaste de ver que en el archivo con extensión **.html** tiene algo nuevo, tiene un par de llaves dobles **{{ }}**, el uso de estas llaves se le llama interpolación, su nombre en inglés es "interpolation", es un mecanismo de Angular para ver en una **template** \(nuestro archivo app.component.html\) una variable.
+**2.** **if** `this.mostrarMensajeEnVariable == true`, entonces nos mostrara un mensaje especifico, si no, **else**, tendremos un mensaje diferente.
 {% endhint %}
 
-## Paso 6: Aprendamos que es for 🧮 <a id="paso-2-que-es-una-variable"></a>
+🎉 ¡**LO LOGRASTE!** 🎉
 
-La estructura `for` nos permite hacer repeticiones de código \(también llamados bucles\) de una forma muy sencilla. Nos permite ejecutar una serie de ciclos _"mientras la condición indicada se siga cumpliendo, se va a repetir la ejecución de las instrucciones definidas dentro del for. Además, después de cada repetición, actualiza el valor de las variables que se utilizan en la condición"_.
+{% hint style="info" %}
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-toma-lista) puedes encontrar el ejercicio resuelto.
+{% endhint %}
 
-* La "inicialización" es la zona en la que se establece los valores iniciales de las variables que controlan la repetición.
-* La "condición" es el único elemento que decide si continua o se detiene la repetición.
-* La "actualización" es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.
+## 😎 Tu Misión 😎
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.ts" %}
-```javascript
-mostrarMensajeEnVariable = true;
+Con lo que aprendiste en **Primeros pasos: HTML y Style,** ponle personalidad a tu aplicación 🎨👩‍🎨. 
 
-ngOnInit() {
-  this.queMensajeMostrar();
-}
+Esta adición es para retar tu curiosidad, podrías proponer la solución que tu quieras. 
 
-queMensajeMostrar() {
-  if (this.mostrarMensajeEnVariable == true) {
-    this.guardemosUnValorEnUnaVariable(
-      "El valor de la condición es igual a true 👍"
-    );
-  } else {
-    this.guardemosUnValorEnUnaVariable(
-      "El valor de la condición es diferente a true!, 👎"
-    );
-  }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-Deberías hacer algo así, y tu resultado se deberá ver así
+{% hint style="success" %}
+Has completado los **Primeros pasos: JavaScript**, ahora vamos para nuestro primer desafío **👇**
+{% endhint %}
 
