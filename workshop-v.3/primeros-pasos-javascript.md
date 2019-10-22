@@ -174,7 +174,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ![](../.gitbook/assets/variable-5.gif)
 
-## Paso 5: Aprendamos que es If ✅ <a id="paso-2-que-es-una-variable"></a>
+## Paso 5: Aprendamos que es If y que es else ✅ <a id="paso-2-que-es-una-variable"></a>
 
 Esta es la estructura más utilizada en JavaScript y en la mayoría de lenguajes de programación. La usamos para tomar decisiones, vamos a ver un ejemplo de su escritura y su uso.  
 Adiciona este código en tu archivo **app.component.ts**
@@ -205,5 +205,46 @@ queMensajeMostrar() {
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
-algo
+![](../.gitbook/assets/variable-6.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
+  
+1.** Este es un conocimiento de Angular 🅰️💖:  
+ Acabaste de ver que en el archivo con extensión **.html** tiene algo nuevo, tiene un par de llaves dobles **{{ }}**, el uso de estas llaves se le llama interpolación, su nombre en inglés es "interpolation", es un mecanismo de Angular para ver en una **template** \(nuestro archivo app.component.html\) una variable.
+
+**1.** Este es un conocimiento de Angular 🅰️💖:  
+ Acabaste de ver que en el archivo con extensión **.html** tiene algo nuevo, tiene un par de llaves dobles **{{ }}**, el uso de estas llaves se le llama interpolación, su nombre en inglés es "interpolation", es un mecanismo de Angular para ver en una **template** \(nuestro archivo app.component.html\) una variable.
+{% endhint %}
+
+## Paso 6: Aprendamos que es If y que es else ✅ <a id="paso-2-que-es-una-variable"></a>
+
+Esta es la estructura más utilizada en JavaScript y en la mayoría de lenguajes de programación. La usamos para tomar decisiones, vamos a ver un ejemplo de su escritura y su uso.  
+Adiciona este código en tu archivo **app.component.ts**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```javascript
+mostrarMensajeEnVariable = true;
+
+ngOnInit() {
+  this.queMensajeMostrar();
+}
+
+queMensajeMostrar() {
+  if (this.mostrarMensajeEnVariable == true) {
+    this.guardemosUnValorEnUnaVariable(
+      "El valor de la condición es igual a true 👍"
+    );
+  } else {
+    this.guardemosUnValorEnUnaVariable(
+      "El valor de la condición es diferente a true!, 👎"
+    );
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así
 
