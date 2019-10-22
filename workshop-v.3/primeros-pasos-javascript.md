@@ -226,7 +226,7 @@ Acabaste de ver la función `ngOnInit(),`esta es propia de Angular y tiene la pa
 
 ## 😎 Tu Misión 😎
 
-Con lo que aprendiste en **Primeros pasos: HTML y Style,** ponle personalidad a tu aplicación 🎨👩‍🎨. 
+Con lo que aprendiste en **Primeros Pasos: Html 📝 & CSS 🎨,** ponle personalidad a tu aplicación 🎨👩‍🎨. 
 
 Esta adición es para retar tu curiosidad, podrías proponer la solución que tu quieras. 
 
