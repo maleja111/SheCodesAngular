@@ -221,7 +221,7 @@ Acabaste de ver la función `ngOnInit(),`esta es propia de Angular y tiene la pa
 🎉 ¡**LO LOGRASTE!** 🎉
 
 {% hint style="info" %}
-\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-toma-lista) puedes encontrar el ejercicio resuelto.
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-conoce-javascript) puedes encontrar el ejercicio resuelto.
 {% endhint %}
 
 ## 😎 Tu Misión 😎
