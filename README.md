@@ -16,7 +16,7 @@ Por motivos personales [Juan Herrera](https://twitter.com/jdjuan), emprendió nu
 
 ![](.gitbook/assets/screen-shot-2019-08-02-at-5.41.24-pm.png)
 
-Nuestra primera versión de She codes Angular, se realizó el [19 de enero del 2019](https://www.meetup.com/She-Codes-Angular/events/257810892/), esta versión fue organizada por: [Alejandra Giraldo](https://twitter.com/maleja111), [Juan Herrera](https://twitter.com/jdjuan) y [Vanessa Aristizabal](https://twitter.com/vanessamarely).
+Nuestra primera versión de She Codes Angular, se realizó el [19 de enero del 2019](https://www.meetup.com/She-Codes-Angular/events/257810892/), esta versión fue organizada por: [Alejandra Giraldo](https://twitter.com/maleja111), [Juan Herrera](https://twitter.com/jdjuan) y [Vanessa Aristizabal](https://twitter.com/vanessamarely).
 
 She Codes Angular participó en el [IWD - International Women's Day 2019 en marzo](https://www.meetup.com/She-Codes-Angular/events/259451451/), en conjunto con otras comunidades aliadas.
 
