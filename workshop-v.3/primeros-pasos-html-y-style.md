@@ -36,6 +36,10 @@ y hay otras etiquetas que no requieren un par, se puede hacer el cierre en una s
 
 En este desafío crearemos una **"Card**" de un personaje, paso a paso.
 
+Crearemos algo como lo siguiente: 
+
+![Card de mi personaje](../.gitbook/assets/screen-shot-2019-10-22-at-8.14.04-am.png)
+
 ¿Estás list@?
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
@@ -198,5 +202,63 @@ Hasta ahora hemos añadido los selectores de clase. Lo que vamos a añadirle son
 
 En el archivo **app.component.css**, incluiremos lo siguiente:
 
+1. Vamos a centrar los títulos, para esto usaremos la propiedad: **text-align: center;**
+2. Colocaremos un ancho por defecto a nuestra sección de card, usaremos la propiedad: **width: 400px;**
+3. Le colocaremos a todo el card una fuente de sans-serif, quedaría así: **font-family: sans-serif;**
+4. Colocaremos un tamaño de fuente para la descripción y para los títulos. A la clase del elemento &lt;h1&gt; le pondremos 30px, al &lt;h3&gt; una fuente de 24px y al párrafo &lt;p&gt; una de 18px. Para esto usaremos la propiedad: **font-size**.
 
+Todas las propiedades las incluiremos dentro de las respectivas clases de los elementos, en el archivo **app.component.css.**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.css" %}
+```css
+.card {
+  font-family: sans-serif;
+  width: 400px;
+}
+.title {
+  font-size: 30px;
+  text-align: center;
+}
+.card-image {
+  width: 100%;
+}
+.description-title {
+  font-size: 24px;
+  text-align: center;
+}
+.description {
+  font-size: 18px;
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Podemos incluirle todos los estilos que queramos y usar tantas propiedades como lo desees.
+
+![Card con estilos aplicados.](../.gitbook/assets/screen-shot-2019-10-22-at-8.05.14-am.png)
+
+A continuación encontrarás una hoja con algunas propiedades, para que puedas aplicar en tu Card.
+
+![Aqu&#xED; podr&#xE1;s encontrar m&#xE1;s propiedades si deseas incluirlas en tu Card](../.gitbook/assets/cheatsheet.png)
+
+¡Felicitaciones hemos terminado el primer desafío!
+
+🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-catparty) puedes encontrar el ejercicio resuelto.
+{% endhint %}
+
+## 😎 Tu Misión Especial 😎
+
+Parece que nuestra Card está lista, pero tiene pocos estilos y no se ve tan bonita 😵. 
+
+Tu misión especial es que le pongas un lindo color de fondo a tu Card y añadas algunos colores a los títulos y la descripción.
+
+Puedes añadirle más cosas adicionales si lo deseas, como más imágenes, emojis, entre otros.
+
+{% hint style="success" %}
+Has completado el **desafío \#0 de HTL & CSS**, ahora vamos a el **desafío \#0 de JavaScript 👇**
+{% endhint %}
 
