@@ -66,17 +66,144 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 En este caso`this.dias`hace referencia a la variable `dias` que  acabamos de crear y \[0\] hace referencia a la posición del array que queremos seleccionar, la primero seria el 0 con lunes, 1 con martes, 2 con miércoles y así sucesivamente.  
   
 **3.** La misma referencia de`this` se hace en la variable `personalInfo` aquí, los objetos están conformados por una estructura`{llave: valor},` donde llave será la referencia para acceder al contenido, es por eso que cuando escribimos `this.personalInfo.apellido`, el resultado es `"Giraldo"`, porque estamos accediendo a la llave`apellido`de nuestra variable`personalInfo.`
+
+**4.** También te abras podido dar cuenta, que en un archivo con extensión **.TS** puedes hacer comentarios dentro de tu código, usando **`//`** o **/**_**\*  texto \***_**/** si quieres utilizar más de una línea comentada, por ejemplo:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```javascript
+/* estas 
+son varias 
+líneas comentadas */
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Esto es muy útil cuando trabajas en equipos y deseas dejar una nota, o simplemente porque deseas recordar que es lo que hace tu código.
 {% endhint %}
 
-## Paso 2: ¿Qué es una variable? **🗄** <a id="paso-2-que-es-una-variable"></a>
+## Paso 3: ¿**Cómo podemos ver el contenido de una variable? 👀**
 
-Una variable es un espacio de almacenamiento, aquí podemos guardar cualquier tipo de dato que te puedas imaginar, como una cadena de caracteres, un valor numérico o estructuras un poco más específicas. Adiciona este código en tu archivo **app.component.ts**Add fileJavaScript exit: ⌘↩
+Que lindo conocer todas las posibilidades de almacenamiento de datos que podemos tener con JavaScript 🥳 .  
+Ahora vamos a utilizar **los** conocimientos que aprendiste en el ejercicio anterior sobre HTML y descubriremos como Angular nos permite ver variables de manera muy simple.  
+Adiciona este código en tu archivo **app.component.html**
 
-```text
-  // Vamos a crear una serie de variables de diferentes tipos  // Numérico  iva = 16;        // Variable tipo entero  total = 234.65;  // Variable tipo decimal​  // Cadenas de texto, tambien se les dicen String  mensaje = 'Bienvenid@ a She Codes Angular';  nombreCompleto = 'Alejandra Giraldo';​  // Arrays - Arreglos  dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];  diaSeleccionado = this.dias[0];    // diaSeleccionado = 'Lunes'​    // Object - Objetos  personalInfo = {'nombre': 'Alejandra', 'apellido': 'Giraldo', 'cedula': 123456};  soloApellido = this.personalInfo.apellido;    // soloApellido = 'Giraldo'​  // Boolean - Booleanos  estoyAprendiendo = true;  meGustanLosVegetales = false;
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<p>
+  Vamos a ver la variable iva: {{ iva }}
+</p>
+<p>
+  Vamos a ver la variable total: {{ total }}
+</p>
+<p>
+  Vamos a ver la variable mensaje: {{ mensaje }}
+</p>
+<p>
+  Vamos a ver la variable nombreCompleto: {{ nombreCompleto }}
+</p>
+<p>
+  Vamos a ver la variable dias: {{ dias }}
+</p>
+<p>
+  Vamos a ver la variable diaSeleccionado: {{ diaSeleccionado }}
+</p>
+<p>
+  Vamos a ver la variable personalInfo: {{ personalInfo }}
+</p>
+<p>
+  Vamos a ver la variable soloApellido: {{ soloApellido }}
+</p>
+
+<p>
+  Vamos a ver la variable estoyAprendiendo: {{ estoyAprendiendo }}
+</p>
+<p>
+  Vamos a ver la variable meGustanLosVegetales: {{ meGustanLosVegetales }}
+</p>
 ```
-
-‌
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/variables-2.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
+  
+1.** Este es un conocimiento de Angular 🅰️💖:  
+ Acabaste de ver que en el archivo con extensión **.html** tiene algo nuevo, tiene un par de llaves dobles **{{ }}**, el uso de estas llaves se le llama interpolación, su nombre en inglés es "interpolation", es un mecanismo de Angular para ver en una **template** \(nuestro archivo app.component.html\) una variable.
+{% endhint %}
+
+## Paso 4: ¿Qué es una función? 🤔 <a id="paso-2-que-es-una-variable"></a>
+
+Cuando se desarrolla una aplicación, es muy habitual utilizar una y otra vez las mismas instrucciones. Por eso una función se utiliza para agrupar las indicaciones que necesitamos para realizar una tarea concreta y que se puedan reutilizar fácilmente.  
+Vamos a reemplazar nuestras variables anteriores del archivo **app.component.ts** por este código:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```javascript
+variable = '';
+
+guardemosUnValorEnUnaVariable(valor) {
+  this.variable = valor;
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/variable-3.gif)
+
+Vamos a reemplazar ****el contenido del archivo **app.component.html** por este código:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<p>
+  Vamos a ver la variable variable: {{ variable }}
+</p>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/variable-5.gif)
+
+## Paso 5: Aprendamos que es If ✅ <a id="paso-2-que-es-una-variable"></a>
+
+Esta es la estructura más utilizada en JavaScript y en la mayoría de lenguajes de programación. La usamos para tomar decisiones, vamos a ver un ejemplo de su escritura y su uso.  
+Adiciona este código en tu archivo **app.component.ts**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```javascript
+mostrarMensajeEnVariable = true;
+
+ngOnInit() {
+  this.queMensajeMostrar();
+}
+
+queMensajeMostrar() {
+  if (this.mostrarMensajeEnVariable == true) {
+    this.guardemosUnValorEnUnaVariable(
+      "El valor de la condición es igual a true 👍"
+    );
+  } else {
+    this.guardemosUnValorEnUnaVariable(
+      "El valor de la condición es diferente a true!, 👎"
+    );
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+algo
 
