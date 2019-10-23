@@ -11,7 +11,7 @@
 * [Primeros Pasos: Html 📝 & CSS 🎨](workshop-v.3/primeros-pasos-html-y-style.md)
 * [Primeros pasos: JavaScript 💻](workshop-v.3/primeros-pasos-javascript.md)
 * [Básico \#1 - Directivas👮](workshop-v.3/basico-1.md)
-* [Básico \#2 - Interpolación y pipelines](workshop-v.3/basico-2.md)
+* [Básico \#2 - Trasformando data 🗳🗂](workshop-v.3/basico-2.md)
 * [Intermedio \#1](workshop-v.3/intermedio-1.md)
 * [Intermedio \#2](workshop-v.3/intermedio-2.md)
 * [Avanzado \#1](workshop-v.3/avanzado-1.md)
