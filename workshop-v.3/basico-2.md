@@ -16,7 +16,7 @@ Realizaremos una aplicación que nos permita cambiar la manera en la que vemos l
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
-Entra a [**www.stackblitz.com**](www.stackblitz.com), y verás algo como esto:
+Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como esto:
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LW1Rd6Lo-WMisT20MSI%2F-LfkG9FnieTyrSrzuXpf%2F-LfkL1kfzmm5NbCpp7Bn%2F1.png?alt=media&token=c53de18e-d4ad-429e-a53d-90c4f288eb14)
 
