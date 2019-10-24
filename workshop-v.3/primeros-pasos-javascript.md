@@ -13,9 +13,9 @@ Hoy vamos a conocer aspectos generales pero muy útiles de forma dinámica. 🎮
 
 \*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-conoce-javascript.stackblitz.io)\*\*\*\*
 
-## Paso 1: **Creemos nuestra App de Angular** ⭐️
+## Paso 1: **Creemos nuestra App de Angular** 🅰️
 
-Entra a [**www.stackblitz.com**](https://stackblitz.com/), y verás algo como esto:
+Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como esto:
 
 ![](../.gitbook/assets/1.png)
 
