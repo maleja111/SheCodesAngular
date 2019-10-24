@@ -105,3 +105,33 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
  porque estas líneas nos servirán de referencia para poner código en un siguiente paso.
 {% endhint %}
 
+## Paso 4: U**na función pequeñita 👶🍼**
+
+Vamos a crear una función simple, pero poderosa 💪🏽con ella controlaremos el valor de nuestra variable **flipCard**.    
+Adicionaremos en el archivo  **app.component.ts** el siguiente código debajo de la declaración de variable text.
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```typescript
+onClickCard() {
+this.flipCard = !this.flipCard;
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/transform-3.gif)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
+  
+1.** La lógica de nuestra función **onClickCard\(\)** manejara el valor de la variable `flipCard`, `this.flipCard = !this.flipCard;` haciendo esto almacenaremos en esta variable el valor contrario al que tiene originalmente, ejemplo:  
+Si el valor de `flipCard` es **true**, con `!this.flipCard` le asignamos un valor **false**.  
+Si el valor de `flipCard` es **false**, con `!this.flipCard` le asignamos un valor **true**.
+{% endhint %}
+
+  
+
+
