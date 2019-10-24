@@ -101,7 +101,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
        **3.1** la primera es **\[class.flipped\]="flipCard"** \(será el responsable de darnos el efecto de girar una tarjeta\), vemos la variable `flipCard` que creamos anteriormente, que funciona así: cuando el valor es true en nuestra estructura HTML se adicionara la clase f**lipped**, solo y solo si, la variable es true, si su valor es false entonces no nos va a adicionar la clase **flipped** en nuestra estructura HTML.  
        **3.2** la segunda es \(click\)="onClickCard\(\)" aquí capturaremos el evento click donde nos mostrará u ocultará la información con la data transformada o sin transformar dependiendo del caso. \(en un siguiente paso veremos que contiene la función\).  
 **4.** Ten presente los 2 comentarios que estás viendo que contienen   
-&lt;!-- TODO: Aquí  
- porque estas líneas nos servirán de referencia para poner código en el futuro.
+**&lt;!-- TODO: Aquí .... --&gt;**  
+ porque estas líneas nos servirán de referencia para poner código en un siguiente paso.
 {% endhint %}
 
