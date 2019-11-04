@@ -114,7 +114,7 @@ Puedes incluirle más texto si lo deseas. Incluirle más párrafos \(&lt;p&gt;&l
 
 ## 🎨Introducción al CSS🎨
 
-Las siglas de CSS significan “Cascade Style Sheet” o "Hoja de estilo en cascada". 
+Las siglas de **CSS** significan “Cascade Style Sheet” o "Hoja de estilo en cascada". 
 
 Son un conjunto de instrucciones que nos permiten definir la apariencia de los diferentes elementos o etiquetas del HTML.
 
@@ -134,7 +134,7 @@ Ahora usaremos nuestra card para colocarle algo de estilos.
 
 ## Paso 1: Incluiremos selectores a nuestra Card
 
-En el CSS existe algo llamado selectores, que nos permiten definir sobre que tipo de elemento vamos a aplicar un conjunto de reglas o propiedades para cambiar la apariencia de los elementos HTML.
+En el **CSS** existe algo llamado selectores, que nos permiten definir sobre que tipo de elemento vamos a aplicar un conjunto de reglas o propiedades para cambiar la apariencia de los elementos HTML.
 
 Existen selectores de tipo, de clase, Id, universales y de atributo.
 
@@ -156,7 +156,7 @@ a[title] {
 ```
 {% endhint %}
 
-Incluiremos selectores tipo clase en nuestra Card en el app.component.html. Nuestro código quedaría así:
+Incluiremos selectores tipo clase en nuestra Card en el **app.component.html**. Nuestro código quedaría así:
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -173,7 +173,7 @@ Incluiremos selectores tipo clase en nuestra Card en el app.component.html. Nues
 
 ![A&#xF1;adimos las clases](../.gitbook/assets/screen-shot-2019-10-21-at-11.47.00-pm.png)
 
-Añadimos las clases en nuestro CSS, para esto en e app.component.css, vamos a colocar cada una de las clases que creamos en el HTML.
+Añadimos las clases en nuestro **CSS**, para esto en el **app.component.css**, vamos a colocar cada una de las clases que creamos en el **HTML**.
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.css" %}

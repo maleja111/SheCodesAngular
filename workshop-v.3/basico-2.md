@@ -363,5 +363,13 @@ Esta adición es para retar tu curiosidad, podrías proponer la solución que tu
 Has completado los **Trasformando data 🗳🗂** ahora vamos para nuestro siguiente desafío **👇**
 {% endhint %}
 
+{% hint style="info" %}
+**Nota:**
 
+Si necesitas ayuda con este ejercicio puedes contactar a:
+
+Alejandra Giraldo  
+Twitter: @maleja111  
+Correo: magiraldodevelop@gmail.com
+{% endhint %}
 
