@@ -60,7 +60,7 @@ En nuestro nuevo componente vamos a crear un campo de texto para el nombre, tel�
 
 Incluiremos este componente form en nuestro app component.
 
-![A&#xF1;adimos los campos](../.gitbook/assets/screen-shot-2019-11-03-at-11.25.14-pm.png)
+![A&#xF1;adimos los campos](../.gitbook/assets/screen-shot-2019-11-04-at-12.51.00-pm.png)
 
 ## Paso 4: Volvamos nuestro formulario reactivo
 
@@ -125,12 +125,68 @@ private buildForm(){
                 name: 'Jhon Doe',
                 email: 'defaul@email.com',
                 country: 'Colombia',
-                birthday: ''
+                comments: ''
          });
  }
 ```
 
-Ahora en la vista en nuestro **form.component.html** vamos a asignar los nombres que definimos el el modelo a los elementos correspondientes del **HTML**.
+Ahora en la vista en nuestro **form.component.html** vamos a asignar los nombres que definimos en el modelo, a los elementos correspondientes del **HTML**.
+
+En el form procederemos a añadir las dos directivas que vienen del modulo de formularios reactivos,  **\[formGroup\]="objetoFormulario"** y **formControlName="nombreDelControl"**.
+
+En nuestra etiqueta form incluiremos la directiva **\[formGroup\]**.
+
+```markup
+<form [formGroup]="formGroup">
+</form>
+```
+
+En nuestros elementos del form: &lt;input&gt; &lt;textarea&gt; pondremos los **formControlName**. Como por ejemplo:
+
+```markup
+<input name="name" type="text" formControlName="name" />
+```
+
+## Paso 5: Envío de nuestra información
+
+Tenemos nuestro formulario, ahora vamos a hacer uso del botón de enviar  o **Send**, para enviar nuestra información.
+
+Crearemos una función **sendData\(\)** en nuestro **form.component.ts**. En nuestra Clase de formulario crearemos una constante que usaremos en nuestra función para almacenar la información de nuestro formulario.
+
+{% code-tabs %}
+{% code-tabs-item title="form.component.ts" %}
+```typescript
+
+export class FormComponent implements OnInit {
+  
+  public contactData;
+
+  public sendData(){
+    this.contactData = this.formGroup.value;
+    console.log(this.contactData);
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+En nuestro botón incluiremos nuestra función. 
+
+```markup
+<button (click)="sendData()">Send</button>
+```
+
+## Paso 6: Visualizar nuestra Data enviada
+
+Para visualizar la información que enviamos, crearemos una sección debajo de nuestro formulario, que indique que nuestra información ha sido enviada con éxito y nos sirve para comprobar la información que incluimos en nuestro formulario.
+
+```markup
+<section>
+    aquí va nuestra información ...
+</section>
+```
+
+Entonces para ello bajo nuestro formulario crearemos una sección donde incluiremos un titulo y mostraremos la información donde ubicaremos el titulo del campo a la derecha y la información que incluimos en el formulario para ese campo a la izquierda.
 
 
 
