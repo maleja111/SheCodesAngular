@@ -2,11 +2,11 @@
 description: "En Angular existen dos formas de crear formularios una llamada Template Driven y otra llamada Reactive Forms, en este desafío te enseñaremos como crear un formulario Reactivo o Reactive Form \U0001F609"
 ---
 
-# ✨Avanzado \#1 - Formularios Reactivos✨
+# ✨Avanzado \#1 - Formularios Reactivos - Deja tu comentario 💬
 
 ## 💡 Introducción 💡
 
-En este desafío crearemos un formulario de contacto aplicando algunos conceptos básicos de Angular, los cuales hemos aprendido en los desafíos anteriores y aprenderemos algunos nuevos a través de este desafío 🤙
+En este desafío crearemos un formulario  aplicando algunos conceptos básicos de Angular, los cuales hemos aprendido en los desafíos anteriores y aprenderemos algunos nuevos a través de esta nueva aplicación 🤙
 
 **¡**[**Aquí puedes encontrar el demo**](https://contact-form1.stackblitz.io)**!**
 
@@ -39,14 +39,14 @@ Copiaremos lo siguiente en el archivo **app.component.html**
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
 ```markup
-<h1>📝 Formulario de Contacto 📝</h1>
+<h1>💬 Deja tu comentario 💬</h1>
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
 Deberías ver algo así: 👇
 
-![T&#xED;tulo del Formulario](../.gitbook/assets/screen-shot-2019-11-03-at-11.12.35-pm.png)
+![A&#xF1;adiendo el titulo a tu aplicaci&#xF3;n](../.gitbook/assets/screen-shot-2019-11-04-at-5.59.55-pm.png)
 
 ## Paso 3: Añadamos algunos campos de texto
 
@@ -54,13 +54,13 @@ Creemos un componente form y en el añadiremos algunos campos de texto para nues
 
 En la carpeta app daremos clic derecho, seleccionamos la opción Angular Generator y seleccionamos component, le asignaremos el nombre form.
 
-![Componente Form](../.gitbook/assets/screen-shot-2019-11-03-at-11.17.48-pm.png)
+![Componente Form](../.gitbook/assets/screen-shot-2019-11-04-at-6.02.00-pm.png)
 
-En nuestro nuevo componente vamos a crear un campo de texto para el nombre, teléfono, país de origen, fecha de nacimiento y correo.
+En nuestro nuevo componente vamos a crear un campo de texto para el nombre, país de origen,  correo y comentarios.
 
 Incluiremos este componente form en nuestro app component.
 
-![A&#xF1;adimos los campos](../.gitbook/assets/screen-shot-2019-11-04-at-12.51.00-pm.png)
+![A&#xF1;adimos los campos](../.gitbook/assets/screen-shot-2019-11-04-at-6.36.48-pm.png)
 
 ## Paso 4: Volvamos nuestro formulario reactivo
 
@@ -96,9 +96,9 @@ Debemos importar la clase y los demás elementos que usaremos para nuestro formu
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms'
 ```
 
-Vamos a incluir algunas funciones y algunos funciones del ciclo de vida de Angular como el **constructor** y el **ngOnInit**.
+Vamos a incluir algunas funciones e incluiremos el  **constructor** y el **ngOnInit** que hacen parte del ****ciclo de vida de Angular.
 
-En el constructor vamos a definir una variable de tipo **FormBuilder**.
+En el **constructor** vamos a definir una variable de tipo **FormBuilder**.
 
 ```typescript
 constructor( private formBuilder: FormBuilder ) { }
@@ -159,18 +159,18 @@ Crearemos una función **sendData\(\)** en nuestro **form.component.ts**. En nue
 
 export class FormComponent implements OnInit {
   
-  public contactData;
+  public formData;
 
   public sendData(){
-    this.contactData = this.formGroup.value;
-    console.log(this.contactData);
+    this.formData = this.formGroup.value;
+    console.log(this.formData);
   }
 }
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Nuestro form.contact.ts se ver&#xE1; as&#xED;](../.gitbook/assets/screen-shot-2019-11-04-at-3.30.17-pm.png)
+![Nuestro form.component.ts se ver&#xE1; as&#xED;](../.gitbook/assets/screen-shot-2019-11-04-at-6.38.15-pm.png)
 
 En nuestro botón incluiremos nuestra función. 
 
@@ -188,7 +188,7 @@ Para visualizar la información que enviamos, crearemos una sección debajo de n
 </section>
 ```
 
-Entonces para ello bajo nuestro formulario crearemos una sección donde incluiremos un titulo y mostraremos la información donde ubicaremos el titulo del campo a la derecha y la información que incluimos en el formulario para ese campo a la izquierda.
+Incluiremos un titulo y mostraremos la información donde ubicaremos el titulo del campo a la derecha y la información que incluimos en el formulario para ese campo a la izquierda.
 
 
 
