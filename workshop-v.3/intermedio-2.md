@@ -2,11 +2,11 @@
 description: "En este ejercicio nos vamos a divertir aprendiendo sobre Formularios en Angular.io \U0001F4DD"
 ---
 
-# Intermedio \#2: Crea tu perfil 👤✏️
+# Intermedio \#2: Crea un formulario de contacto 📞
 
 ## 💡 Introducción 💡
 
-En este desafío vamos a mostrar de forma muy creativa tus datos personales, crearemos un formulario que te va a permitir llenar dinámicamente la información que deseas mostrar en tu propio perfil. 🧙🏼‍♀️
+En este desafío vamos a mostrar de forma muy creativa datos que tu mismo vas a ingresar en un formulario de contacto, una funcionalidad básica de las páginas web. 📞
 
 \*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-crea-tu-perfil.stackblitz.io)\*\*\*\*
 
