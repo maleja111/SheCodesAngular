@@ -216,7 +216,8 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 ## Paso 3: **Aprendamos a hacer un formulario en Angular.io 📝🅰️**
 
 Ya tienes la estructura básica, hora nos concentraremos en la creación de un formulario, este formulario tendrá 3 campos, un campo para ingresar tu nombre, otro para ingresar tu correo electrónico y un campo para ingresar un mensaje.  
-Copiaremos lo siguiente contenido reemplazando el comentario &lt;!-- TODO: Aquí adicionaremos nuestro formulario --&gt;  en el archivo **app.component.html.**
+  
+Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- TODO: Aquí adicionaremos nuestro formulario -->`  en el archivo **app.component.html.**
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -236,4 +237,8 @@ Copiaremos lo siguiente contenido reemplazando el comentario &lt;!-- TODO: Aquí
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/screen-shot-2019-11-04-at-5.59.03-pm.png)
 
