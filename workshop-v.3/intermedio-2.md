@@ -6,10 +6,9 @@ description: "En este ejercicio nos vamos a divertir aprendiendo sobre Formulari
 
 ## 💡 Introducción 💡
 
-JavaScript \(JS\) es un lenguaje de programación que le ha otorgado rapidez y efectos atractivos a las páginas web, mediante su uso combinado junto a HTML, CSS y otros lenguajes.   
-Hoy vamos a conocer aspectos generales pero muy útiles de forma dinámica. 🎮
+En este desafío vamos a mostrar de forma muy creativa tus datos personales, crearemos un formulario que te va a permitir llenar dinámicamente la información que deseas mostrar en tu propio perfil. 🧙🏼‍♀️
 
-\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-conoce-javascript.stackblitz.io)\*\*\*\*
+\*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-crea-tu-perfil.stackblitz.io)\*\*\*\*
 
 ## Paso 1: **Creemos nuestra App de Angular** 🅰️
 
