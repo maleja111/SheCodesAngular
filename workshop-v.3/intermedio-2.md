@@ -1,12 +1,12 @@
 ---
-description: "En este ejercicio nos vamos a divertir aprendiendo sobre Formularios en Angular.io \U0001F4DD"
+description: "En este ejercicio nos vamos a divertir aprendiendo sobre Formularios de tipo Template-driven en Angular.io \U0001F4DD"
 ---
 
-# Intermedio \#2: Crea un formulario de contacto 📞
+# Intermedio \#2: Crea un formulario de contacto ✉️
 
 ## 💡 Introducción 💡
 
-En este desafío vamos a mostrar de forma muy creativa datos que tu mismo vas a ingresar en un formulario de contacto, una funcionalidad básica de las páginas web. 📞
+En este desafío vamos a mostrar de forma muy creativa datos que tú mismo vas a ingresar en un formulario de contacto, la cual es una funcionalidad básica de las páginas web. 📬
 
 \*\*\*\*[**¡Aquí puedes encontrar el demo!**](https://angular-contacto-template-driven-form.stackblitz.io)\*\*\*\*
 
@@ -17,4 +17,204 @@ Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como est
 ![](../.gitbook/assets/1.png)
 
 ![](../.gitbook/assets/screen-shot-2019-05-25-at-1.56.29-pm.png)
+
+## Paso 2: **Vamos a la estructura** básica **HTML 💀**
+
+Vamos a adicionar la estructura básica que va a tener nuestro formulario para que tengamos mucho mas claro como vamos a visualizar nuestros datos.  
+Reemplazaremos el contenido del archivo **app.component.html** y adicionaremos lo siguiente:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<div class="center">
+
+	<div class="card">
+		<div class="additional">
+			<div class="user-card">
+				<div class="level center">
+					She Codes Angular
+				</div>
+        <div class="logo-container">
+          <div class="logo">
+              <img src="https://pbs.twimg.com/profile_images/1106680001368346625/uKM4e-br_400x400.png">
+          </div>
+        </div>
+				<div class="points center">
+					@SheCodesAngular
+				</div>
+				
+			</div>
+			<div class="more-info">
+      <!-- TODO: Aquí adicionaremos nuestro formulario -->
+			</div>
+		</div>
+		<div class="general more-info">
+    <!-- TODO: Aquí adicionaremos el resultado de los datos que ingresemos al formulario -->
+		</div>
+	</div>
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/screen-shot-2019-11-04-at-5.31.48-pm.png)
+
+## Paso 3: **Dale personalidad y color a nuestra aplicación 🎨**
+
+Vamos a hacer algo diferente esta vez, siempre dejamos la estructura CSS para el final, pero en esta ocasión vamos a dejarla lista y nos enfocaremos en la lógica de nuestro formulario de contacto.  
+Reemplazaremos el contenido del archivo **styles.css** y adicionaremos lo siguiente:
+
+{% code-tabs %}
+{% code-tabs-item title="styles.css" %}
+```css
+/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+html, body {
+  background: #FCEEB5;
+  font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.logo-container {
+    left: 29px;
+    position: absolute;
+    top: 75px;
+}
+
+.logo-container img {
+    width: 85%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.card {
+  width: 450px;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(#dE685E, #EE786E);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card .additional .user-card .points {
+  top: 85%;
+}
+
+.card .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card .additional .coords .strong {
+  font-weight:bold;
+}
+
+.card .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+
+.margin-left {
+  margin-left: 40px;
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/screen-shot-2019-11-04-at-5.40.49-pm.png)
+
+## Paso 3: **Aprendamos a hacer un formulario en Angular.io 📝🅰️**
+
+Ya tienes la estructura básica, hora nos concentraremos en la creación de un formulario, este formulario tendrá 3 campos, un campo para ingresar tu nombre, otro para ingresar tu correo electrónico y un campo para ingresar un mensaje.  
+Copiaremos lo siguiente contenido reemplazando el comentario &lt;!-- TODO: Aquí adicionaremos nuestro formulario --&gt;  en el archivo **app.component.html.**
 
