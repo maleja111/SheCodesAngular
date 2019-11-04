@@ -8,7 +8,7 @@ description: >-
 
 ## 💡 Introducción 💡
 
-En este desafío haremos algo divertido aplicando conceptos básicos de Angular, en especial sobre directivas, los cuales  iremos describiendo a medida que realicemos cada uno de los pasos descritos abajo.  
+En este desafío haremos algo divertido aplicando conceptos básicos de Angular, en especial sobre directivas, los cuales  iremos descubriendo a medida que realicemos cada uno de los pasos descritos abajo.  
 
 **¡**[**Aquí puedes encontrar el demo**](https://buttons-emojis.stackblitz.io)**!**
 
