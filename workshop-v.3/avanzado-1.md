@@ -170,6 +170,8 @@ export class FormComponent implements OnInit {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+![Nuestro form.contact.ts se ver&#xE1; as&#xED;](../.gitbook/assets/screen-shot-2019-11-04-at-3.30.17-pm.png)
+
 En nuestro botón incluiremos nuestra función. 
 
 ```markup
