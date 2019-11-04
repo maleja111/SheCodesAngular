@@ -88,6 +88,8 @@ En este archivo llamado  **app.component.html** vamos a reemplazar su contenido,
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+![Un poquito de humor &#x1F913;](../.gitbook/assets/screenshot_20191029-184326-1.png)
+
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 ![](../.gitbook/assets/transform-2.gif)
