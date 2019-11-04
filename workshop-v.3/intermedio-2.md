@@ -218,3 +218,22 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 Ya tienes la estructura básica, hora nos concentraremos en la creación de un formulario, este formulario tendrá 3 campos, un campo para ingresar tu nombre, otro para ingresar tu correo electrónico y un campo para ingresar un mensaje.  
 Copiaremos lo siguiente contenido reemplazando el comentario &lt;!-- TODO: Aquí adicionaremos nuestro formulario --&gt;  en el archivo **app.component.html.**
 
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+  <div class="form-group">
+    <input type="text" placeholder="What is your name?"  clas="form-control" name="name" [(ngModel)]="name" required/>
+  </div>
+  <div class="form-group">
+    <input name="emailaddress" placeholder="What is your email?*" class="form-control" type="email" name="email" [(ngModel)]="email" required/>
+  </div>
+  <div class="form-group">
+    <textarea rows="4" cols="40" name="subject" placeholder="Please enter your message*" class="form-control" name="message" [(ngModel)]="message" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+</form>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
