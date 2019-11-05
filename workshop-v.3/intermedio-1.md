@@ -15,7 +15,7 @@ En este desafío haremos algo divertido aplicando el concepto de enrutamiento, e
 
 ¿Estás list@?
 
-**Es hora de la Acción!!! 😝**
+**¡¡¡Es hora de la Acción!!! 😝**
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
