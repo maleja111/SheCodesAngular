@@ -8,7 +8,7 @@ description: "En Angular existen dos formas de crear formularios una llamada Tem
 
 En este desafío crearemos un formulario  aplicando algunos conceptos básicos de Angular, los cuales hemos aprendido en los desafíos anteriores y aprenderemos algunos nuevos a través de esta nueva aplicación 🤙
 
-**¡**[**Aquí puedes encontrar el demo**](https://contact-form1.stackblitz.io)**!**
+**¡**[**Aquí puedes encontrar el demo**](https://comments-form1.stackblitz.io)**!**
 
 ¿Estás list@?
 
@@ -190,5 +190,73 @@ Para visualizar la información que enviamos, crearemos una sección debajo de n
 
 Incluiremos un titulo y mostraremos la información donde ubicaremos el titulo del campo a la derecha y la información que incluimos en el formulario para ese campo a la izquierda.
 
+```markup
+<section>
+  <h1>Tus comentarios han sido enviados exitosamente!!</h1>
+  <div>
+    <h3>Nombre</h3>
+    <p>{{formData.name}}</p>
+  </div>
+  <div>
+    <h3>Correo</h3>
+    <p>{{formData.email}}</p>
+  </div>
+  <div>
+    <h3>Pais</h3>
+    <p>{{formData.country}}</p>
+  </div>
+  <div>
+    <h3>Comentarios</h3>
+    <p>{{formData.comments}}</p>
+  </div>
+</section>
+```
 
+Para la distribución de los diferentes elementos podemos hacer uso del css e incluso importar una librería que nos ayude a hacer rápidamente el trabajo.
+
+Para eso podemos incluir en nuestro **app.component.css** la siguiente línea:
+
+```css
+@import url('https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.min.css')
+```
+
+Incluiremos algunas de las clases de Bootstrap, para hacer que la información enviada quede en dos columnas.
+
+![Clases de Bootstrap a&#xF1;adidas](../.gitbook/assets/screen-shot-2019-11-04-at-7.29.40-pm.png)
+
+Para evitar que siempre este visible esta sección vamos a ocultarla usando las directivas **\*ngIf**.
+
+Ademas incluiremos algunos estilos para que nuestro formulario se vea bonito.
+
+![Formulario que muestra data](../.gitbook/assets/ezgif.com-gif-maker-16.gif)
+
+
+
+¡Felicitaciones hemos terminado el primer desafío básico!
+
+🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/comments-form1) puedes encontrar el ejercicio resuelto.
+{% endhint %}
+
+## 😎 Tu Misión Especial 😎
+
+Parece que nuestra aplicación está lista 😀. 
+
+👍 Como vez la aplicación no luce tan bonita, entonces tu misión especial es ponerle más estilos para que la personalices y luzca super cool!! ****👍
+
+{% hint style="success" %}
+Has completado el **desafío \#1 de nivel avanzado**, ahora vamos al **desafío avanzado \#2 👇**
+{% endhint %}
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas mentoría con este ejercicio puedes contactar a:
+
+Vanessa M. Aristizabal  
+Twitter: @vanessamarely  
+Correo: vanessamarely@gmail.com
+{% endhint %}
 
