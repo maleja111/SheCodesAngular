@@ -30,7 +30,7 @@ Entra a [**https://auth0.com/**](https://auth0.com/), y crearas una cuenta así:
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-12.20.26-am.png)
 
 Podrás crear una cuenta con un usuario y contraseña o con una cuenta que ya tengas anteriormente por un tercero.  
-Yo usare la de Google para este ejemplo.
+Yo usaré la de Google para este ejemplo.
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-12.26.11-am.png)
 
@@ -65,7 +65,7 @@ import { HttpClientModule } from '@angular/common/http';
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-7.44.10-am.png)
 
 ```typescript
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 ```
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-9.16.45-am.png)
@@ -246,9 +246,9 @@ export class CallbackComponent implements OnInit {
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.02.33-am.png)
 
-##  Paso 3: **Vamos a el routing model de nuestra aplicación**
+## Paso 7: **Vamos a crear el routing model de nuestra aplicación**
 
-Para manejar la ruta de desde nuestra a aplicación al inicio de sesión universal solo necesitamos crear un app-routing.module.ts que nos controlará cada vez que vayamos a autenticarnos y volvamos a nuestra aplicación:
+Para manejar la ruta de desde nuestra a aplicación al inicio de sesión universal solo necesitamos crear un **app-routing.module.ts** que nos controlará cada vez que vayamos a autenticarnos y volvamos a nuestra aplicación:
 
 {% code-tabs %}
 {% code-tabs-item title="app-routing.module.ts " %}
@@ -256,26 +256,13 @@ Para manejar la ruta de desde nuestra a aplicación al inicio de sesión univers
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CallbackComponent } from './callback.component';
-import { PublicDealsComponent } from './public-deals/public-deals.component';
-import { PrivateDealsComponent } from './private-deals/private-deals.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'deals',
-    pathMatch: 'full'
-  },
-  {
-    path: 'deals',
-    component: PublicDealsComponent
-  },
-  {
-    path: 'special',
-    component: PrivateDealsComponent,
-    canActivate: [
-      AuthGuard
-    ]
+    redirectTo: '',
+    pathMatch: ''
   },
   {
     path: 'callback',
@@ -289,6 +276,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 
 ```
 {% endcode-tabs-item %}
@@ -331,8 +319,60 @@ Para manejar complementar el manejo de la ruta usaremos esta clase `AuthGuard` *
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.23.06-am.png)
 
-  
-Yo usare la de Google para este ejemplo.
+## Paso 8: **Vamos a terminar de configurar nuestro app.module.ts**
+
+Acabamos de crear CallbackComponent y AuthService vamos a incluirlos también. en el **app.module.ts**
+
+```typescript
+import { CallbackComponent } from './callback.component';
+import { AuthService } from './auth/auth.service';
+
+```
+
+## Paso 9: Vamos a poner el login en la interfaz de nuestra aplicación
+
+Usaremos la siguiente lógica para llamar al método de autenticación y así determinar si debemos mostrar un elemento de IU específico o no. Como ejemplo, solo queremos mostrar el enlace de Log In si no está autenticado, y Log Out si no está autenticado.  
+En el archivo app.component.html pondremos lo siguiente:
+
+> {% code-tabs %}
+> {% code-tabs-item title="app.component.html" %}
+> ```markup
+> <ul class="nav navbar-nav navbar-right">
+>   <li>
+>     <a *ngIf="!authService.isLoggedIn" (click)="authService.login()">Log In</a>
+>   </li>
+>   <li>
+>     <a (click)="authService.logout()" *ngIf="authService.isLoggedIn">Log Out</a>
+>   </li>
+> </ul>
+> ```
+> {% endcode-tabs-item %}
+> {% endcode-tabs %}
+
+![](../.gitbook/assets/screen-shot-2019-11-05-at-10.47.39-am.png)
+
+En el archivo **app.component.ts** pondremos lo siguiente:
+
+> {% code-tabs %}
+> {% code-tabs-item title="app.component.ts" %}
+> ```typescript
+> import { AuthService } from './auth/auth.service';
+>
+> constructor(public authService: AuthService) {}
+> ```
+> {% endcode-tabs-item %}
+> {% endcode-tabs %}
+
+![](../.gitbook/assets/screen-shot-2019-11-05-at-10.50.16-am.png)
+
+Nos daremos cuenta que el mismo [**stackblitz**](https://stackblitz.com) se da cuenta que nos hace falta instalar un paquete y nos pide que instalemos el de **Auth0.js** y damos clic en `install package`
+
+![](../.gitbook/assets/screen-shot-2019-11-05-at-10.54.40-am.png)
+
+## Paso 7: **Vamos a crear el routing model de nuestra aplicación**
+
+Para manejar la ruta de desde nuestra a aplicación al inicio de sesión universal, solo necesitamos crear un **app-routing.module.ts** que nos controlará cada vez que vayamos a autenticarnos y volvamos a nuestra aplicación:  
+Yo usaré la de Google para este ejemplo.
 
 Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como esto:
 
