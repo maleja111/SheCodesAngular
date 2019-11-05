@@ -97,17 +97,120 @@ export const AUTH_CONFIG: AuthConfig = {
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-8.53.40-am.png)
 
-## **No olvides, que cuando termines el ejercicio debes borrar esas variables, para que personas en internet no usen tu cuenta sin tu autorización.**
+## **No olvides, que cuando termines el ejercicio debes borrar esas variables, para que personas en internet no usen tu cuenta sin tu autorización o roben tu información.**
 
 ## Paso 5: **Crea un servicio de autenticación**
 
 La mejor manera de administrar y coordinar las tareas necesarias para la autenticación del usuario es crear un servicio reutilizable. Con el servicio en su lugar, podrá llamar a sus métodos a través de su aplicación. Se puede crear una instancia del objeto WebAuth de auth0.js en el servicio **AuthService.ts.**
 
+{% code-tabs %}
+{% code-tabs-item title="AuthService.ts" %}
 ```typescript
-import { HttpClientModule } from '@angular/common/http';
-```
+import { Injectable } from "@angular/core";
+import * as auth0 from "auth0-js";
+import { environment } from "../../environments/environment";
+import { Router } from "@angular/router";
 
-![](../.gitbook/assets/screen-shot-2019-11-05-at-7.44.10-am.png)
+(window as any).global = window;
+
+@Injectable()
+export class AuthService {
+  auth0 = new auth0.WebAuth({
+    // the following three lines MUST be updated
+    domain: environment.domain, // TODO '<YOUR_AUTH0_DOMAIN>'
+    audience: environment.audience, // TODO: https://<YOUR_AUTH0_DOMAIN>/userinfo
+    clientID: environment.clientID, // TODO: '<YOUR_AUTH0_CLIENT_ID>'
+    redirectUri: environment.redirectUri,
+    responseType: "id_token",
+    scope: "openid profile"
+  });
+
+  constructor(public router: Router) {}
+
+  public login(): void {
+    this.auth0.authorize();
+  }
+
+  public handleAuthentication(): void {
+    this.auth0.parseHash((err, authResult) => {
+      if (authResult && authResult.accessToken && authResult.idToken) {
+        window.location.hash = "";
+        this.setSession(authResult);
+        this.router.navigate(["/"]);
+      } else if (err) {
+        this.router.navigate(["/"]);
+        console.log(err);
+        alert("Error: ${err.error}. Check the console for further details.");
+      }
+    });
+  }
+
+  private setSession(authResult): void {
+    // Set the time that the Access Token will expire at
+    const expiresAt = JSON.stringify(
+      authResult.expiresIn * 1000 + new Date().getTime()
+    );
+
+    // If there is a value on the scope param from the authResult,
+    // use it to set scopes in the session for the user. Otherwise
+    // use the scopes as requested. If no scopes were requested,
+    // set it to nothing
+    const scopes = authResult.scope || this.requestedScopes || "";
+
+    localStorage.setItem("access_token", authResult.accessToken);
+    localStorage.setItem("id_token", authResult.idToken);
+    localStorage.setItem("expires_at", expiresAt);
+    localStorage.setItem("scopes", JSON.stringify(scopes));
+  }
+
+  public logout(): void {
+    // Remove tokens and expiry time from localStorage
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("id_token");
+    localStorage.removeItem("expires_at");
+    localStorage.removeItem("scopes");
+    // Go back to the home route
+    this.router.navigate(["/"]);
+  }
+
+  public isAuthenticated(): boolean {
+    // Check whether the current time is past the
+    // Access Token's expiry time
+    const expiresAt = JSON.parse(localStorage.getItem("expires_at"));
+    return new Date().getTime() < expiresAt;
+  }
+
+  public userHasScopes(scopes: Array<string>): boolean {
+    const grantedScopes = JSON.parse(localStorage.getItem("scopes")).split(" ");
+    return scopes.every(scope => grantedScopes.includes(scope));
+  }
+}
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![](../.gitbook/assets/screen-shot-2019-11-05-at-9.20.41-am.png)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
+  
+1.** En `auth0.WebAuth(` estamos asignando las variables de configuración que creamos en el paso anterior.  
+**2.** El servicio incluye varios métodos para manejar la autenticación. **login:** las llamadas autorizan desde auth0.js que inicia el inicio de sesión universal.   
+**handleAuthentication:** busca un resultado de autenticación en el hash de URL y lo procesa con el método parseHash de auth0.js.  
+**setSession:** establece el token de acceso del usuario, el token de identificación y la hora en que caducará el token de acceso cerrar sesión: elimina los tokens del usuario del almacenamiento del navegador.  
+**isAuthenticated:** verifica sí el tiempo de vencimiento del token de acceso ha pasado.
+
+```text
+El servicio incluye varios métodos para manejar la autenticación.
+
+login: las llamadas autorizan desde auth0.js que inicia el inicio de sesión universal
+handleAuthentication: busca un resultado de autenticación en el hash de URL y lo procesa con el método parseHash de auth0.js
+setSession: establece el token de acceso del usuario, el token de identificación y la hora en que caducará el token de acceso
+cerrar sesión: elimina los tokens del usuario del almacenamiento del navegador
+isAuthenticated: verifica si el tiempo de vencimiento del token de acceso ha pasado
+```
+{% endhint %}
 
 ##  Paso 3: **Vamos a crear nuestra clase Callback**
 
