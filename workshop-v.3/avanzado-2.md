@@ -54,15 +54,21 @@ Vamos a tomar la URL de nuestra aplicación que nos genera [https://stackblitz.c
 Esta es la ubicación de la URL de nuestra aplicación en [https://stackblitz.com/](https://stackblitz.com/)  
 Guarda los cambios y estas listo para usarla.
 
-## Paso 3: **Vamos insertar la funcionalidad para hacer llamados a funcionalidades externas como una API**
+## Paso 3: **Vamos insertar la funcionalidad para hacer llamados a funcionalidades externas como una API y adicionaremos router.**
 
-Vamos a adicionar la funcionalidad  HTTP Client Module en nuestro  `app.module.ts`  y  luego hacemos su llamado a desde `imports`
+Ya aprendiste como adicionar router, ahora vamos a adicionar la funcionalidad  HTTP Client Module en nuestro  `app.module.ts`  y  luego hacemos su llamado a desde `imports`
 
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
 ```
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-7.44.10-am.png)
+
+```typescript
+import { RouterModule } from '@angular/router';
+```
+
+![](../.gitbook/assets/screen-shot-2019-11-05-at-9.16.45-am.png)
 
 ## Paso 4: **Adicionar las variables de configuración**
 
@@ -89,13 +95,13 @@ export const AUTH_CONFIG: AuthConfig = {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![](../.gitbook/assets/screen-shot-2019-11-05-at-7.44.10-am.png)
+![](../.gitbook/assets/screen-shot-2019-11-05-at-8.53.40-am.png)
 
-export const AUTH\_CONFIG: AuthConfig = { clientID: '', domain: '', callbackURL: '[http://localhost:4200/callback](http://localhost:4200/callback)', apiUrl: '' };
+## **No olvides, que cuando termines el ejercicio debes borrar esas variables, para que personas en internet no usen tu cuenta sin tu autorización.**
 
-## Paso 4: **Vamos insertar la funcionalidad para hacer routing**
+## Paso 5: **Crea un servicio de autenticación**
 
-Esta funcionalidad la vamos a necesitar para cuando nos necesitemos redireccionar a la autenticación de Auth0 `app.module.ts`  y  luego hacemos su llamado a desde `imports`
+La mejor manera de administrar y coordinar las tareas necesarias para la autenticación del usuario es crear un servicio reutilizable. Con el servicio en su lugar, podrá llamar a sus métodos a través de su aplicación. Se puede crear una instancia del objeto WebAuth de auth0.js en el servicio **AuthService.ts.**
 
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
