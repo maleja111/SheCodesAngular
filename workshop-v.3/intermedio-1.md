@@ -29,7 +29,7 @@ Primero iremos a el inicio de **Stackbliz** y crearemos una App de Angular.
 
 En la parte izquierda donde dice "Files", seleccionaremos el archivo llamado **app.component.html**. 
 
-Dentro del archivo seleccionamos su texto,  lo borramos \(presionando la tecla delete de tu compu 💻\) y guardamos los cambios, seleccionando en la parte superior la opción de '**Save**' 💾 o la tecla rápida **cmd** + **S** o en windows **Ctrl** + **S.** 
+Dentro del archivo seleccionamos su texto, lo borramos \(presionando la tecla delete de tu compu 💻\) y guardamos los cambios, seleccionando en la parte superior la opción de '**Save**' 💾 o la tecla rápida **cmd** + **S** o en windows **Ctrl** + **S.** 
 
 ![](../.gitbook/assets/webp.net-gifmaker-1.gif)
 
@@ -65,7 +65,7 @@ Para la fuente puedes usar cualquier tipografía de google como la siguiente e i
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-O puedes usar alguna otra del catalogo:
+O puedes usar alguna otra del catálogo:
 
 [https://fonts.google.com/](https://fonts.google.com/)
 
@@ -73,11 +73,11 @@ A nuestro título, lo pondremos dentro de la etiqueta header y le añadiremos un
 
 ##  Paso 3: Crearemos varios componentes 💪
 
-Angular esta compuesto por varios **componentes**. En nuestra aplicación base existe un componente **App**, en él hemos estado añadiendo las diferentes instrucciones de los diferentes desafíos.
+Angular está compuesto por varios **componentes**. En nuestra aplicación base existe un componente **App**, en él hemos estado añadiendo las diferentes instrucciones de los diferentes desafíos.
 
-Cuando visitas una página Web, puedes observar que ella tiene muchas secciones como información de una empresa/producto, detalles de servicios, información de contacto entre otras. En este paso crearemos varios componentes, que serán donde iremos a colocar cada una de las secciones de nuestra página.
+Cuando visitas una página web, puedes observar que ella tiene muchas secciones como información de una empresa/producto, detalles de servicios, información de contacto entre otras. En este paso crearemos varios componentes, que serán donde iremos a colocar cada una de las secciones de nuestra página.
 
-Dando clic derecho sobre la carpeta App, se desplegará un menu, en el seleccionaremos la opción **Angular Generator** y luego seleccionamos componente.
+Dando clic derecho sobre la carpeta App, se desplegará un menú, en el seleccionaremos la opción **Angular Generator** y luego seleccionamos componente.
 
 ![Creando un componente](../.gitbook/assets/screen-shot-2019-11-03-at-4.24.32-pm.png)
 
@@ -97,9 +97,9 @@ Nuestra carpeta app, lucirá así:
 
 ## Paso 4: Añadiendo un Menu 📋
 
-Añadamos un componente para crear nuestro menu en el.
+Añadamos un componente para crear nuestro menú en él.
 
-Entonces seguimos los pasos anteriores y crearemos nuestro componente menu.
+Entonces seguimos los pasos anteriores y crearemos nuestro componente menú.
 
 ![Componente Menu](../.gitbook/assets/screen-shot-2019-11-03-at-6.25.42-pm.png)
 
@@ -133,13 +133,13 @@ Ahora debemos unir cada uno de los links a los respectivos componentes.
 
 ## Paso 5: Uniendo los componentes a sus links 🕹️
 
-Vamos a crear un modulo para controlar todas nuestras rutas.
+Vamos a crear un módulo para controlar todas nuestras rutas.
 
 En la carpeta **app**, vamos a dar clic derecho y en la opción Angular Generator, seleccionaremos Module
 
 ![Modulo Routing](../.gitbook/assets/ezgif.com-gif-maker-14.gif)
 
-En nuestro nuevo archivo vamos a incluir las rutas y para ello debemos importar el RouterModule  e incluir en los import la colección de nuestras rutas.
+En nuestro nuevo archivo vamos a incluir las rutas y para ello debemos importar el RouterModule e incluir en los import la colección de nuestras rutas.
 
 * Incluimos el import
 
@@ -147,7 +147,7 @@ En nuestro nuevo archivo vamos a incluir las rutas y para ello debemos importar 
 import { RouterModule } from '@angular/router';
 ```
 
-* en los import colocaremos la colección usando el forRoot.
+* En los import colocaremos la colección usando el forRoot.
 
 ```typescript
 RouterModule.forRoot([
@@ -248,7 +248,7 @@ export class AppModule { }
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-* Nos falta incluir estas rutas que creamos de nuestros componentes en el menu que incluimos y usar la etiqueta &lt;router-outlet&gt; que nos ayudará a mostrar el contenido de nuestros componentes
+* Nos falta incluir estas rutas que creamos de nuestros componentes en el menú que incluimos y usar la etiqueta &lt;router-outlet&gt; que nos ayudará a mostrar el contenido de nuestros componentes
 
 En nuestro **app.component.html** vamos a incluir nuestra etiqueta &lt;router-outlet&gt; &lt;/router-outlet&gt;, dentro de estas etiquetas se va a mostrar todo el contenido de nuestros componentes.
 
@@ -264,7 +264,7 @@ En nuestro **app.component.html** vamos a incluir nuestra etiqueta &lt;router-ou
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Al incluir nuestra etiqueta saldrá un error parecido al siguiente y es porque nos falta exportar nuestro Modulo de Routing, y para esto es solo que incluyamos el export, en nuestro NgModule, en el **routing.module.ts** así:
+Al incluir nuestra etiqueta saldrá un error parecido al siguiente y es porque nos falta exportar nuestro módulo de Routing, y para esto es solo que incluyamos el export, en nuestro NgModule, en el **routing.module.ts** así:
 
 {% code-tabs %}
 {% code-tabs-item title="routing.module.ts" %}
@@ -357,7 +357,7 @@ Nuestro portafolio se verá así:
 
 
 
-¡Sí has llegado hasta aquí, Felicitaciones!!! 
+¡Sí has llegado hasta aquí!, ¡¡¡Felicitaciones!!! 
 
 Estas a un paso de completar este desafío, solo te falta realizar la misión especial 👍
 
@@ -371,7 +371,7 @@ Estas a un paso de completar este desafío, solo te falta realizar la misión es
 
 Parece que nuestra aplicación está casi lista 😀. 
 
-👍 Para completarla debes  añadir contenido en los componentes restantes, recuerda que estas construyendo tu portafolio, entonces añade información sobre ti en cada componente y si necesitas ayuda con los estilos o añadiendo el contenido nos puedes pedir ayuda 👍
+👍 Para completarla debes añadir contenido en los componentes restantes, recuerda que estás construyendo tu portafolio, entonces añade información sobre ti en cada componente y si necesitas ayuda con los estilos o añadiendo el contenido nos puedes pedir ayuda 👍
 
 Si completas tu portafolio y me muestras este desafío completado, te daré un pequeño detalle 😁
 
