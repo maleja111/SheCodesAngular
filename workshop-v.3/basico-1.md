@@ -8,13 +8,13 @@ description: >-
 
 ## 💡 Introducción 💡
 
-En este desafío haremos algo divertido aplicando conceptos básicos de Angular, en especial sobre directivas, los cuales  iremos descubriendo a medida que realicemos cada uno de los pasos descritos abajo.  
+En este desafío haremos algo divertido aplicando conceptos básicos de Angular, en especial sobre directivas, los cuales iremos descubriendo a medida que realicemos cada uno de los pasos descritos abajo.  
 
 **¡**[**Aquí puedes encontrar el demo**](https://buttons-emojis.stackblitz.io)**!**
 
 ¿Estás list@?
 
-**Es hora de la Acción!!! 😝**
+**¡¡¡Es hora de la Acción!!! 😝**
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
@@ -28,7 +28,7 @@ Primero iremos a el inicio de **Stackbliz** y crearemos una App de Angular.
 
 En la parte izquierda donde dice "Files", seleccionaremos el archivo llamado **app.component.html**. 
 
-Dentro del archivo seleccionamos su texto,  lo borramos \(presionando la tecla delete de tu compu 💻\) y guardamos los cambios, seleccionando en la parte superior la opción de '**Save**' 💾 o la tecla rápida **cmd** + **S** o en windows **Ctrl** + **S.** 
+Dentro del archivo seleccionamos su texto, lo borramos \(presionando la tecla delete de tu compu 💻\) y guardamos los cambios, seleccionando en la parte superior la opción de '**Save**' 💾 o la tecla rápida **cmd** + **S** o en windows **Ctrl** + **S.** 
 
 ![](../.gitbook/assets/webp.net-gifmaker-1.gif)
 
@@ -58,7 +58,7 @@ Como lo vimos anteriormente, las etiquetas o tags son la forma de escribir códi
 **&lt;h1&gt;:** Es una etiqueta para los títulos más grandes
 {% endhint %}
 
-Existe un concepto en Angular que se llama la **interpolación**, la cual nos permite mostrar lo que definamos en la lógica, puede ser un titulo y mostrarlo en la vista o **HTML**.
+Existe un concepto en Angular que se llama la **interpolación**, la cual nos permite mostrar lo que definamos en la lógica, puede ser un título y mostrarlo en la vista o **HTML**.
 
 Así que usaremos la interpolación para nuestro título.
 
@@ -140,7 +140,7 @@ Entonces usaremos nuestros botones para que al darles clic nos muestre una image
 * Crearemos 3 variables llamadas: **happy**, **sad**, **crazy** y a todas les asignaremos el valor de false. Estas variables las pondremos debajo de nuestra variable title en nuestro **app.component.ts**.
 
 {% hint style="info" %}
-**Te recuerdo ¿Qué es una variable?** es como un caja, \(donde puedes poner cosas 🎁\). Ésta almacenará lo que nosotros queramos, textos, números, etc **👍**
+**Te recuerdo ¿Qué es una variable?** es como una caja, \(donde puedes poner cosas 🎁\). Ésta almacenará lo que nosotros queramos, textos, números, etc **👍**
 {% endhint %}
 
 {% code-tabs %}
@@ -164,13 +164,13 @@ export class AppComponent  {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-* Como queremos que al darle clic a nuestros botones este muestre o oculte una imagen, entonces debemos de añadirle a cada uno el evento clic \(Este hace referencia a un concepto que se llama **Event Binding**\).
+* Como queremos que al darle clic a nuestros botones este muestre u oculte una imagen, entonces debemos de añadirle a cada uno el evento clic \(Este hace referencia a un concepto que se llama **Event Binding**\).
 
 {% hint style="info" %}
 **Event Binding.** Ella nos permite agregar eventos a nuestra vista. En este caso utilizamos el evento de **Click**, pero pueden ser muchos tipos: **\(keyup\)**, **\(change\)**, **\(resize\)**, etc  💻
 {% endhint %}
 
-Entonces a nuestras etiquetas le  añadiremos el click, y le asignaremos a cada botón la variable que creamos respectiva a cada botón, pero para cambiar ese valor de **false**, le pondremos a cada una de nuestras variables el signo de admiración **!**, esto lo que hace es negar nuestra variable.  Si nuestra variable tenia un valor de **true**, al darle clic esta se negara, significa que se convertirá en **false**. Si nuestra variable tenia asignado un **false**, al darle clic se negará en otras palabras se convertirá en **true**. 
+Entonces a nuestras etiquetas le  añadiremos el click, y le asignaremos a cada botón la variable que creamos respectiva a cada botón, pero para cambiar ese valor de **false**, le pondremos a cada una de nuestras variables el signo de admiración **!**, esto lo que hace es negar nuestra variable. Si nuestra variable tenia un valor de **true**, al darle clic esta se negara, significa que se convertirá en **false**. Si nuestra variable tenia asignado un **false**, al darle clic se negará en otras palabras se convertirá en **true**. 
 
 ![A&#xF1;adiendo el click](../.gitbook/assets/ezgif.com-gif-maker-7.gif)
 
@@ -293,7 +293,7 @@ Si damos clic sobre cada botón mostrará y ocultara nuestra imagen.
 
 Parece que nuestra aplicación está lista 😀. 
 
-⭐️ Como vez la aplicación no luce tan bonita, entonces tu misión especial es ponerle algunos estilos para que luzca super cool!! ****⭐️
+⭐️ Como vez la aplicación no luce tan bonita, entonces tu misión especial es ponerle algunos estilos ¡¡para que luzca super cool!! ****⭐️
 
 {% hint style="success" %}
 Has completado el **desafío \#1 de nivel básico**, ahora vamos al **desafío básico \#2 👇**
