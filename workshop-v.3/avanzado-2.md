@@ -371,17 +371,6 @@ Nos daremos cuenta que el mismo [**stackblitz**](https://stackblitz.com) se da c
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.54.40-am.png)
 
-## Paso 7: **Vamos a crear el routing model de nuestra aplicación**
-
-Para manejar la ruta de desde nuestra a aplicación al inicio de sesión universal, solo necesitamos crear un **app-routing.module.ts** que nos controlará cada vez que vayamos a autenticarnos y volvamos a nuestra aplicación:  
-Yo usaré la de Google para este ejemplo.
-
-Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como esto:
-
-![](../.gitbook/assets/1.png)
-
-![](../.gitbook/assets/screen-shot-2019-05-25-at-1.56.29-pm.png)
-
  ¡**LO LOGRASTE!** 🎉
 
 {% hint style="info" %}
