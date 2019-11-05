@@ -400,6 +400,6 @@ Si necesitas ayuda con este ejercicio puedes contactar a:
 
 Alejandra Giraldo  
 Twitter: @maleja111  
-Co
+Correo: magiraldodevelop@gmail.com
 {% endhint %}
 
