@@ -397,3 +397,7 @@ Twitter: @maleja111
 Correo: magiraldodevelop@gmail.com
 {% endhint %}
 
+{% hint style="danger" %}
+No olvides este super importante paso [`Clic`](https://shecodes.gitbook.io/she-codes-angular/workshop-v.3/avanzado-2#no-olvides-que-cuando-termines-el-ejercicio-debes-borrar-esas-variables-para-que-personas-en-internet-no-usen-tu-cuenta-sin-tu-autorizacion-o-roben-tu-informacion) eliminar las variables de Auth0
+{% endhint %}
+
