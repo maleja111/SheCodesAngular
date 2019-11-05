@@ -2,7 +2,7 @@
 description: "Cuando creamos una aplicación una de las partes más importantes es la autenticación dado que deseamos que sea segura y podamos proteger los datos de los usuarios, aprendamos juntos como hacerlo \U0001F510"
 ---
 
-# Avanzado \#2 Autenticación básica con Auth0 🔒
+# Avanzado \#2 Autenticación básica Angular.io con Auth0 🔒
 
 ## 💡 Introducción 💡
 
@@ -121,70 +121,79 @@ export class AuthService {
     audience: environment.audience, // TODO: https://<YOUR_AUTH0_DOMAIN>/userinfo
     clientID: environment.clientID, // TODO: '<YOUR_AUTH0_CLIENT_ID>'
     redirectUri: environment.redirectUri,
-    responseType: "id_token",
+    responseType: "token",
     scope: "openid profile"
   });
+// Store authentication data
+  expiresAt: number;
+  userProfile: any;
+  accessToken: string;
+  authenticated: boolean;
 
-  constructor(public router: Router) {}
+  constructor(private router: Router) {
+    this.getAccessToken();
+  }
 
-  public login(): void {
+  login() {
+    // Auth0 authorize request
     this.auth0.authorize();
   }
 
-  public handleAuthentication(): void {
+  handleLoginCallback() {
+    // When Auth0 hash parsed, get profile
     this.auth0.parseHash((err, authResult) => {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = "";
-        this.setSession(authResult);
-        this.router.navigate(["/"]);
+      if (authResult && authResult.accessToken) {
+        window.location.hash = '';
+        this.getUserInfo(authResult);
       } else if (err) {
-        this.router.navigate(["/"]);
-        console.log(err);
-        alert("Error: ${err.error}. Check the console for further details.");
+        console.error(`Error: ${err.error}`);
+      }
+      this.router.navigate(['/']);
+    });
+  }
+
+  getAccessToken() {
+    this.auth0.checkSession({}, (err, authResult) => {
+      if (authResult && authResult.accessToken) {
+        this.getUserInfo(authResult);
       }
     });
   }
 
-  private setSession(authResult): void {
-    // Set the time that the Access Token will expire at
-    const expiresAt = JSON.stringify(
-      authResult.expiresIn * 1000 + new Date().getTime()
-    );
-
-    // If there is a value on the scope param from the authResult,
-    // use it to set scopes in the session for the user. Otherwise
-    // use the scopes as requested. If no scopes were requested,
-    // set it to nothing
-    const scopes = authResult.scope || this.requestedScopes || "";
-
-    localStorage.setItem("access_token", authResult.accessToken);
-    localStorage.setItem("id_token", authResult.idToken);
-    localStorage.setItem("expires_at", expiresAt);
-    localStorage.setItem("scopes", JSON.stringify(scopes));
+  getUserInfo(authResult) {
+    // Use access token to retrieve user's profile and set session
+    this.auth0.client.userInfo(authResult.accessToken, (err, profile) => {
+      if (profile) {
+        this._setSession(authResult, profile);
+      }
+    });
   }
 
-  public logout(): void {
-    // Remove tokens and expiry time from localStorage
-    localStorage.removeItem("access_token");
-    localStorage.removeItem("id_token");
-    localStorage.removeItem("expires_at");
-    localStorage.removeItem("scopes");
-    // Go back to the home route
-    this.router.navigate(["/"]);
+  private _setSession(authResult, profile) {
+    // Save authentication data and update login status subject
+    this.expiresAt = authResult.expiresIn * 1000 + Date.now();
+    this.accessToken = authResult.accessToken;
+    this.userProfile = profile;
+    this.authenticated = true;
   }
 
-  public isAuthenticated(): boolean {
-    // Check whether the current time is past the
-    // Access Token's expiry time
-    const expiresAt = JSON.parse(localStorage.getItem("expires_at"));
-    return new Date().getTime() < expiresAt;
+  logout() {
+    // Log out of Auth0 session
+    // Ensure that returnTo URL is specified in Auth0
+    // Application settings for Allowed Logout URLs
+    this.auth0.logout({
+      returnTo: 'http://localhost:4200',
+      clientID: environment.auth.clientID
+    });
   }
 
-  public userHasScopes(scopes: Array<string>): boolean {
-    const grantedScopes = JSON.parse(localStorage.getItem("scopes")).split(" ");
-    return scopes.every(scope => grantedScopes.includes(scope));
+  get isLoggedIn(): boolean {
+    // Check if current date is before token
+    // expiration and user is signed in locally
+    return (Date.now() < this.expiresAt) && this.authenticated;
   }
 }
+
 
 ```
 {% endcode-tabs-item %}
@@ -200,37 +209,127 @@ export class AuthService {
 **handleAuthentication:** busca un resultado de autenticación en el hash de URL y lo procesa con el método parseHash de auth0.js.  
 **setSession:** establece el token de acceso del usuario, el token de identificación y la hora en que caducará el token de acceso cerrar sesión: elimina los tokens del usuario del almacenamiento del navegador.  
 **isAuthenticated:** verifica sí el tiempo de vencimiento del token de acceso ha pasado.
-
-```text
-El servicio incluye varios métodos para manejar la autenticación.
-
-login: las llamadas autorizan desde auth0.js que inicia el inicio de sesión universal
-handleAuthentication: busca un resultado de autenticación en el hash de URL y lo procesa con el método parseHash de auth0.js
-setSession: establece el token de acceso del usuario, el token de identificación y la hora en que caducará el token de acceso
-cerrar sesión: elimina los tokens del usuario del almacenamiento del navegador
-isAuthenticated: verifica si el tiempo de vencimiento del token de acceso ha pasado
-```
 {% endhint %}
 
-##  Paso 3: **Vamos a crear nuestra clase Callback**
+## Paso 6: **Crea una clase que nos  manejará el callback**
 
-![](../.gitbook/assets/screen-shot-2019-11-05-at-7.44.10-am.png)
-
-Para manejar la ruta de devolución de llamada \([http: // localhost: 3000 / callback](https://angular-basic-with-auth0.stackblitz.io/callback)\), definamos este componente, cree un nuevo archivo llamado **callback.ts** dentro del directorio src/App e inserte el siguiente código:
+Para manejar la ruta de devolución de llamada \([https://angular-basic-with-auth0.stackblitz.io/callback](https://angular-basic-with-auth0.stackblitz.io/callback)\), vamos a definir un componente que se encargará solo de esto, crea un nuevo archivo llamado **callback.component.ts** dentro del directorio app e inserta el siguiente código:
 
 {% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
-```markup
-<div class="center">
+{% code-tabs-item title="callback.component.ts" %}
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
-	<div class="card">
-		<div class="additional">
-			<div class=
+@Component({
+  selector: 'app-callback',
+  template: `
+    <p>
+      Loading...
+    </p>
+  `,
+  styles: []
+})
+export class CallbackComponent implements OnInit {
+
+  constructor(private auth: AuthService) { }
+
+  ngOnInit() {
+    this.auth.handleLoginCallback();
+  }
+
+}
+
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+![](../.gitbook/assets/screen-shot-2019-11-05-at-10.02.33-am.png)
+
+##  Paso 3: **Vamos a el routing model de nuestra aplicación**
+
+Para manejar la ruta de desde nuestra a aplicación al inicio de sesión universal solo necesitamos crear un app-routing.module.ts que nos controlará cada vez que vayamos a autenticarnos y volvamos a nuestra aplicación:
+
+{% code-tabs %}
+{% code-tabs-item title="app-routing.module.ts " %}
+```typescript
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CallbackComponent } from './callback.component';
+import { PublicDealsComponent } from './public-deals/public-deals.component';
+import { PrivateDealsComponent } from './private-deals/private-deals.component';
+import { AuthGuard } from './auth/auth.guard';
+
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'deals',
+    pathMatch: 'full'
+  },
+  {
+    path: 'deals',
+    component: PublicDealsComponent
+  },
+  {
+    path: 'special',
+    component: PrivateDealsComponent,
+    canActivate: [
+      AuthGuard
+    ]
+  },
+  {
+    path: 'callback',
+    component: CallbackComponent
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  providers: [AuthGuard],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![](../.gitbook/assets/screen-shot-2019-11-05-at-10.18.15-am.png)
+
+Para manejar complementar el manejo de la ruta usaremos esta clase `AuthGuard` **auth.guard.ts** nos ayudará a manejar la ruta de autenticación:
+
+> {% code-tabs %}
+> {% code-tabs-item title="auth.guard.ts" %}
+> ```typescript
+> import { Injectable } from '@angular/core';
+> import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+> import { Observable } from 'rxjs';
+> import { AuthService } from './auth.service';
+> import { Router } from '@angular/router';
 >
+> @Injectable()
+> export class AuthGuard implements CanActivate {
+>
+>   constructor(
+>     private authService: AuthService,
+>     private router: Router
+>   ) {}
+>
+>   canActivate(
+>     next: ActivatedRouteSnapshot,
+>     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+>     if (!this.authService.isLoggedIn) {
+>       this.router.navigate(['/']);
+>       return false;
+>     }
+>     return true;
+>   }
+> }
+> ```
+> {% endcode-tabs-item %}
+> {% endcode-tabs %}
+
+![](../.gitbook/assets/screen-shot-2019-11-05-at-10.23.06-am.png)
 
   
 Yo usare la de Google para este ejemplo.
@@ -241,8 +340,25 @@ Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como est
 
 ![](../.gitbook/assets/screen-shot-2019-05-25-at-1.56.29-pm.png)
 
-## Paso 2: **Vamos a la estructura** básica **HTML 💀**
+## 
 
-Vamos a adicionar la estructura básica que va a tener nuestro formulario para que tengamos mucho mas claro como vamos a visualizar nuestros datos.  
-Reemplazaremos el contenido del archivo **app.component.html** y adicionaremos lo siguiente:
+## 😎 Tu Misión 😎
+
+Con lo que aprendiste en el ejercicio de hoy, crea un inicio de sesión con personalidad, ¡ponle estilo!
+
+La primer chica en mostrarme que termino este ejercicio se gana automáticamente una camiseta de Auth0 🎉
+
+{% hint style="success" %}
+Has completado este desafío y finalizado con todos los desafíos del taller ¡¡**Felicitaciones**!! 🎉🎉🎉
+{% endhint %}
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas ayuda con este ejercicio puedes contactar a:
+
+Alejandra Giraldo  
+Twitter: @maleja111  
+Correo: magiraldodevelop@gmail.com
+{% endhint %}
 

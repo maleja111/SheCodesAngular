@@ -15,7 +15,7 @@
 * [📬Intermedio \#1 - Enrutamiento 📬](workshop-v.3/intermedio-1.md)
 * [Intermedio \#2: Crea un formulario de contacto ✉️](workshop-v.3/intermedio-2.md)
 * [✨Avanzado \#1 - Formularios Reactivos - Deja tu comentario 💬](workshop-v.3/avanzado-1.md)
-* [Avanzado \#2 Autenticación básica con Auth0 🔒](workshop-v.3/avanzado-2.md)
+* [Avanzado \#2 Autenticación básica Angular.io con Auth0 🔒](workshop-v.3/avanzado-2.md)
 
 ## Workshop v.2
 
