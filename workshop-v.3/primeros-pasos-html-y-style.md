@@ -1,7 +1,7 @@
 ---
 description: >-
   En este nivel aprenderemos dos de las herramientas básicas para crear una
-  página Web, las cuales son HTML y CSS.
+  página web, las cuales son HTML y CSS.
 ---
 
 # Primeros Pasos: Html 📝 & CSS 🎨
@@ -12,7 +12,7 @@ Las siglas de HTML en ingles significan: **HyperText Markup Language** o lenguaj
 
 El HTML, es el lenguaje base con el que se hacen las páginas web.
 
-No es un lenguaje de programación, sino una lenguaje descriptivo, una serie de etiquetas 🏷️ que el navegador reconoce para mostrar el contenido en la pantalla 💻.
+No es un lenguaje de programación, sino un lenguaje descriptivo, una serie de etiquetas 🏷️ que el navegador reconoce para mostrar el contenido en la pantalla 💻.
 
 ### Estructura básica de una página Web
 
@@ -32,7 +32,7 @@ Todas las etiquetas deben cerrarse. Hay etiquetas que tienen una que abre y cier
 y hay otras etiquetas que no requieren un par, se puede hacer el cierre en una sola, como: **&lt;img /&gt;**
 {% endhint %}
 
-**Es hora de la Acción!!! 😝**
+**!!!Es hora de la Acción!!! 😝**
 
 En este desafío crearemos una **"Card**" de un personaje, paso a paso.
 
@@ -44,7 +44,7 @@ Crearemos algo como lo siguiente:
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
-Primero iremos a el inicio de **Stackbliz** y crearemos una App de Angular.
+Primero iremos al inicio de **Stackbliz** y crearemos una App de Angular.
 
 ![Vamos al inicio de Stackblitz y damos click en el bot&#xF3;n.](../.gitbook/assets/screen-shot-2019-05-25-at-10.41.44-pm.png)
 
@@ -52,7 +52,7 @@ Primero iremos a el inicio de **Stackbliz** y crearemos una App de Angular.
 
 ![Ver&#xE1;s algo como esto &#x1F446;](../.gitbook/assets/screen-shot-2019-05-25-at-10.52.23-pm.png)
 
-Seleccionamos el texto  del archivo **app.component.html**, lo borramos \(presionando la tecla delete de tu compu 💻\) y guardamos los cambios, seleccionando en la parte superior la opción de 'Save' 💾
+Seleccionamos el texto del archivo **app.component.html**, lo borramos \(presionando la tecla delete de tu compu 💻\) y guardamos los cambios, seleccionando en la parte superior la opción de 'Save' 💾
 
 ![En este archivo colocaremos nuestro HTML](../.gitbook/assets/webp.net-gifmaker-1.gif)
 
@@ -60,7 +60,7 @@ Como vamos a usar **Stackbliz** y la estructura de una aplicación de Angular, e
 
 ## Paso 2: Crearemos la estructura de nuestra Card
 
-Para esto vamos incluir unas etiquetas que nos van a ayudar a organizar la información de nuestra card.
+Para esto vamos a incluir unas etiquetas que nos van a ayudar a organizar la información de nuestra card.
 
 En el archivo **app.component.html**, ****incluiremos lo siguiente:
 
@@ -77,7 +77,7 @@ En el archivo **app.component.html**, ****incluiremos lo siguiente:
 
 Las etiquetas anteriores nos sirven para definir una sección de nuestro documento.
 
-Dentro de las etiquetas &lt;section&gt;&lt;/section&gt;, vamos a añadir un titulo, una imagen y una descripción.
+Dentro de las etiquetas &lt;section&gt;&lt;/section&gt;, vamos a añadir un título, una imagen y una descripción.
 
 En el archivo **app.component.html**, ****incluiremos lo siguiente:
 
@@ -95,13 +95,13 @@ En el archivo **app.component.html**, ****incluiremos lo siguiente:
 {% endcode-tabs %}
 
 {% hint style="info" %}
-En el código anterior incluimos varias etiquetas, las cuales te explicare a continuación:
+En el código anterior incluimos varias etiquetas, las cuales te explicaré a continuación:
 
-**&lt;h1&gt;&lt;/h1&gt;** Sirve para colocar un titulo muy grande.
+**&lt;h1&gt;&lt;/h1&gt;** Sirve para colocar un título muy grande.
 
 **&lt;img /&gt;** Sirve para incluir una imagen, puede ser incluso un gif animado.
 
-**&lt;h3&gt;&lt;/h3&gt;** Sirve para colocar un titulo un poco grande
+**&lt;h3&gt;&lt;/h3&gt;** Sirve para colocar un título un poco grande
 
 **&lt;p&gt;&lt;/p&gt;** Sirve para poner un párrafo.
 {% endhint %}
@@ -114,7 +114,7 @@ Puedes incluirle más texto si lo deseas. Incluirle más párrafos \(&lt;p&gt;&l
 
 ## 🎨Introducción al CSS🎨
 
-Las siglas de **CSS** significan “Cascade Style Sheet” o "Hoja de estilo en cascada". 
+Las siglas de **CSS** significan “Cascade Style Sheet” u "Hoja de estilo en cascada". 
 
 Son un conjunto de instrucciones que nos permiten definir la apariencia de los diferentes elementos o etiquetas del HTML.
 
@@ -134,9 +134,9 @@ Ahora usaremos nuestra card para colocarle algo de estilos.
 
 ## Paso 1: Incluiremos selectores a nuestra Card
 
-En el **CSS** existe algo llamado selectores, que nos permiten definir sobre que tipo de elemento vamos a aplicar un conjunto de reglas o propiedades para cambiar la apariencia de los elementos HTML.
+En el **CSS** existe algo llamados selectores, que nos permiten definir sobre que tipo de elemento vamos a aplicar un conjunto de reglas o propiedades para cambiar la apariencia de los elementos HTML.
 
-Existen selectores de tipo, de clase, Id, universales y de atributo.
+Existen selectores de tipo clase, Id, universales y de atributo.
 
 {% hint style="info" %}
 **Selectores de tipo**: Aplica los estilos al elemento que coincide con su nombre. Por ejemplo: h1 { color: red}
