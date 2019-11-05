@@ -230,7 +230,7 @@ Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- 
     <input name="emailaddress" placeholder="What is your email?*" class="form-control" type="email" name="email" [(ngModel)]="email" required/>
   </div>
   <div class="form-group">
-    <textarea rows="4" cols="40" name="subject" placeholder="Please enter your message*" class="form-control" name="message" [(ngModel)]="message" required></textarea>
+    <textarea rows="4" cols="40" placeholder="Please enter your message*" class="form-control" name="message" [(ngModel)]="message" required></textarea>
   </div>
   <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
 </form>
@@ -238,7 +238,18 @@ Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- 
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Deberías hacer algo así, y tu resultado se deberá ver así:👇
+Deberías hacer algo así, y tu resultado se deberá ver así **cuando pases el mouse sobre la aplicación**:👇
 
 ![](../.gitbook/assets/screen-shot-2019-11-04-at-5.59.03-pm.png)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
+  
+1.** En Angular.io existen 2 tipos de Formularios [Template-driven](https://angular.io/guide/forms#template-driven-forms) y [Reactive Forms](https://angular.io/guide/reactive-forms#reactive-forms), en esta oportunidad trabajaremos con los formularios tipo [Template-driven](https://angular.io/guide/forms#template-driven-forms). su diferencia radica en el tipo de aplicaciones que necesites crear, para formularios simples y sin lógica personalizadas, esta es tu mejor opción, cuando necesitas validaciones personalizadas o creación de campos que aparezcan dinámicamente [Reactive Forms](https://angular.io/guide/reactive-forms#reactive-forms) es tu mejor opción.  
+**2.** En nuestro código HTML tenemos una nueva etiqueta`form`que contendrá nuestro [formulario](https://www.w3schools.com/html/html_forms.asp).  
+**3.** En nuestro código HTML tenemos`contactForm="ngForm"`, que es la referencia a nuestro formulario, en Angular se llama Template reference, y básicamente nos ayuda a potenciar una simple etiqueta HTML `form` con todo el poder que tienen Angular para ofrecernos. el `NgForm` le da propiedades como validación o  poner el campo como requerido y muchísimas más funcionalidades con lógica sin necesidad de tanto código.  
+**4.** En nuestro código HTML tenemos `(ngSubmit)="onSubmit(contactForm.value):`Con él`(ngSubmit)` estamos usando un evento para hacer acceder a nuestra función `onSubmit()` que va a contener la información de los valores `contactForm.value` que son nuestros datos del formulario en el momento que le demos click a el botón de guardar los datos del formulario. \(aun que no los estemos guardando en ninguna base de datos realmente\)  
+**5.** En nuestro código HTML tenemos una nueva etiqueta `input` esta etiqueta nos ayudara a ingresar información a nuestro formulario, en nuestro caso, los campos name y email tienen la etiqueta [input](https://www.w3schools.com/tags/tag_input.asp) que nos permitirá tener control sobre la información ingresada.  
+6**.** En nuestro código HTML tenemos una nueva etiqueta `textarea` esta etiqueta nos ayuda ingresando información a nuestro formulario que podría ser de más de una línea, se usa generalmente para párrafos. Nosotros lo usamos para el campo message [textarea](https://www.w3schools.com/tags/tag_textarea.asp).
+{% endhint %}
 
