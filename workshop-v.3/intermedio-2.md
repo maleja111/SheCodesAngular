@@ -250,6 +250,22 @@ Deberías hacer algo así, y tu resultado se deberá ver así **cuando pases el 
 **3.** En nuestro código HTML tenemos`contactForm="ngForm"`, que es la referencia a nuestro formulario, en Angular se llama Template reference, y básicamente nos ayuda a potenciar una simple etiqueta HTML `form` con todo el poder que tienen Angular para ofrecernos. el `NgForm` le da propiedades como validación o  poner el campo como requerido y muchísimas más funcionalidades con lógica sin necesidad de tanto código.  
 **4.** En nuestro código HTML tenemos `(ngSubmit)="onSubmit(contactForm.value):`Con él`(ngSubmit)` estamos usando un evento para hacer acceder a nuestra función `onSubmit()` que va a contener la información de los valores `contactForm.value` que son nuestros datos del formulario en el momento que le demos click a el botón de guardar los datos del formulario. \(aun que no los estemos guardando en ninguna base de datos realmente\)  
 **5.** En nuestro código HTML tenemos una nueva etiqueta `input` esta etiqueta nos ayudara a ingresar información a nuestro formulario, en nuestro caso, los campos name y email tienen la etiqueta [input](https://www.w3schools.com/tags/tag_input.asp) que nos permitirá tener control sobre la información ingresada.  
-6**.** En nuestro código HTML tenemos una nueva etiqueta `textarea` esta etiqueta nos ayuda ingresando información a nuestro formulario que podría ser de más de una línea, se usa generalmente para párrafos. Nosotros lo usamos para el campo message [textarea](https://www.w3schools.com/tags/tag_textarea.asp).
+**6.** En nuestro código HTML tenemos una nueva etiqueta `textarea` esta etiqueta nos ayuda ingresando información a nuestro formulario que podría ser de más de una línea, se usa generalmente para párrafos. Nosotros lo usamos para el campo message [textarea](https://www.w3schools.com/tags/tag_textarea.asp).  
+**7.** En nuestro código HTML tenemos una nueva etiqueta `required` esta etiqueta es lógica de los formularios de Angular.io tipo **template-driven**, al incluir esta etiqueta le estamos diciendo a angular que ese campo es un campo requerido y que lo necesitamos lleno para el correcto envío de información cuando presionemos el botón guardar.  
+**8.** En nuestro código HTML tenemos una nueva etiqueta `placeholder`  será la encargada de poner un texto dentro del campo \(input, o textarea\) cuando este vacío, se usa para especificar una pista breve que describe el valor que esperamos que ingrese el usuario.  
+**9.** En nuestro código HTML tenemos una nueva etiqueta `button` que define un botón en el que se puede hacer clic.
+{% endhint %}
+
+{% hint style="warning" %}
+**En el próximo paso explicaremos:**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+[disabled]
+[(ngModel)]
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endhint %}
 
