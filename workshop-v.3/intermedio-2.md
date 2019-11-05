@@ -257,7 +257,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así **cuando pases el 
 {% endhint %}
 
 {% hint style="warning" %}
-**En el próximo paso explicaremos:**
+**En el paso 4 explicaremos:**
 
 {% code-tabs %}
 {% code-tabs-item title="app.component.html" %}
@@ -267,5 +267,139 @@ Deberías hacer algo así, y tu resultado se deberá ver así **cuando pases el 
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+{% endhint %}
+
+## Paso 4: Vamos a visualizar los datos **👀**
+
+Ya aprendiste a hacer un formulario 🎉, ahora vamos a comprender cómo ver esa información.  
+  
+Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- TODO: Aquí adicionaremos el resultado de los datos que ingresemos al formulario -->`  en el archivo **app.component.html.**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+<h1>Result Contact us</h1>
+<div class="coords">
+ <span class="strong">Name: </span>
+ <span>{{contactForm.value.name}}</span>
+</div>
+<div class="coords">
+ <span class="strong">Email: </span>
+ <span>{{contactForm.value.email}}</span>
+</div>
+<div class="coords">
+ <span class="strong">Message: </span>
+ <span>{{contactForm.value.message}}</span>
+</div>
+<span class="more">Mouse over the card for more info</span>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![](../.gitbook/assets/screen-shot-2019-11-04-at-7.53.20-pm.png)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
+  
+1.** Recuerdas que en el paso anterior teníamos en nuestro HTML:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+#contactForm="ngForm"
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Bueno, `contactForm` es nuestra referencia a nuestro formulario, entonces gracias a que es un Angular template-driven form, podemos usar la referencia al contenido de sus campos sin adicionar variables o código adicional en nuestro archivo .ts, directamente desde nuestro HTML podemos acceder a ella.  
+**2.** Por lo explicado en el paso anterior, podemos hacer un binding \(una visualización de variable\) usando nuestros conocidos {{}} y nuestro `contactForm` de referencia, haciendo muy fácil mostrar el nombre, que ingresamos de la siguiente manera:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+{{contactForm.value.name}}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Lo mismo lo hacemos con los demás campos:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+{{contactForm.value.email}}
+{{contactForm.value.message}}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+**3.** Recuerdas la etiqueta `[(ngModel)]="name"` en nuestro código HTML, esto, combinado con los puntos 1 y 2, hacen la magia del binding \(una visualización de variable\), cuando usamos **\[\(ngModel\)\]** es dos vías de binding, en inglés, two-way data binding para asignar el nombre, incluso podemos crear una variable con el mismo nombre "name" y asignarle un valor por defecto para cuando cargue nuestro formulario.  
+**4.** Recuerdas la etiqueta \[disabled\] del punto:
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.html" %}
+```markup
+[disabled]="!contactForm.valid"
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+**contactForm.valid**: Es el uso de la referencia del template-driven form para acceder a las propiedades, lo que declaramos como nuestro contactForm puede acceder a la propiedad que le dice si es valid. Lo que lo hace valido o invalido es que cuando adicionamos la etiqueta **required** en el paso 3, le estamos diciendo a nuestro formulario que hasta que ese campo no este lleno, el formulario no sera válido, por lo tanto, debe tener el contenido de los 3 campos de nuestro formulario.   
+**\[disabled\]**: Le estamos indicando que cuando la condición interna no se cumpla, me des habilite el botón, vamos a inhabilitar el botón, mientras el formulario no sea valido.
+{% endhint %}
+
+## Paso 5: Vamos a "guardar" datos **💾**
+
+Podemos ver todas las ventajas que tiene [Template-driven](https://angular.io/guide/forms#template-driven-forms) y vamos a ver las pocas lineas de código que vamos a necesitar para guardar nuestros datos.  
+  
+Copiaremos lo siguiente en el archivo **app.component.ts.**
+
+{% code-tabs %}
+{% code-tabs-item title="app.component.ts" %}
+```typescript
+onSubmit(value: any){  
+    console.log('Save: ', value);
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Deberías hacer algo así, y tu resultado se deberá ver así:👇
+
+![](../.gitbook/assets/screen-shot-2019-11-04-at-11.17.48-pm.png)
+
+{% hint style="info" %}
+**Por si tienes alguna duda. Aquí te explicamos cómo funciona: 👷‍♀️  
+  
+1.** Recuerdas que en el paso 3 te contamos sobre el botón para guardar nuestro formulario, bueno, necesitamos crear una función que va a recibir toda la información que ingresemos en él. la llamamos `onSubmit` y adicionamos la función console.log para ver los datos que queremos "almacenar" en consola.
+{% endhint %}
+
+🎉 ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-contacto-template-driven-form) puedes encontrar el ejercicio resuelto.
+{% endhint %}
+
+## 😎 Tu Misión 😎
+
+Con lo que aprendiste en el ejercicio de hoy, crea un nuevo botón que te permita llenar la información en el formulario con solo un clic, \(aquí un pastelito\),:
+
+* Deberás tener 3 variables, una name, otra email y otra message.
+* Deberás crear una función que responda al evento del botón llenando los valores de las variables.
+
+  Esta adición es para retar tu curiosidad, podrías proponer la solución que tú quieras. 
+
+{% hint style="success" %}
+Has completado **Crea un formulario de contacto ✉️** ahora vamos para nuestro siguiente desafío **👇**
+{% endhint %}
+
+{% hint style="info" %}
+**Nota:**
+
+Si necesitas ayuda con este ejercicio puedes contactar a:
+
+Alejandra Giraldo  
+Twitter: @maleja111  
+Co
 {% endhint %}
 
