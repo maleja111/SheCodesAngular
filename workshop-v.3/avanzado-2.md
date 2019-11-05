@@ -329,6 +329,8 @@ import { AuthService } from './auth/auth.service';
 
 ```
 
+![](../.gitbook/assets/screen-shot-2019-11-05-at-11.09.12-am.png)
+
 ## Paso 9: Vamos a poner el login en la interfaz de nuestra aplicación
 
 Usaremos la siguiente lógica para llamar al método de autenticación y así determinar si debemos mostrar un elemento de IU específico o no. Como ejemplo, solo queremos mostrar el enlace de Log In si no está autenticado, y Log Out si no está autenticado.  
@@ -380,7 +382,11 @@ Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como est
 
 ![](../.gitbook/assets/screen-shot-2019-05-25-at-1.56.29-pm.png)
 
-## 
+ ¡**LO LOGRASTE!** 🎉
+
+{% hint style="info" %}
+\*\*\*\*[**Aquí**](https://stackblitz.com/edit/angular-basic-with-auth0) puedes encontrar el ejercicio resuelto.
+{% endhint %}
 
 ## 😎 Tu Misión 😎
 
