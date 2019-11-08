@@ -19,7 +19,7 @@ En este desafío haremos algo divertido aplicando el concepto de enrutamiento, e
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
-Primero iremos a el inicio de **Stackbliz** y crearemos una App de Angular.
+Primero iremos a el inicio de [**www.stackblitz.com**](https://stackblitz.com) y crearemos una App de Angular.
 
 ![Vamos al inicio de Stackblitz y damos click en el bot&#xF3;n.](../.gitbook/assets/screen-shot-2019-05-25-at-10.41.44-pm.png)
 
@@ -39,13 +39,13 @@ En el mismo archivo **app.component.html,** vamos a usar unas etiquetas o tags d
 
 Copiaremos lo siguiente en el archivo **app.component.html** 
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>My App 😉</h1>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![A&#xF1;adiendo el t&#xED;tulo](../.gitbook/assets/screen-shot-2019-11-03-at-3.57.50-pm.png)
 
@@ -53,8 +53,8 @@ Este paso es muy sencillo y ya lo hemos realizado en pasos anteriores, entonces 
 
 Para la fuente puedes usar cualquier tipografía de google como la siguiente e importarla en el archivo styles.css y aplicar la fuente a todos los elementos, así:
 
-{% code-tabs %}
-{% code-tabs-item title="styles.css" %}
+{% tabs %}
+{% tab title="styles.css" %}
 ```css
 /* Add application styles & imports to this file! */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -62,8 +62,8 @@ Para la fuente puedes usar cualquier tipografía de google como la siguiente e i
   font-family: 'Open Sans', sans-serif;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 O puedes usar alguna otra del catálogo:
 
@@ -109,8 +109,8 @@ En el archivo **menu.component.html** vamos a poner la etiqueta &lt;nav&gt; dond
 
 Nuestra lista se verá parecida al siguiente código, pero en la vista o **HTML** aún  no veremos nuestra lista hasta que la incluyamos en nuestro componente  App. 
 
-{% code-tabs %}
-{% code-tabs-item title="menu.component.html" %}
+{% tabs %}
+{% tab title="menu.component.html" %}
 ```markup
 <nav>
   <ul>
@@ -120,8 +120,8 @@ Nuestra lista se verá parecida al siguiente código, pero en la vista o **HTML*
   </ul>
 </nav>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 En el archivo **app.component.ts** existe una línea donde encuentras el '**selector**' y ese es el que se debe añadir en el **app.component.html**
 
@@ -178,8 +178,8 @@ declarations: [ AboutComponent, ContactComponent, HomeComponent, SkillsComponent
 
 También podemos crear una variable donde almacenemos la colección de nuestras rutas y la pondremos en nuestro forRoot, pero esta es solo otra alternativa.
 
-{% code-tabs %}
-{% code-tabs-item title="routing.module.ts" %}
+{% tabs %}
+{% tab title="routing.module.ts" %}
 ```typescript
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -204,18 +204,18 @@ import { SkillsComponent } from '../skills/skills.component';
 }) 
 export class RoutingModule { }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * Aún no hemos incluido el archivo routing.module en nuestro app, para esto en el archivo **app.module.ts**, importamos nuestro archivo **routing.module.ts**
 
-{% code-tabs %}
-{% code-tabs-item title="app.module.ts" %}
+{% tabs %}
+{% tab title="app.module.ts" %}
 ```typescript
 import { RoutingModule } from './routing/routing.module';
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Incluimos en la colección de imports nuestro '**RoutingModule**'
 
@@ -225,8 +225,8 @@ imports:      [ BrowserModule, FormsModule, RoutingModule ],
 
 En nuestro **app.module.ts** aparecen importados los componentes que ya incluimos en el **routing.module.ts**, entonces lo que haremos es borrar los que ya están en el routing. Nuestro **app.module.ts** quedará así:
 
-{% code-tabs %}
-{% code-tabs-item title="app.module.ts" %}
+{% tabs %}
+{% tab title="app.module.ts" %}
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -245,15 +245,15 @@ import { RoutingModule } from './routing/routing.module';
 export class AppModule { }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * Nos falta incluir estas rutas que creamos de nuestros componentes en el menú que incluimos y usar la etiqueta &lt;router-outlet&gt; que nos ayudará a mostrar el contenido de nuestros componentes
 
 En nuestro **app.component.html** vamos a incluir nuestra etiqueta &lt;router-outlet&gt; &lt;/router-outlet&gt;, dentro de estas etiquetas se va a mostrar todo el contenido de nuestros componentes.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <header class="header">
   <h1>My App 😉</h1>
@@ -261,13 +261,13 @@ En nuestro **app.component.html** vamos a incluir nuestra etiqueta &lt;router-ou
 <app-menu></app-menu>
 <router-outlet></router-outlet>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Al incluir nuestra etiqueta saldrá un error parecido al siguiente y es porque nos falta exportar nuestro módulo de Routing, y para esto es solo que incluyamos el export, en nuestro NgModule, en el **routing.module.ts** así:
 
-{% code-tabs %}
-{% code-tabs-item title="routing.module.ts" %}
+{% tabs %}
+{% tab title="routing.module.ts" %}
 ```typescript
 
 @NgModule({
@@ -288,13 +288,13 @@ Al incluir nuestra etiqueta saldrá un error parecido al siguiente y es porque n
 }) 
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * Solo falta incluir en nuestros links la ruta de nuestros componentes y para ello vamos a hacer uso de unos atributos que tiene el enrutamiento o Routing, llamados **routerLinkActive** y **routerLink**. En cada uno de nuestros links incluiremos que nuestro link esta activo y le pondremos en el routerLink el path que asignamos en el RouterModule. En el archivo **menu.component.html** añadiremos lo mencionado.
 
-{% code-tabs %}
-{% code-tabs-item title="menu.component.html" %}
+{% tabs %}
+{% tab title="menu.component.html" %}
 ```markup
 <nav>
   <ul>
@@ -309,8 +309,8 @@ Al incluir nuestra etiqueta saldrá un error parecido al siguiente y es porque n
   </ul>
 </nav>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![Menu completado exitosamente](../.gitbook/assets/screen-shot-2019-11-03-at-9.59.31-pm.png)
 
@@ -324,8 +324,8 @@ Como puedes notar no hay mucho contenido en nuestros componentes, entonces podem
 
 En nuestro componente home, podemos incluir algo de texto introductorio a nuestra aplicación, esta aplicación es como tu portafolio. Entonces incluye un texto para darle la bienvenida a tu visitante y algo de contexto de la página. En nuestro **home.component.html** colocaremos las etiquetas y el texto.
 
-{% code-tabs %}
-{% code-tabs-item title="home.component.html" %}
+{% tabs %}
+{% tab title="home.component.html" %}
 ```markup
 <section>
   <p>Bienvenidos!!</p>
@@ -334,13 +334,13 @@ En nuestro componente home, podemos incluir algo de texto introductorio a nuestr
   </p>
 </section>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 En el component about, **about.component.html**,  podemos colocar un título.
 
-{% code-tabs %}
-{% code-tabs-item title="about.component.html" %}
+{% tabs %}
+{% tab title="about.component.html" %}
 ```markup
 <section>
   <header>
@@ -348,8 +348,8 @@ En el component about, **about.component.html**,  podemos colocar un título.
   </header>
 </section>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Nuestro portafolio se verá así:
 

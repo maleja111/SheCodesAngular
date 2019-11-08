@@ -44,7 +44,7 @@ Crearemos algo como lo siguiente:
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
-Primero iremos al inicio de **Stackbliz** y crearemos una App de Angular.
+Primero iremos al inicio de [**www.stackblitz.com**](https://stackblitz.com) y crearemos una App de Angular.
 
 ![Vamos al inicio de Stackblitz y damos click en el bot&#xF3;n.](../.gitbook/assets/screen-shot-2019-05-25-at-10.41.44-pm.png)
 
@@ -64,14 +64,14 @@ Para esto vamos a incluir unas etiquetas que nos van a ayudar a organizar la inf
 
 En el archivo **app.component.html**, ****incluiremos lo siguiente:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <section>
 </section>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![Etiquetas &amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;](../.gitbook/assets/screen-shot-2019-10-21-at-10.54.39-pm%20%281%29.png)
 
@@ -81,8 +81,8 @@ Dentro de las etiquetas &lt;section&gt;&lt;/section&gt;, vamos a añadir un tít
 
 En el archivo **app.component.html**, ****incluiremos lo siguiente:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <section>
     <h1>Mr Cat</h1>
@@ -91,8 +91,8 @@ En el archivo **app.component.html**, ****incluiremos lo siguiente:
     <p>He is a funny cat!!!</p>
 </section>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 En el código anterior incluimos varias etiquetas, las cuales te explicaré a continuación:
@@ -158,8 +158,8 @@ a[title] {
 
 Incluiremos selectores tipo clase en nuestra Card en el **app.component.html**. Nuestro código quedaría así:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <section class="card">
     <h1 class="title">Mr Cat</h1>
@@ -168,15 +168,15 @@ Incluiremos selectores tipo clase en nuestra Card en el **app.component.html**. 
     <p class="description">He is a funny cat!!!</p>
 </section>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![A&#xF1;adimos las clases](../.gitbook/assets/screen-shot-2019-10-21-at-11.47.00-pm.png)
 
 Añadimos las clases en nuestro **CSS**, para esto en el **app.component.css**, vamos a colocar cada una de las clases que creamos en el **HTML**.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.css" %}
+{% tabs %}
+{% tab title="app.component.css" %}
 ```css
 .card {
 }
@@ -189,8 +189,8 @@ Añadimos las clases en nuestro **CSS**, para esto en el **app.component.css**, 
 .description {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Nuestro **Stackblitz** se vería así:
 
@@ -209,8 +209,8 @@ En el archivo **app.component.css**, incluiremos lo siguiente:
 
 Todas las propiedades las incluiremos dentro de las respectivas clases de los elementos, en el archivo **app.component.css.**
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.css" %}
+{% tabs %}
+{% tab title="app.component.css" %}
 ```css
 .card {
   font-family: sans-serif;
@@ -231,8 +231,8 @@ Todas las propiedades las incluiremos dentro de las respectivas clases de los el
   font-size: 18px;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Podemos incluirle todos los estilos que queramos y usar tantas propiedades como lo desees.
 

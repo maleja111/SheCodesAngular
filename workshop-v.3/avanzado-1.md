@@ -16,7 +16,7 @@ En este desafío crearemos un formulario  aplicando algunos conceptos básicos d
 
 ## Paso 1: **Creemos nuestra App de Angular** ⭐️
 
-Primero iremos a el inicio de **Stackbliz** y crearemos una App de Angular.
+Primero iremos a el inicio de [**www.stackblitz.com**](https://stackblitz.com) y crearemos una App de Angular.
 
 ![Vamos al inicio de Stackblitz y damos click en el bot&#xF3;n.](../.gitbook/assets/screen-shot-2019-05-25-at-10.41.44-pm.png)
 
@@ -36,13 +36,13 @@ En el mismo archivo **app.component.html,** vamos a usar unas etiquetas o tags d
 
 Copiaremos lo siguiente en el archivo **app.component.html** 
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>💬 Deja tu comentario 💬</h1>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías ver algo así: 👇
 
@@ -153,8 +153,8 @@ Tenemos nuestro formulario, ahora vamos a hacer uso del botón de enviar  o **Se
 
 Crearemos una función **sendData\(\)** en nuestro **form.component.ts**. En nuestra Clase de formulario crearemos una constante que usaremos en nuestra función para almacenar la información de nuestro formulario.
 
-{% code-tabs %}
-{% code-tabs-item title="form.component.ts" %}
+{% tabs %}
+{% tab title="form.component.ts" %}
 ```typescript
 
 export class FormComponent implements OnInit {
@@ -167,8 +167,8 @@ export class FormComponent implements OnInit {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![Nuestro form.component.ts se ver&#xE1; as&#xED;](../.gitbook/assets/screen-shot-2019-11-04-at-6.38.15-pm.png)
 

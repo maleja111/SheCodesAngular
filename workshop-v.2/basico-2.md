@@ -26,8 +26,8 @@ Entra a **www.stackblitz.com**, y verás algo como esto:
 
 Vamos a crear el entorno de nuestra aplicación. Para ello iremos al archivo **app.component.html** y borramos todo el contenido para adicionar lo siguiente:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <div class="card">
   <div class="profile-picture">
@@ -40,8 +40,8 @@ Vamos a crear el entorno de nuestra aplicación. Para ello iremos al archivo **a
   <div class="floating-action-button"> + </div>
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -59,8 +59,8 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 Adiciona este código en la línea 8 de tu archivo **app.component.html**
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <div class="">
   <p class="align-left" *ngIf="following > 100">Following:</p><p class="align-right">{{following}}</p>  
@@ -70,8 +70,8 @@ Adiciona este código en la línea 8 de tu archivo **app.component.html**
   <p class="align-left">Followers:</p><p class="align-right">{{followers}}</p>  
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
@@ -92,15 +92,15 @@ Si el número de followers es mayor a 700 podré ver esta información, de lo co
 
 Adiciona este código en la línea 16 de tu archivo **app.component.html**
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <div class="clear-float" *ngFor="let strength of strengths">
     <p class="align-left">{{strength.text}}</p><p class="align-right">{{strength.level}}</p>  
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
@@ -122,8 +122,8 @@ Para esto vamos a usar la directiva NgSwitch.
 
 Adiciona este código en la línea 20 de tu archivo **app.component.html**
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <div class="clear-float" *ngFor="let person of people" [ngSwitch]="person.color">
   <div *ngSwitchCase="'pink'" [style.color]="person.color">
@@ -131,8 +131,8 @@ Adiciona este código en la línea 20 de tu archivo **app.component.html**
   </div>
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 
@@ -151,8 +151,8 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇​
 Ahora vamos a modificar el archivo **app.component.ts**, ****en ****este vamos a adicionar la declaración de variables que vimos en el archivo **app.component.html**.  
 En este archivo vamos a reemplazar su contenido, por el siguiente código por este:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.ts" %}
+{% tabs %}
+{% tab title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -189,8 +189,8 @@ export class AppComponent {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -214,8 +214,8 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 ¡Llegó el tiempo de usarlas!   
 Reemplaza el contenido de **app.component.css** con éste:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.css" %}
+{% tabs %}
+{% tab title="app.component.css" %}
 ```css
 body {
   background: #ededed; 
@@ -337,8 +337,8 @@ body {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 

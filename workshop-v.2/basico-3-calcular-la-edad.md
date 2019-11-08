@@ -34,13 +34,13 @@ Iremos al archivo **app.component.html** y vamos a usar unas etiquetas o tags de
 
 Copiaremos lo siguiente en el archivo **app.component.html** 
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>Calcular la Edad ⏳</h1>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías ver algo así: 👇
 
@@ -56,28 +56,28 @@ Deberías ver algo así: 👇
 
 Debajo de nuestro titulo en el archivo **app.component.html**, ****vamos a añadir un campo de texto. Existen muchos tipos de campo de texto, el que vamos a incluir va a ser de tipo fecha.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>Calcular la Edad ⏳</h1>
 <input type="date" />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![Incluyamos nuestro campo de texto](../.gitbook/assets/screen-shot-2019-05-26-at-5.31.58-pm.png)
 
 Incluyamos un botón debajo de nuestro campo de texto.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>Calcular la Edad ⏳</h1>
 <input type="date" />
 <button type="button"> Calcular </button>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![A&#xF1;adamos el bot&#xF3;n para calcular](../.gitbook/assets/screen-shot-2019-05-26-at-5.43.44-pm.png)
 
@@ -85,27 +85,27 @@ Incluyamos un botón debajo de nuestro campo de texto.
 
 Ahora a nuestro campo de texto vamos a usar un concepto llamado **two-way-binding**, para esto vamos añadirle algo llamado **banana box \[\(\)\]** y dentro pondremos la palabra **ngModel** y lo haremos igual a una variable llamada **age.** Lo que haremos es que todo lo que escriba en el campo de texto será almacenado en **age**. Todo esto lo vamos a añadirle en nuestro archivo **app.component.html**
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>Calcular la Edad ⏳</h1>
 <input type="date" [(ngModel)]="age" />
 <button type="button"> Calcular </button>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 A nuestro botón le vamos a añadir una directiva de evento el **click**, y le asignaremos el nombre de una función en la cual pondremos toda la lógica. 
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>Calcular la Edad ⏳</h1>
 <input type="date" [(ngModel)]="age" />
 <button type="button" (click)="ageCalculator()"> Calcular </button>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![Coloquemos los elementos mencionados en nuestra App.](../.gitbook/assets/screen-shot-2019-05-26-at-6.20.19-pm.png)
 
@@ -125,8 +125,8 @@ Conceptos vistos hasta ahora: 👇
 
 En nuestro **app.component.ts** vamos a crear una función, llamada **ageCalculator\(\)**, esta función será la que realizará el calculo de la fecha ingresada. Vamos a añadir la función dentro del **export class AppComponent** y ademas reemplazaremos la variable llamada **name='Angular'** y pondremos la función que esta a continuación:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.ts" %}
+{% tabs %}
+{% tab title="app.component.ts" %}
 ```typescript
 export class AppComponent  {
   age;
@@ -141,8 +141,8 @@ export class AppComponent  {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Ahora te explicaré que hicimos en la función anterior: 👇
 
@@ -170,43 +170,43 @@ Ya tenemos el cálculo de la fecha ingresada, ahora vamos a mostrarlo, usemos la
 
 En el archivo **app.component.html** vamos incluir un texto y nuestra variable **showAge**, para mostrar los años de la persona. Debajo de nuestro botón pondremos la siguiente línea: 
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <p>Tu edad es {{ showAge }}</p>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Te va a quedar todo parecido a lo siguiente: 👇
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <h1>Calcular la Edad ⏳</h1>
 <input type="date" [(ngModel)]="age" />
 <button type="button"> Calcular </button>
 <p>Tu edad es {{ showAge }}</p>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Además vamos a añadir otra directiva **\*ngIf,** para mostrar el texto sólo si se ha ingresado algún valor. Añade en la etiqueta **&lt;p&gt;** el atributo **\*ngIf**.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <p *ngIf="age">Tu edad es {{ showAge }}</p>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![Mostraremos la edad usando la interpolaci&#xF3;n](../.gitbook/assets/webp.net-gifmaker-7.gif)
 
 Podemos hacer más bonita nuestra vista añadiendo en el CSS el siguiente código en el archivo **app.component.css**, para que nuestra App luzca así:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.css" %}
+{% tabs %}
+{% tab title="app.component.css" %}
 ```css
 button {
   cursor: pointer;
@@ -236,8 +236,8 @@ p {
   text-transform: uppercase;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![Hemos terminado nuestra App &#x1F44D;](../.gitbook/assets/screen-shot-2019-05-26-at-7.39.43-pm.png)
 

@@ -22,8 +22,8 @@ Entra a **www.stackblitz.com**, y verás algo como esto:
 
 Vamos a crear el entorno de nuestra aplicación. Para ello iremos al archivo **app.component.html** y borramos todo el contenido para adicionar lo siguiente:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <div>
 	<div>
@@ -35,8 +35,8 @@ Vamos a crear el entorno de nuestra aplicación. Para ello iremos al archivo **a
     </div>
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías ver algo así: 👇
 
@@ -48,8 +48,8 @@ Vamos a utilizar un formulario con un campo de texto y 2 botones: un botón adic
 
 Adiciona este código en la línea 8 de tu archivo **app.component.html**
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <div>
   <form (ngSubmit)="save()">
@@ -70,8 +70,8 @@ Adiciona este código en la línea 8 de tu archivo **app.component.html**
   <label class="label">List: {{this.items | json}}</label><br />
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -93,8 +93,6 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 **ngModel:** Creas una instancia a [`FormControl`](https://angular.io/api/forms/FormControl) donde se domina el modelo y binds hacia el elemento.  
 **name:** Nombre del input.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
 ```markup
 <input class="form-group"
         id="textId"
@@ -105,8 +103,6 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
         [(ngModel)]="model.text"
         name="text" />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
   
 **4.** El elemento **button** es un botón, el primero envía información del formulario.  
@@ -114,8 +110,6 @@ Segundo, elimina la lista.
 El primer label nos va a permitir ver el modelo de nuestra aplicación.  
 El segundo label nos va a permitir ver como la lista se elimina.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
 ```markup
 <button type='submit'>Adiciona a la lista</button>
 <button (click)='clearComplete()' type='button'>Elimina toda la lista</button>
@@ -123,8 +117,6 @@ El segundo label nos va a permitir ver como la lista se elimina.
 <label class="label">Form Model: {{this.model | json}}</label><br />
 <label class="label">List: {{this.items | json}}</label><br />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 {% endhint %}
 
 ## Paso 4: Adicionemos lógica para el formulario 🧪 **📋**
@@ -132,8 +124,8 @@ El segundo label nos va a permitir ver como la lista se elimina.
 Ahora vamos a modificar el archivo **app.component.ts**, ****en ****este vamos a adicionar la declaración de variables que vimos en el archivo **app.component.html** y además vamos a agregar unas funciones.  
 En este archivo vamos a reemplazar su contenido, por el siguiente código:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.ts" %}
+{% tabs %}
+{% tab title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -163,8 +155,8 @@ export class AppComponent {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -189,8 +181,8 @@ La línea 20 me limpia el input.
 Ahora vamos a modificar el archivo **app.component.html**, ****en ****este vamos a adicionar el código para ver nuestra lista.  
 Adiciona este código en la línea 26 de tu archivo **app.component.html**
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+{% tabs %}
+{% tab title="app.component.html" %}
 ```markup
 <div *ngIf="items.length > 0" class="mt-20">
   <div *ngFor="let item of items" class="individual">
@@ -205,8 +197,8 @@ Adiciona este código en la línea 26 de tu archivo **app.component.html**
   </div>
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -228,8 +220,8 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 ¿Recuerdas las clases que usamos en nuestro **app.component.html**? ¡Llegó el tiempo de usarlas!   
 Reemplaza el contenido de **app.component.css** con éste:
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.css" %}
+{% tabs %}
+{% tab title="app.component.css" %}
 ```css
 * {
   font-family: 'Gloria Hallelujah', cursive;
@@ -289,8 +281,8 @@ button{
   margin-top: 20px;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
