@@ -373,8 +373,6 @@ Parece que nuestra aplicación está casi lista 😀.
 
 👍 Para completarla debes añadir contenido en los componentes restantes, recuerda que estás construyendo tu portafolio, entonces añade información sobre ti en cada componente y si necesitas ayuda con los estilos o añadiendo el contenido nos puedes pedir ayuda 👍
 
-Si completas tu portafolio y me muestras este desafío completado, te daré un pequeño detalle 😁
-
 {% hint style="success" %}
 Has completado el **desafío \#2 de nivel básico**, ahora vamos al **desafío Intermedio \#2 👇**
 {% endhint %}
