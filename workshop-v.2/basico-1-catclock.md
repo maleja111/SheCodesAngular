@@ -36,13 +36,11 @@ Iremos al archivo **app.component.html** y vamos a usar unas etiquetas o tags de
 
 Copiaremos lo siguiente en el archivo **app.component.html** 
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>CatClock 😼</h1>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías ver algo así: 👇
 
@@ -64,15 +62,13 @@ Debajo de nuestro titulo en el archivo **app.component.html**, ****vamos a añad
 
 Copiaremos lo siguiente en el archivo **app.component.html** 
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>CatClock 😼</h1>
 
 <img id="catImage" src="https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg" alt="CatClock">
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Verás algo así: 👇
 
@@ -86,15 +82,13 @@ Podemos reemplazar la variable que estaba creada llamada **name** y la renombram
 
 Le quitamos el valor de **'Angular'** y le pondremos **'Party'**
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 export class AppComponent  {
   party = 'Party';
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Verás algo así: 👇
 
@@ -108,15 +102,13 @@ Ahora añadamos nuestra variable a nuestro título en el archivo **app.component
 
 Para usar la interpolación se usan dos llaves **{{ }}** dobles.
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>CatClock 😼 {{party}} </h1>
 
 <img id="catImage" src="https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg" alt="CatClock">
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Paso 5: **Crearemos una imagen dinámica**  🖌️
 
@@ -128,30 +120,26 @@ Crearemos una variable llamada **urlImage** y pondremos la url copiada allí.
 
 En el archivo **app.component.ts** ve hasta la línea 8, donde encontraras el **export class AppComponent** y añade dentro de el, debajo de la variable **party**, ****la variable de urlImage, no borres lo demás, te debe quedar algo así en el **export class AppComponent**: ****👇
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 export class AppComponent  {
   party = 'Party';
   urlImage = 'https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg';
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Luego en el archivo  **app.component.html** borraremos del src la url de la imagen y pondremos en su lugar el nombre de la nueva variable entre llaves dobles. 
 
 Quedaría algo así: 👇
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>CatClock 😼 {{party}} </h1>
 
 <img id="catImage" src={{urlImage}} alt="CatClock">
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![Creamos nuestra imagen din&#xE1;mica](../.gitbook/assets/webp.net-gifmaker-4.gif)
 
@@ -163,8 +151,7 @@ Para ellos usaremos algo de lógica, colocaremos un **if** \(nos sirve para preg
 
 Copia debajo la variable **urlImage** el siguiente código:
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 export class AppComponent  {
   party = 'Party';
@@ -177,8 +164,7 @@ export class AppComponent  {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/webp.net-gifmaker-5.gif)
 

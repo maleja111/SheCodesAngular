@@ -22,8 +22,7 @@ Vamos a crear un formulario con un campo de texto, donde pondremos el nombre de 
 
 Puedes añadir el siguiente código en **app.component.html**
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <section>
   <h1>Autentiquemonos en Github 😉</h1>
@@ -42,8 +41,7 @@ Puedes añadir el siguiente código en **app.component.html**
   <label class="label">Form Model: {{this.model | json}}</label><br />
 </section>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-9.25.58-pm.png)
 
@@ -51,8 +49,7 @@ Puedes añadir el siguiente código en **app.component.html**
 
 En el archivo **app.component.ts** vamos a crear el objeto model, que nos mostrará el modelo de nuestro formulario y crearemos una función login que se encargará de la lógica de nuestra App.
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -70,20 +67,17 @@ export class AppComponent {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 En nuestra función llamada **login**, que será accionada cuando el usuario de click en el botón **Enviar**, le añadiremos un parámetro que va a recibir la función que se lo asignaremos a nuestra variable model.
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```text
 login(form: any) {
   this.model = form;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -97,8 +91,7 @@ Crearemos un 'servicio' dando clic sobre la carpeta 'app', seleccionamos 'servic
 
 Importamos unas dependencias en nuestro nuevo archivo llamado **login.service.ts**,  y añadimos en el constructor lo siguiente: **http: HttpClient** 
 
-{% tabs %}
-{% tab title="login.service.ts" %}
+{% code title="login.service.ts" %}
 ```text
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
@@ -112,23 +105,19 @@ export class LoginService {
 
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Incluimos el '**HttpClientModule**' en el archivo **app.module.ts**
 
-{% tabs %}
-{% tab title="add.module.ts" %}
+{% code title="add.module.ts" %}
 ```text
 import { HttpClientModule } from '@angular/common/http';
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 En los imports incluimos el **HttpClientModule** en el '**app.module.ts'**
 
-{% tabs %}
-{% tab title="app.module.ts" %}
+{% code title="app.module.ts" %}
 ```text
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
@@ -139,13 +128,11 @@ En los imports incluimos el **HttpClientModule** en el '**app.module.ts'**
 export class AppModule { }
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 En nuestro archivo **login.service.ts** crearemos dos funciones, una para manejar los errores: **handleError** y otra que nos obtendrá la data del API **getResponse**:
 
-{% tabs %}
-{% tab title="login.service.ts" %}
+{% code title="login.service.ts" %}
 ```text
 getResponse(APIRoot: any) {
   return this.http
@@ -158,8 +145,7 @@ private handleError(res: HttpErrorResponse | any) {
   return observableThrowError(res.error || 'Server error');
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/webp.net-gifmaker-11.gif)
 
@@ -169,8 +155,7 @@ En nuestro archivo **app.component.ts**, crearemos una variable, de tipo **strin
 
 También importaremos en nuestro **app.component.ts** el servicio que creamos, **LoginService,** y crearemos una función **constructor** donde declararemos una función privada del servicio. ****
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 import { LoginService } from './login.service';
@@ -199,8 +184,7 @@ export class AppComponent {
 } 
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Ahora podemos probar el llamado de nuestra API colocando en el campo de texto el nombre de un usuario de **Github**. Si abres la consola de **Stackblitz** podrás ver el resultado de nuestro **console.log\(response\)**.
 
@@ -232,8 +216,7 @@ Iremos al archivo **table.component.html** y vamos a crear las etiquetas de tabl
 
 En nuestra tabla crearemos una fila para los encabezados dónde vamos a mostrar un nombre, la descripción, el lenguaje del repo, la rama por defecto y la url.
 
-{% tabs %}
-{% tab title="table.component.html" %}
+{% code title="table.component.html" %}
 ```markup
 <table class="table" id="reposTable">
   <thead>
@@ -258,8 +241,7 @@ En nuestra tabla crearemos una fila para los encabezados dónde vamos a mostrar 
   </tbody>
 </table>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Ahora vamos a añadir nuestro  componente tabla \(**&lt;app-table&gt;&lt;/app-table&gt;**\) en nuestro componente App, en el archivo **app.component.html** 
 
@@ -281,19 +263,16 @@ En el archivo **table.component.ts** vamos a importar el Input y recibimos la nu
 
 En la línea donde importamos el **Component**, vamos a añadirle el **Input**, nuestra línea quedaría así: 
 
-{% tabs %}
-{% tab title="table.component.ts" %}
+{% code title="table.component.ts" %}
 ```text
 
 import { Component, Input, OnInit } from '@angular/core';
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 En la case **TableComponent** añadimos nuestro decorador **Input** con nuestro **repos** de tipo **array**.
 
-{% tabs %}
-{% tab title="table.component.ts" %}
+{% code title="table.component.ts" %}
 ```text
 export class TableComponent implements OnInit {
 
@@ -304,15 +283,13 @@ export class TableComponent implements OnInit {
 
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-05-27-at-11.25.37-pm.png)
 
 Como en la respuesta podemos recibir más de un elemento en nuestro array, en nuestro HTML \(**table.component.html**\) usaremos la directiva **\*ngFor**, para recorrer todos los valores del array y usaremos la interpolación para colocar los valores que corresponde a cada columna.
 
-{% tabs %}
-{% tab title="table.component.html" %}
+{% code title="table.component.html" %}
 ```text
 
 <tbody>
@@ -326,8 +303,7 @@ Como en la respuesta podemos recibir más de un elemento en nuestro array, en nu
     </tr>
   </tbody>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![Agregamos un \*ngForm para recorrer el array que obtuvimos como respuesta del API](../.gitbook/assets/screen-shot-2019-05-27-at-11.42.37-pm.png)
 

@@ -64,14 +64,12 @@ Para esto vamos a incluir unas etiquetas que nos van a ayudar a organizar la inf
 
 En el archivo **app.component.html**, ****incluiremos lo siguiente:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <section>
 </section>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![Etiquetas &amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;](../.gitbook/assets/screen-shot-2019-10-21-at-10.54.39-pm%20%281%29.png)
 
@@ -81,8 +79,7 @@ Dentro de las etiquetas &lt;section&gt;&lt;/section&gt;, vamos a añadir un tít
 
 En el archivo **app.component.html**, ****incluiremos lo siguiente:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <section>
     <h1>Mr Cat</h1>
@@ -91,8 +88,7 @@ En el archivo **app.component.html**, ****incluiremos lo siguiente:
     <p>He is a funny cat!!!</p>
 </section>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 {% hint style="info" %}
 En el código anterior incluimos varias etiquetas, las cuales te explicaré a continuación:
@@ -158,8 +154,7 @@ a[title] {
 
 Incluiremos selectores tipo clase en nuestra Card en el **app.component.html**. Nuestro código quedaría así:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <section class="card">
     <h1 class="title">Mr Cat</h1>
@@ -168,15 +163,13 @@ Incluiremos selectores tipo clase en nuestra Card en el **app.component.html**. 
     <p class="description">He is a funny cat!!!</p>
 </section>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![A&#xF1;adimos las clases](../.gitbook/assets/screen-shot-2019-10-21-at-11.47.00-pm.png)
 
 Añadimos las clases en nuestro **CSS**, para esto en el **app.component.css**, vamos a colocar cada una de las clases que creamos en el **HTML**.
 
-{% tabs %}
-{% tab title="app.component.css" %}
+{% code title="app.component.css" %}
 ```css
 .card {
 }
@@ -189,8 +182,7 @@ Añadimos las clases en nuestro **CSS**, para esto en el **app.component.css**, 
 .description {
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Nuestro **Stackblitz** se vería así:
 
@@ -209,8 +201,7 @@ En el archivo **app.component.css**, incluiremos lo siguiente:
 
 Todas las propiedades las incluiremos dentro de las respectivas clases de los elementos, en el archivo **app.component.css.**
 
-{% tabs %}
-{% tab title="app.component.css" %}
+{% code title="app.component.css" %}
 ```css
 .card {
   font-family: sans-serif;
@@ -231,8 +222,7 @@ Todas las propiedades las incluiremos dentro de las respectivas clases de los el
   font-size: 18px;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Podemos incluirle todos los estilos que queramos y usar tantas propiedades como lo desees.
 

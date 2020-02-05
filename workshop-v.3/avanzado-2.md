@@ -60,23 +60,19 @@ Guarda los cambios y estas listo para usarla.
 
 Ya aprendiste como adicionar router, ahora vamos a adicionar la funcionalidad  HTTP Client Module en nuestro  `app.module.ts`  y  luego hacemos su llamado a desde `imports`
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-7.44.10-am.png)
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```typescript
 import { AppRoutingModule } from './app-routing.module';
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-9.16.45-am.png)
 
@@ -85,8 +81,7 @@ import { AppRoutingModule } from './app-routing.module';
 En este archivo vamos a sacar las variables necesarias para manejar nuestra aplicación, esta va a ser la información que le entregaremos a la API de Auth0 y con ella nos identificaremos.  
 vamos a crear un archivo llamado donde las pondremos  **auth0-variables.ts**
 
-{% tabs %}
-{% tab title="auth0-variables.ts" %}
+{% code title="auth0-variables.ts" %}
 ```typescript
 interface AuthConfig {
   clientID: string;
@@ -102,8 +97,7 @@ export const AUTH_CONFIG: AuthConfig = {
   redirectUri: "https://angular-basic-with-auth0.stackblitz.io/callback",
 };
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-8.53.40-am.png)
 
@@ -113,8 +107,7 @@ export const AUTH_CONFIG: AuthConfig = {
 
 La mejor manera de administrar y coordinar las tareas necesarias para la autenticación del usuario es crear un servicio reutilizable. Con el servicio en su lugar, podrá llamar a sus métodos a través de su aplicación. Se puede crear una instancia del objeto WebAuth de auth0.js en el servicio **AuthService.ts.**
 
-{% tabs %}
-{% tab title="AuthService.ts" %}
+{% code title="AuthService.ts" %}
 ```typescript
 import { Injectable } from "@angular/core";
 import * as auth0 from "auth0-js";
@@ -206,8 +199,7 @@ export class AuthService {
 
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-9.20.41-am.png)
 
@@ -225,8 +217,7 @@ export class AuthService {
 
 Para manejar la ruta de devolución de llamada \([https://angular-basic-with-auth0.stackblitz.io/callback](https://angular-basic-with-auth0.stackblitz.io/callback)\), vamos a definir un componente que se encargará solo de esto, crea un nuevo archivo llamado **callback.component.ts** dentro del directorio app e inserta el siguiente código:
 
-{% tabs %}
-{% tab title="callback.component.ts" %}
+{% code title="callback.component.ts" %}
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth/auth.service';
@@ -251,8 +242,7 @@ export class CallbackComponent implements OnInit {
 }
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.02.33-am.png)
 
@@ -260,8 +250,7 @@ export class CallbackComponent implements OnInit {
 
 Para manejar la ruta de desde nuestra a aplicación al inicio de sesión universal solo necesitamos crear un **app-routing.module.ts** que nos controlará cada vez que vayamos a autenticarnos y volvamos a nuestra aplicación:
 
-{% tabs %}
-{% tab title="app-routing.module.ts " %}
+{% code title="app-routing.module.ts " %}
 ```typescript
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -289,13 +278,13 @@ export class AppRoutingModule { }
 
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.18.15-am.png)
 
 Para manejar complementar el manejo de la ruta usaremos esta clase `AuthGuard` **auth.guard.ts** nos ayudará a manejar la ruta de autenticación:
 
+> {% code title="auth.guard.ts" %}
 > ```typescript
 > import { Injectable } from '@angular/core';
 > import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
@@ -322,6 +311,7 @@ Para manejar complementar el manejo de la ruta usaremos esta clase `AuthGuard` *
 >   }
 > }
 > ```
+> {% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.23.06-am.png)
 
@@ -329,15 +319,13 @@ Para manejar complementar el manejo de la ruta usaremos esta clase `AuthGuard` *
 
 Acabamos de crear CallbackComponent y AuthService vamos a incluirlos también. en el **app.module.ts**
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```typescript
 import { CallbackComponent } from './callback.component';
 import { AuthService } from './auth/auth.service';
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-11.09.12-am.png)
 
@@ -346,6 +334,7 @@ import { AuthService } from './auth/auth.service';
 Usaremos la siguiente lógica para llamar al método de autenticación y así determinar si debemos mostrar un elemento de IU específico o no. Como ejemplo, solo queremos mostrar el enlace de Log In si no está autenticado, y Log Out si no está autenticado.  
 En el archivo app.component.html pondremos lo siguiente:
 
+> {% code title="app.component.html" %}
 > ```markup
 > <ul class="nav navbar-nav navbar-right">
 >   <li>
@@ -356,16 +345,19 @@ En el archivo app.component.html pondremos lo siguiente:
 >   </li>
 > </ul>
 > ```
+> {% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.47.39-am.png)
 
 En el archivo **app.component.ts** pondremos lo siguiente:
 
+> {% code title="app.component.ts" %}
 > ```typescript
 > import { AuthService } from './auth/auth.service';
 >
 > constructor(public authService: AuthService) {}
 > ```
+> {% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-05-at-10.50.16-am.png)
 

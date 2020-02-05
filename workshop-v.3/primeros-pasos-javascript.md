@@ -26,8 +26,7 @@ Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como est
 Una variable es un espacio de almacenamiento, aquí podemos guardar cualquier tipo de dato que te puedas imaginar, como una cadena de caracteres, un valor numérico o estructuras un poco más específicas.  
 Adiciona este código en tu archivo **app.component.ts**
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```javascript
   // Vamos a crear una serie de variables de diferentes tipos
   // Numérico
@@ -50,8 +49,7 @@ Adiciona este código en tu archivo **app.component.ts**
   estoyAprendiendo = true;
   meGustanLosVegetales = false;
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -69,11 +67,13 @@ En este caso`this.dias`hace referencia a la variable `dias` que  acabamos de cre
   
 **4.** También te abras podido dar cuenta, que en un archivo con extensión **.TS** puedes hacer comentarios dentro de tu código, usando **`//`** o **/**_**\*  texto \***_**/** si quieres utilizar más de una línea comentada, por ejemplo
 
+{% code title="app.component.ts" %}
 ```javascript
 /* estas 
 son varias 
 líneas comentadas */
 ```
+{% endcode %}
 
 Esto es muy útil cuando trabajas en equipos y deseas dejar una nota, o simplemente porque deseas recordar que es lo que hace tu código.
 {% endhint %}
@@ -86,8 +86,7 @@ Que lindo conocer todas las posibilidades de almacenamiento de datos que podemos
 Ahora vamos a utilizar **los** conocimientos que aprendiste en el ejercicio anterior sobre HTML y descubriremos como Angular nos permite ver variables de manera muy simple.  
 Adiciona este código en tu archivo **app.component.html**
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <p>
   Vamos a ver la variable iva: {{ iva }}
@@ -121,8 +120,7 @@ Adiciona este código en tu archivo **app.component.html**
   Vamos a ver la variable meGustanLosVegetales: {{ meGustanLosVegetales }}
 </p>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -140,8 +138,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 Cuando se desarrolla una aplicación, es muy habitual utilizar una y otra vez las mismas instrucciones. Por eso una función se utiliza para agrupar las indicaciones que necesitamos para realizar una tarea concreta y que se puedan reutilizar fácilmente.  
 Vamos a reemplazar nuestras variables anteriores del archivo **app.component.ts** por este código:
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```javascript
 variable = '';
 
@@ -149,8 +146,7 @@ guardemosUnValorEnUnaVariable(valor) {
   this.variable = valor;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -158,15 +154,13 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 Vamos a reemplazar ****el contenido del archivo **app.component.html** por este código:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <p>
   Vamos a ver la variable variable: {{ variable }}
 </p>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -177,8 +171,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 Esta es la estructura más utilizada en JavaScript y en la mayoría de lenguajes de programación. La usamos para tomar decisiones, vamos a ver un ejemplo de su escritura y su uso.  
 Adiciona este código en tu archivo **app.component.ts**
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```javascript
 mostrarMensajeEnVariable = true;
 
@@ -198,8 +191,7 @@ queMensajeMostrar() {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 

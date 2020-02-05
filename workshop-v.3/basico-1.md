@@ -38,13 +38,11 @@ En el mismo archivo **app.component.html,** vamos a usar unas etiquetas o tags d
 
 Copiaremos lo siguiente en el archivo **app.component.html** 
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>🤪 Emoji 🤪</h1>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías ver algo así: 👇
 
@@ -68,8 +66,7 @@ En el archivo **app.component.ts**, vas a encontrar varias líneas de código, c
 
 Nuestro código lo pondremos dentro de las llaves que inician en la línea 8. Entonces modificaremos la variable **name** y le pondremos **title** y dentro de las comillas pondremos el texto que colocamos en nuestras etiquetas &lt;h1&gt;&lt;/h1&gt;. Así:
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -82,20 +79,17 @@ export class AppComponent  {
   title = '🤪 Emoji 🤪';
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
  
 
 En el archivo de **app.component.html** dentro de las etiquetas &lt;h1&gt;&lt;/h1&gt; pondremos nuestra variable definida. Así:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>{{title}}</h1>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![Usando la interpolaci&#xF3;n](../.gitbook/assets/ezgif.com-gif-maker.gif)
 
@@ -107,29 +101,25 @@ Entonces manos a la obra 😀.
 
 En nuestro **app.component.html** añadiremos las etiquetas de un botón, &lt;button&gt;&lt;/button&gt; y repetiremos esta línea 3 veces y dentro de ella pondremos diferentes emojis.
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>{{title}}</h1>
 <button></button>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![A&#xF1;adamos nuestros botones](../.gitbook/assets/ezgif.com-gif-maker-1.gif)
 
 Nuestro **app.component.html** quedaría así:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>{{title}}</h1>
 <button>😀</button>
 <button>😢</button>
 <button>🤪</button>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Paso 4: Pongamos algunas Directivas
 
@@ -143,8 +133,7 @@ Entonces usaremos nuestros botones para que al darles clic nos muestre una image
 **Te recuerdo ¿Qué es una variable?** es como una caja, \(donde puedes poner cosas 🎁\). Ésta almacenará lo que nosotros queramos, textos, números, etc **👍**
 {% endhint %}
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -161,8 +150,7 @@ export class AppComponent  {
 }
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * Como queremos que al darle clic a nuestros botones este muestre u oculte una imagen, entonces debemos de añadirle a cada uno el evento clic \(Este hace referencia a un concepto que se llama **Event Binding**\).
 
@@ -174,16 +162,14 @@ Entonces a nuestras etiquetas le  añadiremos el click, y le asignaremos a cada 
 
 ![A&#xF1;adiendo el click](../.gitbook/assets/ezgif.com-gif-maker-7.gif)
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>{{title}}</h1>
 <button (click)="happy=!happy">😀</button>
 <button (click)="sad=!sad">😢</button>
 <button (click)="crazy=!crazy">🤪</button>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Si damos clic en cada botón, visualmente no notaremos el cambio, así que es hora de poner nuestras imágenes.
 
@@ -193,8 +179,7 @@ Si damos clic en cada botón, visualmente no notaremos el cambio, así que es ho
 
 El código que aparece en la imagen es el siguiente:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>{{title}}</h1>
 <button (click)="happy=!happy">😀</button>
@@ -204,15 +189,13 @@ El código que aparece en la imagen es el siguiente:
 <button (click)="sad=!sad">😢</button>
 <button (click)="crazy=!crazy">🤪</button>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * Dupliquemos el código de &lt;section&gt; para los otros dos botones y le cambiamos el title de la imagen y el src.
 
 Duplicado queda así:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>{{title}}</h1>
 <button (click)="happy=!happy">😀</button>
@@ -228,8 +211,7 @@ Duplicado queda así:
   <img title="Happy" src="https://i.pinimg.com/originals/f2/ce/c9/f2cec98f06e8f66ff0bcfb2ffdb413eb.jpg" />
 </section>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
  Si cambiamos los title y el src, nos queda así:
 
@@ -237,8 +219,7 @@ Duplicado queda así:
 
 Tu código debería quedar similar al siguiente, pero con las imágenes que hayas agregado de tu preferencia.
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>{{title}}</h1>
 <button (click)="happy=!happy">😀</button>
@@ -254,8 +235,7 @@ Tu código debería quedar similar al siguiente, pero con las imágenes que haya
   <img title="Crazy" src="https://townsquare.media/site/757/files/2014/08/names.jpg" />
 </section>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * Ahora que tenemos nuestras imágenes vamos a añadir la directiva encargada de ocultar y mostrar el contenido. 
 

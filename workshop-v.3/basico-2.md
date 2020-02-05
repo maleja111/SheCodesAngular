@@ -24,16 +24,14 @@ Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como est
 Ya dominas perfectamente el concepto de que es una variable 🤓vamos a crear las variables que van a contener la información que vamos a mostrar en nuestra aplicación.  
 Copiaremos lo siguiente en el archivo **app.component.ts.**
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 flipCard = false;
 today = new Date();
 totalBill = 203094.12;
 text = 'SHe CoDes AnGulAr';
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -53,8 +51,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 En esta parte vamos a crear la estructura HTML que le dará vida y estructura a la forma en que presentaremos los datos en pantalla.  
 En este archivo llamado  **app.component.html** vamos a reemplazar su contenido, por el siguiente código.
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <div>
 	<div class="centerTitle">
@@ -85,8 +82,7 @@ En este archivo llamado  **app.component.html** vamos a reemplazar su contenido,
 
 </div>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![Un poquito de humor &#x1F913;](../.gitbook/assets/screenshot_20191029-184326-1.png)
 
@@ -112,15 +108,13 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 Vamos a crear una función simple, pero poderosa 💪🏽con ella controlaremos el valor de nuestra variable **flipCard**.    
 Adicionaremos en el archivo  **app.component.ts** el siguiente código debajo de la declaración de variable text.
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 onClickCard() {
 this.flipCard = !this.flipCard;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -139,8 +133,7 @@ Si el valor de `flipCard` es **false**, con `!this.flipCard` le asignamos un val
 Llego la hora de cambiar el contenido de nuestras variables, sin cambiar el contenido de nuestras variables 🤨💬what? 🥴¡sí! nuestro objetivo será mostrar el valor de nuestras variables, sin asignarle un valor diferente, solo modificaremos la forma en la que se ve el mismo valor en pantalla.  
 En este archivo llamado **app.component.html** vamos a reemplazar la línea "&lt;!-- TODO: Aquí colocaremos datos sin modificar --&gt;", por el siguiente código.
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <br/>
 Hoy: {{ today | date }}
@@ -152,8 +145,7 @@ Redeondeo Número: {{totalBill | number}}
 <br/>
 Minúsculas: {{text | lowercase}}
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -161,8 +153,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
 En este archivo llamado **app.component.html** vamos a reemplazar la línea "&lt;!-- TODO: Aquí colocaremos los mismos datos modificados --&gt;", por el siguiente código.
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 Hoy: {{ today | date:'fullDate' }}
 <br/>
@@ -173,8 +164,7 @@ Redeondeo Número: {{totalBill | number:'1.0-0'}}
 <br/>
 Mayúsculas: {{text | uppercase}}
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -203,8 +193,7 @@ date:'fullDate' el elemento _fullDate_ me indica que deseo la fecha completa, ta
 Ya hicimos toda la lógica 🧠, ahora vamos a ponerle personalidad 👩‍🎨  
 Reemplaza el contenido de **styles.css** con el siguiente código:
 
-{% tabs %}
-{% tab title="app.component.css" %}
+{% code title="app.component.css" %}
 ```css
 /* Add application styles & imports to this file! */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
@@ -342,8 +331,7 @@ h3.cardTitle {
   font-weight: bold;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 

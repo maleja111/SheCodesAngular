@@ -36,13 +36,11 @@ En el mismo archivo **app.component.html,** vamos a usar unas etiquetas o tags d
 
 Copiaremos lo siguiente en el archivo **app.component.html** 
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>💬 Deja tu comentario 💬</h1>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías ver algo así: 👇
 
@@ -153,8 +151,7 @@ Tenemos nuestro formulario, ahora vamos a hacer uso del botón de enviar  o **Se
 
 Crearemos una función **sendData\(\)** en nuestro **form.component.ts**. En nuestra Clase de formulario crearemos una constante que usaremos en nuestra función para almacenar la información de nuestro formulario.
 
-{% tabs %}
-{% tab title="form.component.ts" %}
+{% code title="form.component.ts" %}
 ```typescript
 
 export class FormComponent implements OnInit {
@@ -167,8 +164,7 @@ export class FormComponent implements OnInit {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![Nuestro form.component.ts se ver&#xE1; as&#xED;](../.gitbook/assets/screen-shot-2019-11-04-at-6.38.15-pm.png)
 

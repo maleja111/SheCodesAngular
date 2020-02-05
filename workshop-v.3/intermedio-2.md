@@ -23,8 +23,7 @@ Entra a [**www.stackblitz.com**](https://stackblitz.com), y verás algo como est
 Vamos a adicionar la estructura básica que va a tener nuestro formulario para que tengamos mucho mas claro como vamos a visualizar nuestros datos.  
 Reemplazaremos el contenido del archivo **app.component.html** y adicionaremos lo siguiente:
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <div class="center">
 
@@ -54,8 +53,7 @@ Reemplazaremos el contenido del archivo **app.component.html** y adicionaremos l
 	</div>
 </div>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -66,8 +64,7 @@ Deberías hacer algo así, y tu resultado se deberá ver así:👇
 Vamos a hacer algo diferente esta vez, siempre dejamos la estructura CSS para el final, pero en esta ocasión vamos a dejarla lista y nos enfocaremos en la lógica de nuestro formulario de contacto.  
 Reemplazaremos el contenido del archivo **styles.css** y adicionaremos lo siguiente:
 
-{% tabs %}
-{% tab title="styles.css" %}
+{% code title="styles.css" %}
 ```css
 /* Add application styles & imports to this file! */
 @import url('https://fonts.googleapis.com/css?family=Abel');
@@ -206,8 +203,7 @@ html, body {
   margin-left: 40px;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
@@ -219,8 +215,7 @@ Ya tienes la estructura básica, hora nos concentraremos en la creación de un f
   
 Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- TODO: Aquí adicionaremos nuestro formulario -->`  en el archivo **app.component.html.**
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
   <div class="form-group">
@@ -235,8 +230,7 @@ Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- 
   <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
 </form>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así **cuando pases el mouse sobre la aplicación**:👇
 
@@ -259,10 +253,12 @@ Deberías hacer algo así, y tu resultado se deberá ver así **cuando pases el 
 {% hint style="warning" %}
 **En el paso 4 explicaremos:**
 
+{% code title="app.component.html" %}
 ```markup
 [disabled]
 [(ngModel)]
 ```
+{% endcode %}
 {% endhint %}
 
 ## Paso 4: Vamos a visualizar los datos **👀**
@@ -271,8 +267,7 @@ Ya aprendiste a hacer un formulario 🎉, ahora vamos a comprender cómo ver esa
   
 Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- TODO: Aquí adicionaremos el resultado de los datos que ingresemos al formulario -->`  en el archivo **app.component.html.**
 
-{% tabs %}
-{% tab title="app.component.html" %}
+{% code title="app.component.html" %}
 ```markup
 <h1>Result Contact us</h1>
 <div class="coords">
@@ -289,8 +284,7 @@ Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- 
 </div>
 <span class="more">Mouse over the card for more info</span>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/screen-shot-2019-11-04-at-7.53.20-pm.png)
 
@@ -299,30 +293,38 @@ Adicionaremos el siguiente contenido reemplazando la línea de comentario `<!-- 
   
 1.** Recuerdas que en el paso anterior teníamos en nuestro HTML:
 
+{% code title="app.component.html" %}
 ```markup
 #contactForm="ngForm"
 ```
+{% endcode %}
 
 Bueno, `contactForm` es nuestra referencia a nuestro formulario, entonces gracias a que es un Angular template-driven form, podemos usar la referencia al contenido de sus campos sin adicionar variables o código adicional en nuestro archivo .ts, directamente desde nuestro HTML podemos acceder a ella.  
 **2.** Por lo explicado en el paso anterior, podemos hacer un binding \(una visualización de variable\) usando nuestros conocidos {{}} y nuestro `contactForm` de referencia, haciendo muy fácil mostrar el nombre, que ingresamos de la siguiente manera:
 
+{% code title="app.component.html" %}
 ```markup
 {{contactForm.value.name}}
 ```
+{% endcode %}
 
 Lo mismo lo hacemos con los demás campos:
 
+{% code title="app.component.html" %}
 ```markup
 {{contactForm.value.email}}
 {{contactForm.value.message}}
 ```
+{% endcode %}
 
 **3.** Recuerdas la etiqueta `[(ngModel)]="name"` en nuestro código HTML, esto, combinado con los puntos 1 y 2, hacen la magia del binding \(una visualización de variable\), cuando usamos **\[\(ngModel\)\]** es dos vías de binding, en inglés, two-way data binding para asignar el nombre, incluso podemos crear una variable con el mismo nombre "name" y asignarle un valor por defecto para cuando cargue nuestro formulario.  
 **4.** Recuerdas la etiqueta \[disabled\] del punto:
 
+{% code title="app.component.html" %}
 ```markup
 [disabled]="!contactForm.valid"
 ```
+{% endcode %}
 
 **contactForm.valid**: Es el uso de la referencia del template-driven form para acceder a las propiedades, lo que declaramos como nuestro contactForm puede acceder a la propiedad que le dice si es valid. Lo que lo hace valido o invalido es que cuando adicionamos la etiqueta **required** en el paso 3, le estamos diciendo a nuestro formulario que hasta que ese campo no este lleno, el formulario no sera válido, por lo tanto, debe tener el contenido de los 3 campos de nuestro formulario.   
 **\[disabled\]**: Le estamos indicando que cuando la condición interna no se cumpla, me des habilite el botón, vamos a inhabilitar el botón, mientras el formulario no sea valido.
@@ -334,15 +336,13 @@ Podemos ver todas las ventajas que tiene [Template-driven](https://angular.io/gu
   
 Copiaremos lo siguiente en el archivo **app.component.ts.**
 
-{% tabs %}
-{% tab title="app.component.ts" %}
+{% code title="app.component.ts" %}
 ```typescript
 onSubmit(value: any){  
     console.log('Save: ', value);
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Deberías hacer algo así, y tu resultado se deberá ver así:👇
 
